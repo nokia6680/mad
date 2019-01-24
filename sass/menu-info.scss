@@ -1,0 +1,54 @@
+.menu-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: #fff;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  height: 100%;
+
+  &__item {
+    margin-left: 10px;
+
+    &--email {
+      margin-right: 40px;
+    }
+
+    &--schedule {
+      margin-right: 34px;
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font: {
+      size: 0.75em;
+      family: $medium-font;
+    }
+
+    color: $text-mail;
+    line-height: 1;
+
+    text-decoration-style: dashed;
+  }
+
+  &__text {
+    font: {
+      size: 0.75em;
+      family: $medium-font;
+    }
+
+    color: $text-mail;
+    line-height: 1;
+
+    text-decoration-style: dashed;
+  }
+}

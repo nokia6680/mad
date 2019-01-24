@@ -11,37 +11,9 @@
     padding: 0 11px;
   }
 
-  @media only screen and (min-width: $iphone) {
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 22px;
-  }
-
-  @media only screen and (min-width: $mobile-hd) {
-    width: auto;
-    max-width: 404px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  @media only screen and (min-width: $tablets) {
-    width: auto;
-    max-width: 660px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   @media only screen and (min-width: $laptop-wide) {
     width: auto;
     max-width: 1150px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  @media only screen and (min-width: $widebooks-hd) {
-    width: auto;
-    max-width: 1280px;
     margin: 0 auto;
     padding: 0;
   }
