@@ -12,7 +12,7 @@
   }
 
   @media only screen and (min-width: $laptop-wide) {
-    width: auto;
+    width: 100%;
     max-width: 1150px;
     margin: 0 auto;
     padding: 0;
@@ -25,11 +25,7 @@
   cursor: pointer;
 
   position: relative;
-  padding-left: 40px;
-
-  @media only screen and (min-width: $laptop) {
-    padding-left: 25px;
-  }
+  padding-left: 20px;
 }
 
 @mixin custom-checkbox {
@@ -37,33 +33,29 @@
   content: "";
   display: block;
 
-  width: 19px;
-  height: 18px;
-  bottom: 2px;
+  width: 12px;
+  height: 12px;
+
+  bottom: 0;
   left: 0;
 
-  background-image: url('../img/checkbox.png');
-  background-size: 19px 18px;
-  background-repeat: no-repeat;
+  background-color: #99999e;
+  border: 1px solid #919197;
+  border-radius: 2px;
 }
 
 @mixin checkbox-checked {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 3px;
+  top: 2px;
+  left: 2px;
   display: block;
-  width: 21px;
-  height: 27px;
+  width: 8px;
+  height: 6px;
 
   background-image: url('../img/tick.png');
-  background-size: 21px 27px;
+  background-size: 8px 6px;
   background-repeat: no-repeat;
-
-  @media only screen and (min-width: $laptop) {
-    top: -5px;
-    left: 3px;
-  }
 }
 
 @mixin soft-animation {

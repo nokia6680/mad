@@ -1,0 +1,30 @@
+.info-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+
+  padding-top: 55px;
+  padding-bottom: 200px;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+
+    background-image: url('../img/info-book.svg');
+    background-size: 1150px 640px;
+    background-repeat: no-repeat;
+
+    width: 1150px;
+    height: 640px;
+
+    top: 88px;
+    left: -18px;
+
+    z-index: -1;
+  }
+}

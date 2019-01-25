@@ -1,0 +1,61 @@
+.recall-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+
+  &__submit {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    margin-bottom: 40px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: $btn-bg-wogr;
+
+    font: {
+      size: 1em;
+      family: $bold-font;
+    }
+    color: $text-white;
+    line-height: 1;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    box-shadow: 10px 10px 20px 0px rgba(106,100,35,0.25);
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(106,100,35,0.25);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(106,100,35,0.25);
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__label {
+    font: {
+      size: 0.719em;
+      family: $regular-font;
+    }
+
+    color: $text-darkgray;
+    line-height: 1;
+  }
+
+  &__checkbox + label {
+    @include checkbox-default;
+  }
+
+  &__checkbox + label::before {
+    @include custom-checkbox;
+  }
+
+  &__checkbox:checked + label::after {
+    @include checkbox-checked;
+  }
+}

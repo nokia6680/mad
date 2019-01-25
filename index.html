@@ -69,7 +69,7 @@
 			</div>
 			<div class="header-menu__lower lower-menu">
 				<!--Первый список для кнопки УСЛУГИ-->
-				<ul class="lower-menu__list lower-menu__list--service">
+				<ul class="lower-menu__list lower-menu__list--service" id="service-list">
 					<li class="lower-menu__item">
 						<a class="lower-menu__link lower-menu__link--design" href="#" target="_self">Дизайн полиграфии</a>
 					</li>
@@ -99,33 +99,33 @@
 					</li>
 				</ul>
 				<!--Второй список для кнопки Продукция-->
-				<ul class="lower-menu__list lower-menu__list--goods">
+				<ul class="lower-menu__list lower-menu__list--goods" id="goods-list">
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--design" href="#" target="_self">Дизайн полиграфии</a>
+						<a class="lower-menu__link lower-menu__link--design" href="#" target="_self">Дизайн полиграфии1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--devpoly" href="#" target="_self">Верстка полиграфии</a>
+						<a class="lower-menu__link lower-menu__link--devpoly" href="#" target="_self">Верстка полиграфии1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--sites" href="#" target="_self">Сайты</a>
+						<a class="lower-menu__link lower-menu__link--sites" href="#" target="_self">Сайты1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--printpoly" href="#" target="_self">Печать полиграфии</a>
+						<a class="lower-menu__link lower-menu__link--printpoly" href="#" target="_self">Печать полиграфии1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--illustration" href="#" target="_self">Иллюстрации</a>
+						<a class="lower-menu__link lower-menu__link--illustration" href="#" target="_self">Иллюстрации1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--infograph" href="#" target="_self">Инфографика</a>
+						<a class="lower-menu__link lower-menu__link--infograph" href="#" target="_self">Инфографика1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--textpreparing" href="#" target="_self">Подготовка текста</a>
+						<a class="lower-menu__link lower-menu__link--textpreparing" href="#" target="_self">Подготовка текста1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--photos" href="#" target="_self">Фотография</a>
+						<a class="lower-menu__link lower-menu__link--photos" href="#" target="_self">Фотография1</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--devpages" href="#" target="_self">Верстка страницы</a>
+						<a class="lower-menu__link lower-menu__link--devpages" href="#" target="_self">Верстка страницы1</a>
 					</li>
 				</ul>
 			</div>
@@ -169,20 +169,18 @@
 					<h2 class="info-recall__title">Узнайте стоимость заказа прямо сейчас!</h2>
 					<form class="info-recall__form recall-form" method="post" action="#" autocomplete="off">
 						<ul class="recall-form__list recall-list">
-							<li class="recall-list__item">
+							<li class="recall-list__item recall-list__item--name">
 								<input class="recall-list__input recall-list__input--name" type="text" name="name" id="name" placeholder="Ваше имя"/>
 							</li>
-							<li class="recall-list__item">
+							<li class="recall-list__item recall-list__item--tel">
 								<input class="recall-list__input recall-list__input--tel" type="tel" name="tel" id="tel" placeholder="Контактный телефон"/>
 							</li>
-							<li class="recall-list__item recall-list__item--submit">
-								<button class="recall-form__submit" type="submit">Позвоните мне</button>
-							</li>
-							<li class="recall-list__item">
-								<input class="recall-list__checkbox" type="checkbox" name="agreement" id="agreement" />
-								<label class="recall-list__label" for="agreement">Согласен на обработку персональных данных</label>
-							</li>
 						</ul>
+						<button class="recall-form__submit" type="submit">Позвоните мне</button>
+						<p class="recall-form__item">
+							<input class="recall-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement" />
+							<label class="recall-form__label" for="agreement">Согласен на обработку персональных данных</label>
+						</p>
 					</form>
 				</div>
 			</div>

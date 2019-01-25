@@ -1,0 +1,31 @@
+.info {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    font: {
+      size: 2.75em;
+      family: $thin-font;
+    }
+
+    color: $text-lightblack;
+    line-height: 1;
+  }
+
+  &__subtitle {
+    font: {
+      size: 1em;
+      family: $black-font;
+    }
+
+    color: $text-lightblack;
+    line-height: 1;
+  }
+}
