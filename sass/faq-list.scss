@@ -1,0 +1,62 @@
+.faq-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 555px;
+
+  margin-bottom: 150px;
+
+  &__item {
+    width: 410px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  &__item--active {
+    position: relative;
+    width: 520px;
+
+    &::before {
+      position: absolute;
+      content:'';
+
+      width: 315px;
+      height: 97px;
+
+      background-image: url('../img/tab-arrow.png');
+      background-size: 315px 97px;
+      background-repeat: no-repeat;
+
+      top: -20px;
+      right: 35px;
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      &::before {
+        top: -30px;
+      }
+    }
+
+    .faq-list__text {
+      font-family: $bold-font;
+    }
+  }
+
+  &__text {
+    font: {
+      size: 1.5em;
+      family: $regular-font;
+    }
+
+    color: $text-lightblack;
+    line-height: 1.2;
+  }
+}
