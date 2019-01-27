@@ -1,0 +1,44 @@
+.details-rights {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 205px;
+
+  &__copyright {
+    display: block;
+
+    font: {
+      size: 0.75em;
+      family: $regular-font;
+    }
+
+    color: $text-footer;
+    line-height: normal;
+
+    margin-bottom: 30px;
+  }
+
+  &__requisites {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title,
+  &__nr {
+    font: {
+      size: 0.75em;
+      family: $regular-font;
+    }
+
+    color: $text-footer;
+    line-height: normal;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+}

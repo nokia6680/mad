@@ -1,0 +1,59 @@
+.details-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  width: 205px;
+
+  margin-bottom: 80px;
+
+  &__phone {
+    display: block;
+    margin-bottom: 5px;
+
+    font: {
+      size: 1.125em;
+      family: $medium-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  &__mail {
+    display: block;
+    margin-bottom: 20px;
+
+    font: {
+      size: 0.75em;
+      family: $regular-font;
+    }
+
+    color: $text-footer;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  &__send {
+    width: 165px;
+
+    font: {
+      size: 0.75em;
+      family: $bold-font;
+    }
+
+    color: $text-orange;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    background-color: transparent;
+    border: 1px solid $text-orange;
+    border-radius: 3px;
+  }
+}
