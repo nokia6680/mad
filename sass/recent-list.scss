@@ -1,0 +1,123 @@
+.recent-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  margin-bottom: 220px;
+
+  &__item {
+    width: 383px;
+    height: 383px;
+    position: relative;
+  }
+
+  &__image {
+    width: 383px;
+    height: 383px;
+  }
+
+  /*Появляющаяся штука*/
+  &__link {
+    position: absolute;
+    display: none;
+
+    width: 425px;
+    height: 425px;
+
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+
+    text-decoration: none;
+
+    box-shadow:18px 17px 19px 0px rgba(106,100,35,0.25);
+    -webkit-box-shadow:18px 17px 19px 0px rgba(106,100,35,0.25);
+    -moz-box-shadow:18px 17px 19px 0px rgba(106,100,35,0.25);
+  }
+  /*Увеличенное изображение*/
+  &__fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 425px;
+    height: 425px;
+
+    z-index: -2;
+  }
+  /*Блок с текстом*/
+  &__text {
+    background-color: rgba(226, 124, 16, 0.93);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__name {
+    display: block;
+    width: 145px;
+
+    text-align: center;
+
+    font: {
+      size: 1.5em;
+      family: $regular-font;
+    }
+
+    color: $text-white;
+    line-height: 1.2;
+
+    margin-bottom: 45px;
+  }
+
+  &__type {
+    display: block;
+    width: 145px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    position: relative;
+
+    font: {
+      size: 1em;
+      family: $bold-font;
+    }
+
+    color: $text-white;
+    line-height: 1.2;
+
+    margin-top: 14px;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 19px;
+      height: 1px;
+
+      background-color: #f0d7b8;
+
+      top: -13px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item:hover .recent-list__link {
+    @include animation;
+
+    display: block;
+  }
+}

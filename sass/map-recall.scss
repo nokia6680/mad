@@ -1,0 +1,26 @@
+.map-recall {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 370px;
+  padding: 33px 47px 45px;
+
+  background-color: rgba(252, 246, 247, 0.95);
+  box-shadow: 0 0 50px 28px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 0 50px 28px rgba(0,0,0,0.08);
+  -moz-box-shadow: 0 0 50px 28px rgba(0,0,0,0.08);
+
+  &__title {
+    width: 240px;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font: {
+      size: 1em;
+      family: $medium-font;
+    }
+    color: $text-black;
+    line-height: 1.2;
+    text-align: center;
+  }
+}

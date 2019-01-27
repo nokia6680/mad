@@ -1,0 +1,80 @@
+.map-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 20px 28px;
+  list-style: none;
+
+  background-color: $bg-form-list;
+  border: 1px solid #e6e6e6;
+
+  &__item {
+    width: 100%;
+    position: relative;
+  }
+
+  &__item--name::after {
+    position: absolute;
+    top: 4px;
+    left: 1px;
+
+    content: '';
+
+    width: 13px;
+    height: 13px;
+
+    background-image: url('../img/icon-name.png');
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+  }
+
+  &__item--tel::after {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+
+    content: '';
+
+    width: 14px;
+    height: 13px;
+
+    background-image: url('../img/icon-phone.png');
+    background-repeat: no-repeat;
+    background-size: 14px 13px;
+  }
+
+  &__input {
+    position: relative;
+    border: none;
+
+    width: 100%;
+
+    padding-left: 30px;
+    padding-right: 15px;
+
+    cursor: text;
+    outline: none;
+
+    font: {
+      size: 0.938em;
+      family: $regular-font;
+    }
+
+    color: $text-lightgray;
+
+    &--name {
+      padding-bottom: 19px;
+      border-bottom: 1px solid #dadada;
+    }
+
+    &--tel {
+      padding-top: 18px;
+    }
+  }
+}
