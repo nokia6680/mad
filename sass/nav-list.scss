@@ -12,6 +12,35 @@
 
   &__item {
     height: 100%;
+
+    &--top {
+      background-color: $link-hover-bg;
+
+      .nav-list__link {
+        color: $link-hover-text;
+      }
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        bottom: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 0;
+        height: 0;
+
+        border-left: 6.5px solid transparent;
+        border-right: 6.5px solid transparent;
+        border-bottom: 4px solid #1c1c1a;
+      }
+    }
   }
 
   &__link {
@@ -35,10 +64,5 @@
 
     text-transform: uppercase;
     text-decoration: none;
-
-    &:hover {
-      background-color: $link-hover-bg;
-      color: $link-hover-text;
-    }
   }
 }

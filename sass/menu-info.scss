@@ -37,10 +37,14 @@
     color: $text-mail;
     line-height: 1;
 
-    text-decoration-style: dashed;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed $text-mail;
   }
 
   &__text {
+    display: block;
+
     font: {
       size: 0.75em;
       family: $medium-font;
@@ -50,5 +54,6 @@
     line-height: 1;
 
     text-decoration-style: dashed;
+    margin-bottom: 5px;
   }
 }
