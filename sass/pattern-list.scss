@@ -20,10 +20,16 @@
     padding-top: 26px;
     padding-bottom: 27px;
 
+    cursor: pointer;
+
     &--active {
       text-decoration: none;
 
-      background-color: $pattern-list-bg;
+      background: #ff8d16; /* Old browsers */
+      background: -moz-linear-gradient(left, #ff8d16 1%, #ff3527 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #ff8d16 1%,#ff3527 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #ff8d16 1%,#ff3527 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d16', endColorstr='#ff3527',GradientType=1 ); /* IE6-9 */
 
       &::after {
         position: absolute;
@@ -33,7 +39,7 @@
         height: 0;
 
         border-top: 34.5px solid transparent;
-        border-left: 13px solid #ea5b0a;
+        border-left: 13px solid #ff3527;
         border-bottom: 34.5px solid transparent;
 
         right: -13px;

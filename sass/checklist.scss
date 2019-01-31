@@ -41,6 +41,21 @@
     }
   }
 
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font: {
+      size: 1.25em;
+      family: $thin-font;
+    }
+
+    color: $text-lightblack;
+    line-height: 1;
+
+    text-transform: uppercase;
+  }
+
   &__btn {
     position: relative;
     display: block;

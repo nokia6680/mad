@@ -5,4 +5,27 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
+  position: relative;
+
+  &__title {
+    position: absolute;
+
+    bottom: -35px;
+    right: -140px;
+
+    font: {
+      size: 17.75em;
+      family: $black-font;
+    }
+
+    color: $text-black;
+    opacity: 0.03;
+    line-height: 1;
+
+    text-transform: uppercase;
+    letter-spacing: -2px;
+
+    margin: 0;
+  }
 }

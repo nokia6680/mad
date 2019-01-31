@@ -8,9 +8,13 @@
 
   &__logo {
     min-width: 160px;
-    height: 67px;
 
     margin-right: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &__link {
@@ -18,10 +22,24 @@
     height: 100%;
 
     text-decoration: none;
+
+    display: block;
+    margin-bottom: 20px;
   }
 
   &__pic {
     width: 160px;
-    height: auto;
+    height: 67px;
+  }
+
+  &__title {
+    font: {
+      size: 1.125em;
+      family: $thin-font;
+    }
+
+    color: $text-lightblack;
+    line-height: 1;
+    text-transform: uppercase;
   }
 }

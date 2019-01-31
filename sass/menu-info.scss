@@ -1,7 +1,7 @@
 .menu-info {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   background-color: #fff;
@@ -13,47 +13,22 @@
 
   height: 100%;
 
-  &__item {
-    margin-left: 10px;
-
-    &--email {
-      margin-right: 40px;
-    }
-
-    &--schedule {
-      margin-right: 34px;
-      margin-left: 0;
-    }
-  }
+  padding-right: 40px;
+  padding-left: 40px;
 
   &__link {
     display: block;
 
     font: {
       size: 0.75em;
-      family: $medium-font;
+      family: $bold-font;
     }
 
-    color: $text-mail;
+    color: $text-lightgray;
     line-height: 1;
 
     text-decoration: none;
     padding-bottom: 5px;
     border-bottom: 1px dashed $text-mail;
-  }
-
-  &__text {
-    display: block;
-
-    font: {
-      size: 0.75em;
-      family: $medium-font;
-    }
-
-    color: $text-mail;
-    line-height: 1;
-
-    text-decoration-style: dashed;
-    margin-bottom: 5px;
   }
 }

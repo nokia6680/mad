@@ -1,7 +1,7 @@
 .menu-phone {
   position: absolute;
   top: 0;
-  left: 757px;
+  left: 715px;
 
   display: flex;
   flex-direction: column;
@@ -51,5 +51,22 @@
       left: 0;
       top: 0;
     }
+  }
+
+  &__text {
+    display: block;
+
+    font: {
+      size: 0.75em;
+      family: $medium-font;
+    }
+
+    color: $text-white;
+    line-height: 1;
+
+    text-decoration-style: dashed;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 62px;
   }
 }
