@@ -37,6 +37,8 @@
 
     text-decoration: none;
 
+    cursor: pointer;
+
     &::after {
       position: absolute;
       content: '';
@@ -48,8 +50,8 @@
       background-size: 17px 15px;
       background-repeat: no-repeat;
 
-      left: 0;
-      top: 0;
+      left: 15px;
+      top: 2px;
     }
   }
 

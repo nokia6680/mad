@@ -20,7 +20,7 @@
 
     &:hover {
       width: 520px;
-      
+
       .faq-list__text {
         font-family: $bold-font;
       }
@@ -61,10 +61,12 @@
   &__text {
     font: {
       size: 1.5em;
-      family: $regular-font;
+      family: $light-font;
     }
 
     color: $text-lightblack;
     line-height: 1.2;
+
+    margin: 0;
   }
 }

@@ -12,6 +12,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link media="none" onload="if(media!="all") media="all"" rel="stylesheet" type="text/css", href= style.css>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -23,7 +24,7 @@
 	<header class="header">
 		<div class="header__logo">
 			<a class="header__link" href="index.html" target="_self">
-				<img class="header__pic" src="img/main-logo.svg" alt="MAD" />
+				<img class="header__pic" src="img/main-logo.png" alt="MAD" />
 			</a>
 			<b class="header__title">Студия дизайна</b>
 		</div>
@@ -34,22 +35,22 @@
 				<nav class="upper-menu__nav menu-nav">
 					<ul class="menu-nav__list nav-list">
 						<li class="nav-list__item nav-list__item--service nav-list__item--active">
-							<a class="nav-list__link" href="#" target="_self">Услуги</a>
+							<a class="nav-list__link" href="/" target="_self">Услуги</a>
 						</li>
 						<li class="nav-list__item nav-list__item--goods">
-							<a class="nav-list__link" href="#" target="_self">Продукция</a>
+							<a class="nav-list__link" href="/izgotovlenie-poligrafii" target="_self">Продукция</a>
 						</li>
 						<li class="nav-list__item nav-list__item--portfolio">
-							<a class="nav-list__link" href="#" target="_self">Портфолио</a>
+							<a class="nav-list__link" href="/portfolio" target="_self">Портфолио</a>
 						</li>
 						<li class="nav-list__item nav-list__item--top">
-							<a class="nav-list__link" href="#" target="_self">Топ-12</a>
+							<a class="nav-list__link" href="/top" target="_self">Топ-12</a>
 						</li>
 						<li class="nav-list__item nav-list__item--articles">
-							<a class="nav-list__link" href="#" target="_self">Статьи</a>
+							<a class="nav-list__link" href="/blog" target="_self">Статьи</a>
 						</li>
 						<li class="nav-list__item nav-list__item--contacts">
-							<a class="nav-list__link" href="#" target="_self">О нас</a>
+							<a class="nav-list__link" href="/about" target="_self">О нас</a>
 						</li>
 					</ul>
 				</nav>
@@ -59,8 +60,8 @@
 				</div>
 				<!--Ссылка на телефон-->
 				<div class="upper-menu__phone menu-phone">
-					<a class="menu-phone__link" href="tel:+74950218126">
-						+7 (495) 021 81 26
+					<a class="menu-phone__link" href="tel:+74993943386">
+						+7 (499) 394 33 86
 					</a>
 					<span class="menu-phone__text">Пн-Пт: 10.00-19.00</span>
 				</div>
@@ -69,61 +70,70 @@
 				<!--Первый список для кнопки УСЛУГИ-->
 				<ul class="lower-menu__list lower-menu__list--service lower-menu__list--active" id="service-list">
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--design" href="#" target="_self">Дизайн полиграфии</a>
+						<a class="lower-menu__link lower-menu__link--design" href="/uslugi/dizayn-poligrafii" target="_self">Дизайн полиграфии</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--devpoly" href="#" target="_self">Верстка полиграфии</a>
+						<a class="lower-menu__link lower-menu__link--devpoly" href="/uslugi/verstka-poligrafii" target="_self">Верстка полиграфии</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--sites" href="#" target="_self">Сайты</a>
+						<a class="lower-menu__link lower-menu__link--sites" href="/uslugi/sayty" target="_self">Сайты</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--printpoly" href="#" target="_self">Печать полиграфии</a>
+						<a class="lower-menu__link lower-menu__link--printpoly" href="/uslugi/pechat-poligrafii" target="_self">Печать полиграфии</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--illustration" href="#" target="_self">Иллюстрации</a>
+						<a class="lower-menu__link lower-menu__link--illustration" href="/uslugi/razrabotka-illustratsyii" target="_self">Иллюстрации</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--infograph" href="#" target="_self">Инфографика</a>
+						<a class="lower-menu__link lower-menu__link--infograph" href="/uslugi/razrabotka-infografiki" target="_self">Инфографика</a>
 					</li>
 					<li class="lower-menu__item lower-menu__item--textpreparing">
-						<a class="lower-menu__link lower-menu__link--textpreparing" href="#" target="_self">Подготовка текста</a>
+						<a class="lower-menu__link lower-menu__link--textpreparing" href="/uslugi/podgotovka-tekstov" target="_self">Подготовка текста</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--photos" href="#" target="_self">Фотография</a>
+						<a class="lower-menu__link lower-menu__link--photos" href="/uslugi/fotografiya" target="_self">Фотография</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--devpages" href="#" target="_self">Верстка страницы</a>
+						<a class="lower-menu__link lower-menu__link--devpages" href="/uslugi/verstka-stranicy" target="_self">Верстка страницы</a>
 					</li>
 				</ul>
 				<!--Второй список для кнопки Продукция-->
 				<ul class="lower-menu__list lower-menu__list--goods" id="goods-list">
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--design" href="#" target="_self">Дизайн полиграфии1</a>
+						<a class="lower-menu__link lower-menu__link--booklets" href="/izgotovlenie-broshyur" target="_self">Брошюры</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--devpoly" href="#" target="_self">Верстка полиграфии1</a>
+						<a class="lower-menu__link lower-menu__link--magazines" href="/izgotovlenie-zhurnalov" target="_self">Журналы</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--sites" href="#" target="_self">Сайты1</a>
+						<a class="lower-menu__link lower-menu__link--catalog" href="/sdelat-katalog" target="_self">Каталоги</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--printpoly" href="#" target="_self">Печать полиграфии1</a>
+						<a class="lower-menu__link lower-menu__link--logo" href="/sozdanie-logotipa" target="_self">Логотипы</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--illustration" href="#" target="_self">Иллюстрации1</a>
+						<a class="lower-menu__link lower-menu__link--firmstyle" href="/razrabotka-firmennogo-stilya" target="_self">Фирменный стиль</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--infograph" href="#" target="_self">Инфографика1</a>
+						<a class="lower-menu__link lower-menu__link--yearview" href="/godovye-otchety" target="_self">Годовые отчеты</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--textpreparing" href="#" target="_self">Подготовка текста1</a>
+						<a class="lower-menu__link lower-menu__link--leaflets" href="/izgotovlenie-lifletov" target="_self">Лифлеты</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--photos" href="#" target="_self">Фотография1</a>
+						<a class="lower-menu__link lower-menu__link--flyer" href="/izgotovlenie-listovok" target="_self">Листовки и флаеры</a>
 					</li>
 					<li class="lower-menu__item">
-						<a class="lower-menu__link lower-menu__link--devpages" href="#" target="_self">Верстка страницы1</a>
+						<a class="lower-menu__link lower-menu__link--notes" href="/izgotovit-buklety" target="_self">Буклеты</a>
+					</li>
+					<li class="lower-menu__item">
+						<a class="lower-menu__link lower-menu__link--newspapers" href="//izgotovlenie-gazety" target="_self">Газеты</a>
+					</li>
+					<li class="lower-menu__item">
+						<a class="lower-menu__link lower-menu__link--admodels" href="/razrabotka-reklamnyh-maketov" target="_self">Рекламные макеты</a>
+					</li>
+					<li class="lower-menu__item">
+						<a class="lower-menu__link lower-menu__link--materials" href="/reklamnye-razdatochnie-materialy" target="_self">Раздаточные материалы</a>
 					</li>
 				</ul>
 			</div>
@@ -164,7 +174,7 @@
 				</ul>
 				<!--Форма обратного звонка-->
 				<div class="info-wrapper__recall info-recall">
-					<h2 class="info-recall__title">Узнайте стоимость заказа прямо сейчас!</h2>
+					<b class="info-recall__title">Узнайте стоимость заказа прямо сейчас!</b>
 					<form class="info-recall__form recall-form" method="post" action="#" autocomplete="off">
 						<ul class="recall-form__list recall-list">
 							<li class="recall-list__item recall-list__item--name">
@@ -176,8 +186,8 @@
 						</ul>
 						<button class="recall-form__submit" type="submit">Позвоните мне</button>
 						<p class="recall-form__item">
-							<input class="recall-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement" />
-							<label class="recall-form__label" for="agreement">Согласен на обработку персональных данных</label>
+							<input class="recall-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement" checked />
+							<label class="recall-form__label" for="agreement">Согласен на обработку&nbsp;<a class="recall-form__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">персональных данных</a></label>
 						</p>
 					</form>
 				</div>
@@ -187,12 +197,12 @@
 		<section class="main__checklist checklist">
 			<h2 class="checklist__title visually-hidden">Скачать чек-лист</h2>
 			<p class="checklist__description">Дизайнерский продукт — плод совместного труда клиента и студии. Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы. Исходя из этого мы вместе планируем время на этапы, назначаем ответственных с обеих сторон, рассчитываем стоимость нашей части работ. Чем больше делает студия — тем дольше срок и выше стоимость.</p>
-			<h3 class="checklist__subtitle">Что нужно для создания брошюры?</h3>
+			<b class="checklist__subtitle">Что нужно для создания брошюры?</b>
 			<a class="checklist__btn checklist__btn--download" href="#" download>Скачать чек-лист</a>
 		</section>
 		<!--Секция услуг-->
 		<section class="main__service service">
-			<h2 class="service__title">Наши услуги</h2>
+			<h2 class="service__title">Этапы создания брошюры</h2>
 			<ul class="service__list service-list">
 				<li class="service-list__item service-list__item--preparing">
 					<a class="service-list__link service-list__link--preparing" href="#" target="_self">Подготовка<br />материалов</a>
@@ -216,17 +226,22 @@
 		</section>
 		<!--Секция примеров работ-->
 		<section class="main__sample sample">
-			<h2 class="sample__title visually-hidden">Примеры наших работ</h2>
 			<div class="sample__info sample-info">
-				<h3 class="sample-info__title">Примеры наших работ</h3>
+				<h2 class="sample-info__title">Примеры наших работ</h2>
 				<b class="sample-info__subtitle">Работы</b>
-				<a class="sample-info__btn sample-info__btn--showall" href="#" target="_self">Смотреть все портфолио</a>
+				<a class="sample-info__btn sample-info__btn--showall" href="/portfolio" target="_self">Смотреть все портфолио</a>
 			</div>
 			<ul class="sample__list sample-list">
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-1.jpg" alt="Пример-1" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-1.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-1.jpg" alt="Пример-1" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-1.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-1.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-1.jpg" alt="Пример-1" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -234,9 +249,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-2.jpg" alt="Пример-2" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-2.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-2.jpg" alt="Пример-2" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-2.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-2.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-2.jpg" alt="Пример-2" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -244,9 +265,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-3.jpg" alt="Пример-3" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-3.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-3.jpg" alt="Пример-3" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-3.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-3.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-3.jpg" alt="Пример-3" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -254,9 +281,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-4.jpg" alt="Пример-4" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-4.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-4.jpg" alt="Пример-4" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-4.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-4.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-4.jpg" alt="Пример-4" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -264,9 +297,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-5.jpg" alt="Пример-5" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-5.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-5.jpg" alt="Пример-5" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-5.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-5.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-5.jpg" alt="Пример-5" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -274,9 +313,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-6.jpg" alt="Пример-6" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-6.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-6.jpg" alt="Пример-6" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-6.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-6.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-6.jpg" alt="Пример-6" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -284,9 +329,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-7.jpg" alt="Пример-7" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-7.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-7.jpg" alt="Пример-7" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-7.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-7.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-7.jpg" alt="Пример-7" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -294,9 +345,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-8.jpg" alt="Пример-8" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-8.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-8.jpg" alt="Пример-8" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-8.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-8.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-8.jpg" alt="Пример-8" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -304,9 +361,15 @@
 					</a>
 				</li>
 				<li class="sample-list__item">
-					<img class="sample-list__image" src="img/sample-9.jpg" alt="Пример-9" />
+					<picture class="sample-list__frame">
+						<source srcset="img/sample-9.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-9.jpg" alt="Пример-9" />
+					</picture>
 					<a class="sample-list__link" href="#" target="_self">
-						<img class="sample-list__fade" src="img/sample-9.jpg" />
+						<picture class="sample-list__framefade">
+							<source srcset="img/sample-9.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-9.jpg" alt="Пример-9" />
+						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
 							<span class="sample-list__type">Брошюра</span>
@@ -321,16 +384,16 @@
 			<!--Блок вопросов-->
 			<ul class="faq__list faq-list">
 				<li class="faq-list__item faq-list__item--active">
-					<span class="faq-list__text">Сколько&nbsp;стоит&nbsp;изготовить брошюру&nbsp;под&nbsp;ключ?</span>
+					<h2 class="faq-list__text">Сколько&nbsp;стоит&nbsp;изготовить брошюру&nbsp;под&nbsp;ключ?</h2>
 				</li>
 				<li class="faq-list__item">
-					<span class="faq-list__text">Как&nbsp;долго&nbsp;вы&nbsp;делаете&nbsp;брошюры? В&nbsp;какие&nbsp;сроки?</span>
+					<h2 class="faq-list__text">Как&nbsp;долго&nbsp;вы&nbsp;делаете&nbsp;брошюры? В&nbsp;какие&nbsp;сроки?</h2>
 				</li>
 				<li class="faq-list__item">
-					<span class="faq-list__text">Мне&nbsp;нужна&nbsp;брошюра, с&nbsp;чего&nbsp;начать?</span>
+					<h2 class="faq-list__text">Мне&nbsp;нужна&nbsp;брошюра, с&nbsp;чего&nbsp;начать?</h2>
 				</li>
 				<li class="faq-list__item">
-					<span class="faq-list__text">А если мне не понравится?</span>
+					<h2 class="faq-list__text">А если мне не понравится?</h2>
 				</li>
 			</ul>
 			<!--Блок ответов-->
@@ -361,7 +424,7 @@
 		<section class="main__pattern pattern">
 			<h2 class="pattern__title visually-hidden">Образцы&nbsp;наших&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</h2>
 			<div class="pattern__info pattern-info">
-				<h3 class="pattern-info__title pattern-info__title--framed">Образцы&nbsp;наших&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</h3>
+				<b class="pattern-info__title pattern-info__title--framed">Образцы&nbsp;наших&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</b>
 				<ul class="pattern-info__list pattern-list">
 					<li class="pattern-list__item pattern-list__item--active">
 						<span class="pattern-list__text">Коммерческие предложения</span>
@@ -375,37 +438,57 @@
 				<!--Список комм.предложений-->
 				<ul class="pattern-links__list pattern-links__list--active">
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Евролифлет Концепт + Верстка + Пре-пресс</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Евролифлет Концепт + Верстка + Пре-пресс</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Буклет дизайн + Верстка А4 + Пре-пресс + Печать</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Буклет дизайн + Верстка А4 + Пре-пресс + Печать</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Годовой отчет 320 полос + Перевод</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Годовой отчет 320 полос + Перевод</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Буклет Дизайн + Верстка А4 + Пре-пресс+ Печать</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Буклет Дизайн + Верстка А4 + Пре-пресс+ Печать</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Брошюра Дизайн + Пре-пресс</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Брошюра Дизайн + Пре-пресс</h3>
+						</a>
 					</li>
 				</ul>
 				<!--Список с презентациями-->
 				<ul class="pattern-links__list">
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Евролифлет Концепт + Верстка + Пре-пресс1</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Евролифлет Концепт + Верстка + Пре-пресс1</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Буклет дизайн + Верстка А4 + Пре-пресс + Печать1</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Буклет дизайн + Верстка А4 + Пре-пресс + Печать1</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Годовой отчет 320 полос + Перевод1</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Годовой отчет 320 полос + Перевод1</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Буклет Дизайн + Верстка А4 + Пре-пресс+ Печать1</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Буклет Дизайн + Верстка А4 + Пре-пресс+ Печать1</h3>
+						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download>Брошюра Дизайн + Пре-пресс1</a>
+						<a class="pattern-links__link" href="#" download>
+							<h3 class="pattern-links__text">Брошюра Дизайн + Пре-пресс1</h3>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -414,13 +497,19 @@
 		<section class="main__recent recent">
 			<header class="recent__header">
 				<h2 class="recent__title">Свежие кейсы</h2>
-				<a class="recent__btn recent__btn--showall" href="#" target="_self">Смотреть все кейсы</a>
+				<a class="recent__btn recent__btn--showall" href="/blog/design" target="_self">Смотреть все кейсы</a>
 			</header>
 			<ul class="recent__list recent-list">
 				<li class="recent-list__item">
-					<img class="recent-list__image" src="img/recent-1.jpg" alt="recent-1" />
+					<picture class="recent-list__frame">
+						<source srcset="img/recent-1.webp" type="image/webp" />
+						<img class="recent-list__image" src="img/recent-1.jpg" alt="recent-1" />
+					</picture>
 					<a class="recent-list__link" href="#" target="_self">
-						<img class="recent-list__fade" src="img/recent-1.jpg" />
+						<picture class="recent-list__framefade">
+							<source srcset="img/recent-1.webp" type="image/webp" />
+							<img class="recent-list__fade" src="img/recent-1.jpg" alt="recent-1" />
+						</picture>
 						<div class="recent-list__text">
 							<b class="recent-list__name">Название организации</b>
 							<span class="recent-list__type">Брошюра</span>
@@ -428,9 +517,15 @@
 					</a>
 				</li>
 				<li class="recent-list__item">
-					<img class="recent-list__image" src="img/recent-2.jpg" alt="recent-2" />
+					<picture class="recent-list__frame">
+						<source srcset="img/recent-2.webp" type="image/webp" />
+						<img class="recent-list__image" src="img/recent-2.jpg" alt="recent-2" />
+					</picture>
 					<a class="recent-list__link" href="#" target="_self">
-						<img class="recent-list__fade" src="img/recent-2.jpg" />
+						<picture class="recent-list__framefade">
+							<source srcset="img/recent-2.webp" type="image/webp" />
+							<img class="recent-list__fade" src="img/recent-2.jpg" alt="recent-2" />
+						</picture>
 						<div class="recent-list__text">
 							<b class="recent-list__name">Название организации</b>
 							<span class="recent-list__type">Брошюра</span>
@@ -438,9 +533,15 @@
 					</a>
 				</li>
 				<li class="recent-list__item">
-					<img class="recent-list__image" src="img/recent-3.jpg" alt="recent-3" />
+					<picture class="recent-list__frame">
+						<source srcset="img/recent-3.webp" type="image/webp" />
+						<img class="recent-list__image" src="img/recent-3.jpg" alt="recent-3" />
+					</picture>
 					<a class="recent-list__link" href="#" target="_self">
-						<img class="recent-list__fade" src="img/recent-3.jpg" />
+						<picture class="recent-list__framefade">
+							<source srcset="img/recent-3.webp" type="image/webp" />
+							<img class="recent-list__fade" src="img/recent-3.jpg" alt="recent-3" />
+						</picture>
 						<div class="recent-list__text">
 							<b class="recent-list__name">Название организации</b>
 							<span class="recent-list__type">Брошюра</span>
@@ -455,7 +556,7 @@
 			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A93b0613b8509cca17f0d1d5d9b337495ef35596cff4fb8158d9be049c73c4455&amp;source=constructor" width="100%" height="611" frameborder="0"></iframe>
 			<!--Форма заказа звонка-->
 			<article class="map__recall map-recall">
-				<h2 class="map-recall__title">Узнайте стоимость разработки дизайна вашей полиграфии прямо сейчас!</h2>
+				<b class="map-recall__title">Узнайте стоимость разработки дизайна вашей полиграфии прямо сейчас!</b>
 				<form class="map-recall__form map-form" method="post" action="#" autocomplete="off">
 					<ul class="map-form__list map-list">
 						<li class="map-list__item map-list__item--name">
@@ -468,8 +569,8 @@
 					<textarea class="map-form__textarea" placeholder="Здравствуйте! Меня&nbsp;заинтересовали&nbsp;ваши&nbsp;услуги. Свяжитесь&nbsp;со&nbsp;мной&nbsp;по&nbsp;телефону"></textarea>
 					<button class="map-form__submit" type="submit">Позвоните мне</button>
 					<p class="map-form__item">
-						<input class="map-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-map" />
-						<label class="map-form__label" for="agreement-map">Согласен на обработку персональных данных</label>
+						<input class="map-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-map" checked />
+						<label class="map-form__label" for="agreement-map">Согласен на обработку&nbsp;<a class="map-form__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">персональных данных</a></label>
 					</p>
 				</form>
 			</article>
@@ -480,30 +581,31 @@
 		<section class="footer__details details">
 			<h2 class="visually-hidden">Верхняя часть футера</h2>
 			<div class="details__rights details-rights">
-				<span class="details-rights__copyright">&copy;2014-2017 ООО &laquo;Медиа Эйд&raquo;.<br />Все права защищены</span>
+				<span class="details-rights__copyright">&copy;2014-2019 ООО &laquo;Медиа Эйд&raquo;.<br />Все права защищены</span>
 				<div class="details-rights__requisites">
 					<span class="details-rights__title">Наши реквизиты:</span>
-					<span class="details-rights__nr details-rights__nr--inn">ИНН: 7805654337 / КПП: 780501001</span>
-					<span class="details-rights__nr details-rights__nr--ogrn">ОГРН: 1147847232455</span>
+					<span class="details-rights__nr details-rights__nr--inn">ИНН: 7725403320  / КПП: 772501001</span>
+					<span class="details-rights__nr details-rights__nr--ogrn">ОГРН от 13.11.2017: 5177746200077</span>
 				</div>
 			</div>
 			<div class="details__address details-address">
 				<p class="details-address__description">109125 г. Москва, ул. Рабочая 93, стр.2<br />БЦ "Новорогожский", офис 241</p>
+				<a class="details-address__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">Политика конфиденциальности</a>
 				<div class="details-address__links">
-					<a class="details-address__sitemap" href="#" target="_self">Карта сайта</a>
+					<a class="details-address__sitemap" href="/sitemap" target="_self">Карта сайта</a>
 					<ul class="details-address__social social-list">
 						<li class="social-list__item social-list__item--vk">
-							<a class="social-list__link" href="#" target="_blank"><i class="fab fa-vk"></i></a>
+							<a class="social-list__link" href="https://vk.com/designmediaaid" target="_blank"><i class="fab fa-vk"></i></a>
 						</li>
 						<li class="social-list__item social-list__item--fb">
-							<a class="social-list__link" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a class="social-list__link" href="https://www.facebook.com/MediaAid.ru/" target="_blank"><i class="fab fa-facebook-f"></i></a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="details__contacts details-contacts">
-				<a class="details-contacts__phone" href="tel:+74996666666">+7 (499) 666 66 66</a>
-				<a class="details-contacts__mail" href="mailto:hello@mediaaid.ru">hello@mediaaid.ru</a>
+				<a class="details-contacts__phone" href="tel:+74993943386">+7 (499) 394-33-86</a>
+				<a class="details-contacts__mail" href="mailto:mail@mediaaid.ru">mail@mediaaid.ru</a>
 				<button class="details-contacts__send" type="button">Отправить заявку</button>
 			</div>
 		</section>
@@ -511,118 +613,115 @@
 			<h2 class="visually-hidden">Нижняя часть футера</h2>
 			<!--Single item-->
 			<article class="menu__article menu__article--service">
-				<h3 class="menu__title">Услуги</h3>
+				<b class="menu__title">Услуги</b>
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Дизайн полиграфии</a>
+						<a class="menu__link" href="/uslugi/dizayn-poligrafii" target="_self">Дизайн полиграфии</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Верстка полиграфии</a>
+						<a class="menu__link" href="/uslugi/verstka-poligrafii" target="_self">Верстка полиграфии</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Печать</a>
+						<a class="menu__link" href="/uslugi/pechat-poligrafii" target="_self">Печать</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Изготовление полиграфии&nbsp;под&nbsp;ключ</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Прочие услуги</a>
+						<a class="menu__link" href="/uslugi/sayty" target="_self">Сайты</a>
 					</li>
 				</ul>
 			</article>
 			<!--Single item-->
 			<article class="menu__article menu__article--goods">
-				<h3 class="menu__title">Продукция</h3>
+				<b class="menu__title">Продукция</b>
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Брошюры</a>
+						<a class="menu__link" href="/izgotovlenie-broshyur" target="_self">Брошюры</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Буклеты</a>
+						<a class="menu__link" href="/izgotovit-buklety" target="_self">Буклеты</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Каталоги</a>
+						<a class="menu__link" href="/sdelat-katalog" target="_self">Каталоги</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Газеты</a>
+						<a class="menu__link" href="/izgotovlenie-gazety" target="_self">Газеты</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Журналы</a>
+						<a class="menu__link" href="/izgotovlenie-zhurnalov" target="_self">Журналы</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="/sozdanie-logotipa" target="_self">Логотипы</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="/razrabotka-firmennogo-stilya" target="_self">Фирменный стиль</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="/izgotovlenie-lifletov" target="_self">Лифлеты</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="/izgotovlenie-listovok" target="_self">Листовки</a>
 					</li>
 				</ul>
 			</article>
 			<!--Single item-->
 			<article class="menu__article menu__article--portfolio">
-				<h3 class="menu__title">Портфолио</h3>
+				<b class="menu__title">Портфолио</b>
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Брошюры</a>
+						<a class="menu__link" href="/portfolio/po-napravleniyu-dizayna/poligrafiya-dlya-bankov/" target="_self">Банковская тема</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Буклеты</a>
+						<a class="menu__link" href="/portfolio/po-napravleniyu-dizayna/poligrafiya-dlya-gostinits-i-oteley/" target="_self">Гостиницы и отели</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Каталоги</a>
+						<a class="menu__link" href="/portfolio/po-napravleniyu-dizayna/poligrafiya-promyshlennykh-kompaniy/" target="_self">Промышленные компании</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Газеты</a>
+						<a class="menu__link" href="/portfolio/po-napravleniyu-dizayna/poligrafiya-dlya-strakhovykh-kompaniy/" target="_self">Страхование</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Журналы</a>
+						<a class="menu__link" href="/portfolio/po-napravleniyu-dizayna/poligrafiya-dlya-tovarov-i-produktov/" target="_self">Ритейл</a>
 					</li>
 				</ul>
 			</article>
 			<!--Single item-->
 			<article class="menu__article menu__article--blog">
-				<h3 class="menu__title">Блог</h3>
+				<b class="menu__title">Блог</b>
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Материалы в&nbsp;полиграфии</a>
+						<a class="menu__link" href="/blog/management/" target="_self">Управление проектами</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">О дизайне</a>
+						<a class="menu__link" href="/blog/design/" target="_self">О дизайне</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Технологии</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Типографика и&nbsp;верстка</a>
+						<a class="menu__link" href="/blog/tekhnologii/" target="_self">Технологии</a>
 					</li>
 				</ul>
 			</article>
 			<!--Single item-->
 			<article class="menu__article menu__article--cases">
-				<h3 class="menu__title">Кейсы</h3>
+				<b class="menu__title">Кейсы</b>
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Системы освещения</a>
+						<a class="menu__link" href="/blog/design/pervyy-v-rossii-zhurnal-o-khodbe/" target="_self">Скандинавская ходьба</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Гостиничный бизнес</a>
+						<a class="menu__link" href="/blog/design/katalog-sredstv-zashchity-ruk-kompanii-svs/" target="_self">Каталог "СВС"</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Гипермаркет ОК</a>
+						<a class="menu__link" href="/blog/design/keys-razrabotka-dizayna-kataloga-dlya-promyshlennoy-kompanii/" target="_self">Промышленный каталог</a>
 					</li>
 				</ul>
 			</article>
 			<!--Single item-->
 			<article class="menu__article menu__article--about">
-				<h3 class="menu__title">О нас</h3>
+				<b class="menu__title">О нас</b>
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">О компании</a>
+						<a class="menu__link" href="/about" target="_self">О нас</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Контакты</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Сотрудники</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Отзывы</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#" target="_self">Рекомендационные письма</a>
+						<a class="menu__link" href="/contact" target="_self">Контакты</a>
 					</li>
 				</ul>
 			</article>

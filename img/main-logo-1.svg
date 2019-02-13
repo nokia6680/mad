@@ -6,19 +6,20 @@
       }
 
       .cls-2 {
-        fill: url(#Безымянный_градиент_27);
+        fill: url(#Безымянный_градиент_8);
       }
 
       .cls-3 {
         fill: #cb502e;
       }
     </style>
-    <linearGradient id="Безымянный_градиент_27" data-name="Безымянный градиент 27" x1="121.51" y1="104" x2="169.04" y2="112.53" gradientTransform="translate(47.89 -34.05) rotate(31.33)" gradientUnits="userSpaceOnUse">
-      <stop offset="0.1" stop-color="#c10e19"/>
-      <stop offset="1" stop-color="#d9901c"/>
+    <linearGradient id="Безымянный_градиент_8" data-name="Безымянный градиент 8" x1="121.51" y1="104" x2="169.04" y2="112.53" gradientTransform="translate(47.89 -34.05) rotate(31.33)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c43431"/>
+      <stop offset="0.5" stop-color="#cc5f37"/>
+      <stop offset="1" stop-color="#da8e3e"/>
     </linearGradient>
   </defs>
-  <title>main-logo</title>
+  <title>MAD logo222</title>
   <g>
     <path class="cls-1" d="M20.67,129.7h-0.3l0.77,25.5-13.21.06L7.72,110.12l18.5-.09L34,134.29h0.3L40.74,110l19.1-.09L60,155l-13.74.06,0.3-25.37-0.36-.06-7.73,25.47-10,0Z" transform="translate(-7.54 -99.68)"/>
     <path class="cls-2" d="M99.24,154.83L99,109.7l19.41-.09q10.37,0,16.27,5.87t6,16.41q0.05,11-5.77,16.91t-16.25,6Zm11.6-35.08L111,144.67l5.56,0q6.7,0,9.56-3t2.83-9.75q-0.06-12.2-12.51-12.14Z" transform="translate(-7.54 -99.68)"/>

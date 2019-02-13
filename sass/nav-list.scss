@@ -64,5 +64,9 @@
 
     text-transform: uppercase;
     text-decoration: none;
+
+    &:hover {
+      color: #ef820d;
+    }
   }
 }

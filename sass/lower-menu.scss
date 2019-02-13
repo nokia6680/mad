@@ -1,26 +1,8 @@
 .lower-menu {
   width: 100%;
-
   height: 90px;
 
-  background-color: $header-links-bg;
-  padding-left: 28px;
-  padding-right: 0;
-
   position: relative;
-
-  &::after {
-    position: absolute;
-    content: '';
-
-    width: 50%;
-    height: 90px;
-
-    top: 0;
-    right: -50%;
-
-    background-color: $header-links-bg;
-  }
 
   &__list {
     margin: 0;
@@ -33,8 +15,29 @@
     align-items: center;
     flex-wrap: wrap;
 
+    width: 100%;
+
+    height: 90px;
+
+    background-color: $header-links-bg;
+    padding-left: 28px;
+    padding-right: 0;
+
     opacity: 0;
     position: absolute;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 50%;
+      height: 90px;
+
+      top: 0;
+      right: -50%;
+
+      background-color: $header-links-bg;
+    }
 
     &--active {
       opacity: 1;
@@ -69,5 +72,9 @@
     line-height: 1.5em;
 
     text-decoration: none;
+
+    &:hover {
+      color: #ef820d;
+    }
   }
 }

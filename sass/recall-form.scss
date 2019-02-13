@@ -16,6 +16,8 @@
     border: none;
     border-radius: 5px;
 
+    cursor: pointer;
+
     background: #ff8d16; /* Old browsers */
     background: -moz-linear-gradient(left, #ff8d16 1%, #ff3527 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #ff8d16 1%,#ff3527 100%); /* Chrome10-25,Safari5.1-6 */
@@ -49,6 +51,11 @@
 
     color: $text-darkgray;
     line-height: 1;
+  }
+
+  &__policy {
+    text-decoration: none;
+    color: #ef820d;
   }
 
   &__checkbox + label {
