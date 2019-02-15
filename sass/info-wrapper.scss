@@ -7,10 +7,37 @@
   width: 100%;
 
   padding-top: 55px;
-  padding-bottom: 200px;
+  padding-bottom: 220px;
 
   position: relative;
 
+  /*Стилизация для блока изображения*/
+  &__background {
+    position: absolute;
+
+    top: 88px;
+    left: -18px;
+
+    width: 1150px;
+    height: 640px;
+
+    max-width: 1150px;
+    max-height: 640px;
+
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__frame {
+    max-width: 943px;
+    max-height: 638px;
+  }
+
+  /*
   &::before {
     position: absolute;
     content: '';
@@ -26,5 +53,5 @@
     left: -18px;
 
     z-index: -1;
-  }
+  }*/
 }

@@ -49,6 +49,8 @@
   }
 
   &__send {
+    visibility: hidden;
+    
     width: 165px;
 
     font: {
