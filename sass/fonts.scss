@@ -1,4 +1,48 @@
 @font-face {
+    font-family: 'pt_root_light';
+    src: url('../fonts/PT Root UI_Light.eot');
+    src: url('../fonts/PT Root UI_Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PT Root UI_Light.woff') format('woff'),
+         url('../fonts/PT Root UI_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pt_root_regular';
+    src: url('../fonts/PT Root UI_Regular.eot');
+    src: url('../fonts/PT Root UI_Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PT Root UI_Regular.woff') format('woff'),
+         url('../fonts/PT Root UI_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pt_root_medium';
+    src: url('../fonts/PT Root UI_Medium.eot');
+    src: url('../fonts/PT Root UI_Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PT Root UI_Medium.woff') format('woff'),
+         url('../fonts/PT Root UI_Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pt_root_bold';
+    src: url('../fonts/PT Root UI_Bold.eot');
+    src: url('../fonts/PT Root UI_Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PT Root UI_Bold.woff') format('woff'),
+         url('../fonts/PT Root UI_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Roboto Thin';
     src: url('../fonts/roboto-thin_1.eot');
     src: url('../fonts/roboto-thin_1.eot?#iefix') format('embedded-opentype'),

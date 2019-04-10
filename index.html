@@ -8,11 +8,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<link media="none" onload="if(media!="all") media="all"" rel="stylesheet" type="text/css", href= style.css>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -28,6 +25,8 @@
 			</a>
 			<b class="header__title">Студия дизайна</b>
 		</div>
+		<!--Кнопка открытия меню-->
+		<button class="header__opener" type="button"></button>
 		<!--Правая часть хедера-->
 		<div class="header__menu header-menu">
 			<div class="header-menu__upper upper-menu">
@@ -163,20 +162,17 @@
 			<div class="info__wrapper info-wrapper">
 				<ul class="info-wrapper__list info-list">
 					<li class="info-list__item">
-						<span class="info-list__text">срок изготовления &mdash; 4 недели</span>
+						<span class="info-list__text">от идеи до тиража &mdash; 4 недели</span>
 					</li>
 					<li class="info-list__item">
 						<span class="info-list__text">цена от 100 000 руб</span>
-					</li>
-					<li class="info-list__item">
-						<span class="info-list__text">подберём материалы</span>
 					</li>
 				</ul>
 				<!--Фоновое, загружаемое изображение-->
 				<div class="info-wrapper__background">
 					<picture class="info-wrapper__frame">
-						<source srcset="img/info-book.webp" type="image/webp" />
-						<img class="info-wrapper__image" src='img/info-book.png' alt="Брошюра" />
+						<source media="(min-width: 1152px)" srcset="img/info-book.png" />
+						<img class="info-wrapper__image" src='img/bg-mob.png' alt="Брошюра" />
 					</picture>
 				</div>
 				<!--Форма обратного звонка-->
@@ -198,12 +194,16 @@
 						</p>
 					</form>
 				</div>
+				<!--Кнопка расчета стоимости только для мобильных-->
+				<button class="info-wrapper__count" type="button">Расчитать стоимость брошюры</button>
 			</div>
 		</section>
 		<!--Секция чек-листа-->
 		<section class="main__checklist checklist">
 			<h2 class="checklist__title visually-hidden">Скачать чек-лист</h2>
 			<p class="checklist__description">Дизайнерский продукт — плод совместного труда клиента и студии. Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы. Исходя из этого мы вместе планируем время на этапы, назначаем ответственных с обеих сторон, рассчитываем стоимость нашей части работ. Чем больше делает студия — тем дольше срок и выше стоимость.</p>
+			<!--Для мобильного описание-->
+			<p class="checklist__description checklist__description--mobile">Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы.</p>
 			<b class="checklist__subtitle">Что нужно для создания брошюры?</b>
 			<a class="checklist__btn checklist__btn--download" href="#" download>Скачать чек-лист</a>
 		</section>
@@ -212,7 +212,7 @@
 			<h2 class="service__title">Этапы создания брошюры</h2>
 			<ul class="service__list service-list">
 				<li class="service-list__item service-list__item--preparing">
-					<a class="service-list__link service-list__link--preparing" href="#" target="_self">Подготовка<br />материалов</a>
+					<a class="service-list__link service-list__link--preparing" href="#" target="_self">Подготовка текста</a>
 				</li>
 				<li class="service-list__item service-list__item--concept">
 					<a class="service-list__link service-list__link--concept" href="#" target="_self">Концепция</a>
@@ -238,8 +238,8 @@
 				<b class="sample-info__subtitle">Работы</b>
 				<a class="sample-info__btn sample-info__btn--showall" href="/portfolio" target="_self">Смотреть все портфолио</a>
 			</div>
-			<ul class="sample__list sample-list">
-				<li class="sample-list__item">
+			<div class="sample__list sample-list" id="sample-list">
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-1.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-1.jpg" alt="Пример-1" />
@@ -254,8 +254,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-2.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-2.jpg" alt="Пример-2" />
@@ -270,8 +270,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-3.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-3.jpg" alt="Пример-3" />
@@ -286,8 +286,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-4.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-4.jpg" alt="Пример-4" />
@@ -302,8 +302,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-5.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-5.jpg" alt="Пример-5" />
@@ -318,8 +318,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-6.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-6.jpg" alt="Пример-6" />
@@ -334,8 +334,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-7.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-7.jpg" alt="Пример-7" />
@@ -350,8 +350,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-8.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-8.jpg" alt="Пример-8" />
@@ -366,8 +366,8 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="sample-list__item">
+				</div>
+				<div class="sample-list__item">
 					<picture class="sample-list__frame">
 						<source srcset="img/sample-9.webp" type="image/webp" />
 						<img class="sample-list__image" src="img/sample-9.jpg" alt="Пример-9" />
@@ -382,59 +382,72 @@
 							<span class="sample-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</section>
 		<!--Секция FAQ-->
 		<section class="main__faq faq">
-			<h2 class="faq__title">F.A.Q.</h2>
+			<!--Заголовок для мобильной версии-->
+			<h2 class="faq__title faq__title--mobile">Часто задаваемые вопросы</h2>
+			<!--Заголовок для десктопной версии-->
+			<h2 class="faq__title faq__title--desktop">F.A.Q.</h2>
 			<!--Блок вопросов-->
 			<ul class="faq__list faq-list">
-				<li class="faq-list__item faq-list__item--active">
+				<li class="faq-list__item faq-list__item--active" rel="tab1">
 					<h2 class="faq-list__text">Сколько&nbsp;стоит&nbsp;изготовить брошюру&nbsp;под&nbsp;ключ?</h2>
 				</li>
-				<li class="faq-list__item">
+				<li class="faq-list__item" rel="tab2">
 					<h2 class="faq-list__text">Как&nbsp;долго&nbsp;вы&nbsp;делаете&nbsp;брошюры? В&nbsp;какие&nbsp;сроки?</h2>
 				</li>
-				<li class="faq-list__item">
+				<li class="faq-list__item" rel="tab3">
 					<h2 class="faq-list__text">Мне&nbsp;нужна&nbsp;брошюра, с&nbsp;чего&nbsp;начать?</h2>
 				</li>
-				<li class="faq-list__item">
+				<li class="faq-list__item" rel="tab4">
 					<h2 class="faq-list__text">А если мне не понравится?</h2>
 				</li>
 			</ul>
 			<!--Блок ответов-->
-			<ul class="faq__answer faq-answer">
-				<li class="faq-answer__tab faq-answer__tab--active">
+			<div class="faq__answer faq-answer">
+				<!--Панель заголовка в режиме аккордеона-->
+				<h3 class="faq-answer__title faq-answer__title--active" rel="tab1">Стоимость брошюры под ключ?</h3>
+				<div class="faq-answer__tab" id="tab1" style="display: flex;">
 					<p class="faq-answer__description">
-						Будучи и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества1. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции1.
+						Будучи 1и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества1. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции1.
 					</p>
-				</li>
-				<li class="faq-answer__tab">
+				</div>
+				<!--Панель заголовка в режиме аккордеона-->
+				<h3 class="faq-answer__title" rel="tab2">Сколько времени занимает?</h3>
+				<div class="faq-answer__tab" id="tab2" style="display: none;">
 					<p class="faq-answer__description">
-						Будучи и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества2. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции2.
+						Будучи 2и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества2. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции2.
 					</p>
-				</li>
-				<li class="faq-answer__tab">
+				</div>
+				<!--Панель заголовка в режиме аккордеона-->
+				<h3 class="faq-answer__title" rel="tab3">Что нужно для брошюры?</h3>
+				<div class="faq-answer__tab" id="tab3" style="display: none;">
 					<p class="faq-answer__description">
-						Будучи и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества3. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции3.
+						Будучи 3и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества3. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции3.
 					</p>
-				</li>
-				<li class="faq-answer__tab">
+				</div>
+				<!--Панель заголовка в режиме аккордеона-->
+				<h3 class="faq-answer__title" rel="tab4">Если не понравится?</h3>
+				<div class="faq-answer__tab" id="tab4" style="display: none;">
 					<p class="faq-answer__description">
-						Будучи и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества4. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции4.
+						Будучи 4и так невысокими, цены на полиграфические услуги уменьшаются по мере увеличения длительности сотрудничества4. Позвоните нам, чтобы узнать, сколько стоит выполнение вашего заказа. Кроме того, вы можете оставить заявку на расчет на сайте. Если говорить о примерной стоимости полиграфических услуг, то ее вы можете увидеть в разделах с описанием конкретных видов продукции4.
 					</p>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</section>
 		<!--Секция образцов презентаций-->
 		<section class="main__pattern pattern">
 			<h2 class="pattern__title visually-hidden">Образцы&nbsp;наших&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</h2>
 			<div class="pattern__info pattern-info">
-				<b class="pattern-info__title pattern-info__title--framed">Образцы&nbsp;наших&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</b>
+				<b class="pattern-info__title pattern-info__title--framed">Образцы&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</b>
 				<ul class="pattern-info__list pattern-list">
 					<li class="pattern-list__item pattern-list__item--active">
-						<span class="pattern-list__text">Коммерческие предложения</span>
+						<!--Для мобильного-->
+						<span class="pattern-list__text pattern-list__text--mobile">КП</span>
+						<span class="pattern-list__text pattern-list__text--desktop">Коммерческие предложения</span>
 					</li>
 					<li class="pattern-list__item">
 						<span class="pattern-list__text">Презентации</span>
@@ -446,27 +459,27 @@
 				<ul class="pattern-links__list pattern-links__list--active">
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Евролифлет Концепт + Верстка + Пре-пресс</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Евролифлет:</b> концепт, верстка + препресс</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Буклет дизайн + Верстка А4 + Пре-пресс + Печать</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Буклет:</b> дизайн, верстка А4, препресс, печать1</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Годовой отчет 320 полос + Перевод</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Буклет Дизайн + Верстка А4 + Пре-пресс+ Печать</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Брошюра Дизайн + Пре-пресс</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 				</ul>
@@ -474,27 +487,27 @@
 				<ul class="pattern-links__list">
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Евролифлет Концепт + Верстка + Пре-пресс1</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Евролифлет:</b> концепт, верстка + препресс</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Буклет дизайн + Верстка А4 + Пре-пресс + Печать1</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Буклет:</b> дизайн, верстка А4, препресс, печать1</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Годовой отчет 320 полос + Перевод1</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Буклет Дизайн + Верстка А4 + Пре-пресс+ Печать1</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
 						<a class="pattern-links__link" href="#" download>
-							<h3 class="pattern-links__text">Брошюра Дизайн + Пре-пресс1</h3>
+							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 				</ul>
@@ -506,8 +519,8 @@
 				<h2 class="recent__title">Свежие кейсы</h2>
 				<a class="recent__btn recent__btn--showall" href="/blog/design" target="_self">Смотреть все кейсы</a>
 			</header>
-			<ul class="recent__list recent-list">
-				<li class="recent-list__item">
+			<div class="recent__list recent-list" id="recent-list">
+				<div class="recent-list__item">
 					<picture class="recent-list__frame">
 						<source srcset="img/recent-1.webp" type="image/webp" />
 						<img class="recent-list__image" src="img/recent-1.jpg" alt="recent-1" />
@@ -522,8 +535,8 @@
 							<span class="recent-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="recent-list__item">
+				</div>
+				<div class="recent-list__item">
 					<picture class="recent-list__frame">
 						<source srcset="img/recent-2.webp" type="image/webp" />
 						<img class="recent-list__image" src="img/recent-2.jpg" alt="recent-2" />
@@ -538,8 +551,8 @@
 							<span class="recent-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-				<li class="recent-list__item">
+				</div>
+				<div class="recent-list__item">
 					<picture class="recent-list__frame">
 						<source srcset="img/recent-3.webp" type="image/webp" />
 						<img class="recent-list__image" src="img/recent-3.jpg" alt="recent-3" />
@@ -554,8 +567,8 @@
 							<span class="recent-list__type">Брошюра</span>
 						</div>
 					</a>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</section>
 		<!--Секция карты и формы обратной связи-->
 		<section class="main__map map">
@@ -596,7 +609,11 @@
 				</div>
 			</div>
 			<div class="details__address details-address">
-				<p class="details-address__description">109125 г. Москва, ул. Рабочая 93, стр.2<br />БЦ "Новорогожский", офис 241</p>
+				<!--Лого для мобильных-->
+				<a class="details-address__logo" href="#" target="_self">
+					<img class="details-address__img" src="img/footer-logo.png" alt="Media Aid Design"/>
+				</a>
+				<p class="details-address__description">109125 г. Москва, ул. Рабочая 93, стр.2 БЦ "Новорогожский", офис 241</p>
 				<a class="details-address__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">Политика конфиденциальности</a>
 				<div class="details-address__links">
 					<a class="details-address__sitemap" href="/sitemap" target="_self">Карта сайта</a>
@@ -734,6 +751,8 @@
 			</article>
 		</section>
 	</footer>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

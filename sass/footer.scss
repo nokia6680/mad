@@ -1,8 +1,19 @@
 .footer {
   width: 100%;
 
-  padding-top: 42px;
-  padding-bottom: 42px;
+  padding-top: 20px;
+  padding-bottom: 65px;
 
   background-color: $bg-footer;
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .footer {
+    width: 100%;
+
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    background-color: $bg-footer;
+  }
 }

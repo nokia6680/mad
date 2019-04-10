@@ -9,3 +9,19 @@
 
   position: relative;
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .upper-menu {
+    position: relative;
+    top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: 65px;
+
+    position: relative;
+  }
+}

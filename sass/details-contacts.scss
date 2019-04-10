@@ -4,78 +4,114 @@
   justify-content: flex-start;
   align-items: flex-end;
 
-  width: 205px;
+  width: auto;
 
-  margin-bottom: 80px;
+  padding-top: 5px;
 
   &__phone {
     display: block;
-    margin-bottom: 5px;
-
-    cursor: pointer;
+    position: absolute;
+    width: 170px;
 
     font: {
       size: 1.125em;
-      family: $medium-font;
+      family: $pt-bold;
     }
 
     color: $text-white;
-    line-height: 1;
     text-decoration: none;
-
-    &:hover {
-      color: #ef820d;
-    }
   }
 
   &__mail {
-    display: block;
-    margin-bottom: 20px;
-
-    cursor: pointer;
-
-    font: {
-      size: 0.75em;
-      family: $regular-font;
-    }
-
-    color: $text-footer;
-    line-height: normal;
-    text-decoration: none;
-
-    &:hover {
-      color: #ef820d;
-    }
+    display: none;
   }
 
   &__send {
-    visibility: hidden;
-    
-    width: 165px;
+    display: none;
+  }
+}
 
-    font: {
-      size: 0.75em;
-      family: $bold-font;
+@media only screen and (min-width: $laptop-wide) {
+  .details-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    width: 205px;
+
+    margin-bottom: 80px;
+
+    &__phone {
+      display: block;
+      margin-bottom: 5px;
+
+      cursor: pointer;
+
+      font: {
+        size: 1.125em;
+        family: $medium-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+      text-decoration: none;
+
+      &:hover {
+        color: #ef820d;
+      }
     }
 
-    color: $text-orange;
-    line-height: 1;
-    text-transform: uppercase;
-    text-align: center;
+    &__mail {
+      display: block;
+      margin-bottom: 20px;
 
-    padding-top: 14px;
-    padding-bottom: 14px;
+      cursor: pointer;
 
-    background-color: transparent;
-    border: 1px solid $text-orange;
-    border-radius: 3px;
+      font: {
+        size: 0.75em;
+        family: $regular-font;
+      }
 
-    cursor: pointer;
+      color: $text-footer;
+      line-height: normal;
+      text-decoration: none;
 
-    &:hover {
-      background-color: $text-orange;
-      color: $text-white;
-      transition: 0.1s ease-in;
+      &:hover {
+        color: #ef820d;
+      }
+    }
+
+    &__send {
+      display: inline-flex;
+      visibility: hidden;
+
+      width: 165px;
+
+      font: {
+        size: 0.75em;
+        family: $bold-font;
+      }
+
+      color: $text-orange;
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: center;
+
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      background-color: transparent;
+      border: 1px solid $text-orange;
+      border-radius: 3px;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: $text-orange;
+        color: $text-white;
+        transition: 0.1s ease-in;
+      }
     }
   }
 }

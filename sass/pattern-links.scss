@@ -1,18 +1,22 @@
 .pattern-links {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 
-  width: 575px;
-  min-height: 590px;
+  background-color: $pattern-info-bg;
+  min-width: 320px;
+  width: 100vw;
+  min-height: 300px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 
-  padding-left: 118px;
+  margin-bottom: 65px;
 
   &__list {
     opacity: 0;
     position: absolute;
-    width: 575px;
+    width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -33,21 +37,21 @@
   &__item {
     position: relative;
 
-    width: 400px;
+    width: 100%;
 
     margin-bottom: 20px;
-    padding-left: 37px;
+    padding-left: 43px;
 
     &::before {
       position: absolute;
       content: '';
 
-      width: 16px;
-      height: 19px;
+      width: 24px;
+      height: 32px;
 
-      background-image: url('../img/paper-icon.png');
+      background-image: url('../img/paper-icon-mb.png');
       background-repeat: no-repeat;
-      background-size: 16px 19px;
+      background-size: 24px 32px;
 
       left: 0;
       top: 50%;
@@ -66,14 +70,97 @@
     margin: 0;
 
     font: {
-      size: 1.125em;
-      family: $thin-font;
+      size: 0.875em;
+      family: $pt-light;
     }
 
-    color: $text-lightblack;
-    line-height: 1;
-    letter-spacing: 0px;
+    color: $text-white;
+    text-decoration: underline;
 
-    text-decoration: none;
+    &--bold {
+      font-family: $pt-bold;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .pattern-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 575px;
+    min-height: 590px;
+
+    padding-left: 118px;
+
+    &__list {
+      opacity: 0;
+      position: absolute;
+      width: 575px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &--active {
+        transition: .3s ease-in;
+        z-index: 2;
+        opacity: 1;
+      }
+    }
+
+    &__item {
+      position: relative;
+
+      width: 400px;
+
+      margin-bottom: 20px;
+      padding-left: 37px;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 16px;
+        height: 19px;
+
+        background-image: url('../img/paper-icon.png');
+        background-repeat: no-repeat;
+        background-size: 16px 19px;
+
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__link {
+      width: 100%;
+      height: 100%;
+
+      text-decoration: none;
+    }
+
+    &__text {
+      margin: 0;
+
+      font: {
+        size: 1.125em;
+        family: $thin-font;
+      }
+
+      color: $text-lightblack;
+      line-height: 1;
+      letter-spacing: 0px;
+
+      text-decoration: none;
+    }
   }
 }

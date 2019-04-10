@@ -1,3 +1,66 @@
+//СКРИПТ ЗАПУСКА СЛАЙДЕРА ПРИМЕРОВ
+$(window).on('resize', function(e){
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init = $(".sample-list").data('init-slider');
+  // Если мобильный
+  if(window.innerWidth < 1152){
+    // Если слайдер не запущен
+    if(init != 1){
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('.sample-list').slick({
+        dots: true,
+        fade: true,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }).data({'init-slider': 1});
+    }
+  }
+  // Если десктоп
+  else {
+    // Если слайдер запущен
+    if(init == 1){
+      // Разрушаем слайдер и записываем в data init-slider = 0
+      $('.sample-list').slick('unslick').data({'init-slider': 0});
+    }
+  }
+}).trigger('resize');
+
+//СКРИПТ ЗАПУСКА СЛАЙДЕРА ПОСЛЕДНИХ КЕЙСОВ
+// Подпишемся на ресайз и продиспатчим его для запуска
+$(window).on('resize', function(e){
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init1 = $(".recent-list").data('init-slider');
+  // Если мобильный
+  if(window.innerWidth < 1152){
+    // Если слайдер не запущен
+    if(init1 != 1){
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('.recent-list').slick({
+        dots: true,
+        fade: true,
+        infinite: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }).data({'init-slider': 1});
+    }
+  }
+  // Если десктоп
+  else {
+    // Если слайдер запущен
+    if(init1 == 1){
+      // Разрушаем слайдер и записываем в data init-slider = 0
+      $('.recent-list').slick('unslick').data({'init-slider': 0});
+    }
+  }
+}).trigger('resize');
+
 $(document).on("mouseover", ".nav-list__item", function() {
   var numberIndex = $(this).index();
 
@@ -15,6 +78,30 @@ $(document).on("mouseover", ".nav-list__item", function() {
   }
 });
 
+$(".faq-answer__tab").hide();
+$(".faq-answer__tab:first").show();
+/* в режиме вкладок */
+$(".faq-list__item").click(function () {
+    $(".faq-answer__tab").hide();
+    var activeTab = $(this).attr("rel");
+    $("#" + activeTab).fadeIn();
+    $(".faq-list__item").removeClass("faq-list__item--active");
+    $(this).addClass("faq-list__item--active");
+    $(".faq-answer__title").removeClass("faq-answer__title--active");
+    $(".faq-answer__title[rel^='" + activeTab + "']").addClass("faq-answer__title--active");
+});
+/* в режиме аккордеона */
+$(".faq-answer__title").click(function () {
+    $(".faq-answer__tab").hide();
+    var d_activeTab = $(this).attr("rel");
+    $("#" + d_activeTab).fadeIn();
+    $(".faq-answer__title").removeClass("faq-answer__title--active");
+    $(this).addClass("faq-answer__title--active");
+    $(".faq-list__item").removeClass("faq-list__item--active");
+    $(".faq-list__item[rel^='" + d_activeTab + "']").addClass("faq-list__item--active");
+});
+
+/*
 $(document).on("click", ".faq-list__item", function() {
   var numberIndex = $(this).index();
 
@@ -31,7 +118,7 @@ $(document).on("click", ".faq-list__item", function() {
     $(".faq-answer").height(listItemHeight + "px");
   }
 });
-
+*/
 $(document).on("click", ".pattern-list__item", function() {
   var numberIndex = $(this).index();
 

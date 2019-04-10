@@ -4,12 +4,20 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  padding-left: 35px;
+  &__logo {
+    width: 60px;
+    height: 25px;
 
-  width: 260px;
+    display: inline-flex;
+    text-decoration: none;
 
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 28px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
 
   &__description {
     position: relative;
@@ -17,30 +25,16 @@
     margin-top: 0;
     margin-bottom: 20px;
 
+    width: 210px;
+
     font: {
       size: 0.75em;
-      family: $regular-font;
+      family: $pt-bold;
+      weight: 700;
     }
 
     color: $text-footer;
     line-height: normal;
-
-    &::before {
-      position: absolute;
-      content: '';
-
-      width: 18px;
-      height: 24px;
-
-      background-image: url('../img/map-pin.png');
-      background-repeat: no-repeat;
-      background-size: 18px 24px;
-
-      top: 50%;
-      left: -35px;
-
-      transform: translateY(-50%);
-    }
   }
 
   &__links {
@@ -53,29 +47,96 @@
   }
 
   &__sitemap {
-    font: {
-      size: 0.75em;
-      family: $regular-font;
-    }
-
-    color: $text-footer;
-    line-height: normal;
-
-    text-decoration: underline;
+    display: none;
   }
 
   &__policy {
-    display: block;
-    margin-bottom: 20px;
-    
-    font: {
-      size: 0.75em;
-      family: $regular-font;
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .details-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-left: 35px;
+
+    width: 260px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    &__description {
+      position: relative;
+
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      font: {
+        size: 0.75em;
+        family: $regular-font;
+      }
+
+      color: $text-footer;
+      line-height: normal;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 18px;
+        height: 24px;
+
+        background-image: url('../img/map-pin.png');
+        background-repeat: no-repeat;
+        background-size: 18px 24px;
+
+        top: 50%;
+        left: -35px;
+
+        transform: translateY(-50%);
+      }
     }
 
-    color: $text-footer;
-    line-height: normal;
+    &__links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
-    text-decoration: underline;
+      width: 100%;
+    }
+
+    &__sitemap {
+      display: block;
+
+      font: {
+        size: 0.75em;
+        family: $regular-font;
+      }
+
+      color: $text-footer;
+      line-height: normal;
+
+      text-decoration: underline;
+    }
+
+    &__policy {
+      display: block;
+      margin-bottom: 20px;
+
+      font: {
+        size: 0.75em;
+        family: $regular-font;
+      }
+
+      color: $text-footer;
+      line-height: normal;
+
+      text-decoration: underline;
+    }
   }
 }

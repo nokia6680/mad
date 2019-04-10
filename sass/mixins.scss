@@ -1,15 +1,8 @@
 @mixin container {
-  margin: 0 auto;
-  padding: 0 7px;
   width: auto;
   max-width: 100%;
-
-  @media only screen and (min-width: $mobile) {
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 11px;
-  }
+  margin: 0 auto;
+  padding: 0 10px;
 
   @media only screen and (min-width: $laptop-wide) {
     width: 100%;

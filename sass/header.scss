@@ -4,18 +4,34 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+
+  margin-top: 26px;
 
   &__logo {
-    min-width: 160px;
+    min-width: 100px;
     height: 100%;
 
-    margin-right: 16px;
+    margin-right: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+  }
+
+  &__opener {
+    display: inline-flex;
+
+    width: 21px;
+    height: 16px;
+
+    background-image: url('../img/bugrer.png');
+    background-repeat: no-repeat;
+    background-size: 21px 16px;
+
+    background-color: transparent;
+    border: none;
   }
 
   &__link {
@@ -24,23 +40,70 @@
 
     text-decoration: none;
 
-    display: block;
-    margin-bottom: 40px;
+    display: inline-flex;
   }
 
   &__pic {
-    width: 160px;
-    height: 67px;
+    width: 100px;
+    height: 41px;
   }
 
   &__title {
-    font: {
-      size: 1.125em;
-      family: $thin-font;
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .header {
+    @include container;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__logo {
+      min-width: 160px;
+      height: 100%;
+
+      margin-right: 16px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
     }
 
-    color: $text-lightblack;
-    line-height: 1;
-    text-transform: uppercase;
+    &__link {
+      width: 100%;
+      height: 100%;
+
+      text-decoration: none;
+
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    &__opener {
+      display: none;
+    }
+
+    &__pic {
+      width: 160px;
+      height: 67px;
+    }
+
+    &__title {
+      display: inline-flex;
+
+      font: {
+        size: 1.125em;
+        family: $thin-font;
+      }
+
+      color: $text-lightblack;
+      line-height: 1;
+      text-transform: uppercase;
+    }
   }
 }

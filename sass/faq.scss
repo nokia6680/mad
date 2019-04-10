@@ -2,30 +2,68 @@
   @include container;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
   position: relative;
 
+  overflow-x: hidden;
+
   &__title {
-    position: absolute;
-
-    bottom: -35px;
-    right: -140px;
-
     font: {
-      size: 17.75em;
-      family: $black-font;
+      size: 1.5em;
+      family: $pt-bold;
     }
 
     color: $text-black;
-    opacity: 0.03;
-    line-height: 1;
-
-    text-transform: uppercase;
-    letter-spacing: 0;
-
     margin: 0;
+
+    margin-bottom: 21px;
+
+    &--desktop {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .faq {
+    @include container;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: relative;
+
+    &__title {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: inline-flex;
+        position: absolute;
+
+        bottom: -35px;
+        right: -140px;
+
+        font: {
+          size: 17.75em;
+          family: $black-font;
+        }
+
+        color: $text-black;
+        opacity: 0.03;
+        line-height: 1;
+
+        text-transform: uppercase;
+        letter-spacing: 0;
+
+        margin: 0;
+      }
+    }
   }
 }

@@ -1,72 +1,116 @@
 .faq-list {
-  margin: 0;
-  padding: 0;
+  display: none;
+  /*  margin: 0;
+    padding: 0;
 
-  list-style: none;
+    list-style: none;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-  width: 555px;
+    width: 300px;
 
-  margin-bottom: 120px;
+    margin-bottom: 40px;
 
-  &__item {
-    width: 410px;
-    margin-bottom: 30px;
-    cursor: pointer;
+    &__item {
+      width: 100%;
+      margin-bottom: 20px;
+      cursor: pointer;
 
-    &:hover {
+      &:hover {
+        width: 100%;
+      }
+    }
+
+    &__item--active {
+      position: relative;
+      width: 100%;
+    }
+
+    &__text {
+      font: {
+        size: 1em;
+        family: $pt-light;
+      }
+
+      color: $text-black;
+      margin: 0;
+    }*/
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .faq-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 555px;
+
+    margin-bottom: 120px;
+
+    &__item {
+      width: 410px;
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      &:hover {
+        width: 520px;
+
+        .faq-list__text {
+          font-family: $bold-font;
+        }
+      }
+    }
+
+    &__item--active {
+      position: relative;
       width: 520px;
+
+      &::before {
+        position: absolute;
+        content:'';
+
+        width: 315px;
+        height: 97px;
+
+        background-image: url('../img/tab-arrow.png');
+        background-size: 315px 97px;
+        background-repeat: no-repeat;
+
+        top: -20px;
+        right: 35px;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        &::before {
+          top: -30px;
+        }
+      }
 
       .faq-list__text {
         font-family: $bold-font;
       }
     }
-  }
 
-  &__item--active {
-    position: relative;
-    width: 520px;
-
-    &::before {
-      position: absolute;
-      content:'';
-
-      width: 315px;
-      height: 97px;
-
-      background-image: url('../img/tab-arrow.png');
-      background-size: 315px 97px;
-      background-repeat: no-repeat;
-
-      top: -20px;
-      right: 35px;
-    }
-
-    &:nth-of-type(3),
-    &:nth-of-type(4) {
-      &::before {
-        top: -30px;
+    &__text {
+      font: {
+        size: 1.5em;
+        family: $light-font;
       }
+
+      color: $text-lightblack;
+      line-height: 1.2;
+
+      margin: 0;
     }
-
-    .faq-list__text {
-      font-family: $bold-font;
-    }
-  }
-
-  &__text {
-    font: {
-      size: 1.5em;
-      family: $light-font;
-    }
-
-    color: $text-lightblack;
-    line-height: 1.2;
-
-    margin: 0;
   }
 }

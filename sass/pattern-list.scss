@@ -1,56 +1,34 @@
 .pattern-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   margin: 0;
   padding: 0;
   list-style: none;
 
-  width: 505px;
-  margin-left: 51px;
+  width: 300px;
+  height: 65px;
+
+  padding: 5px 5px;
+
+  background-color: #FF770D;
 
   &__item {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    width: 100%;
-
-    padding-left: 42px;
-    padding-top: 26px;
-    padding-bottom: 27px;
-
+    width: 50%;
+    height: 100%;
     cursor: pointer;
 
     &--active {
       text-decoration: none;
-
-      background: #ff8d16; /* Old browsers */
-      background: -moz-linear-gradient(left, #ff8d16 1%, #ff3527 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(left, #ff8d16 1%,#ff3527 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, #ff8d16 1%,#ff3527 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d16', endColorstr='#ff3527',GradientType=1 ); /* IE6-9 */
-
-      &::after {
-        position: absolute;
-        content: '';
-
-        width: 0;
-        height: 0;
-
-        border-top: 34.5px solid transparent;
-        border-left: 13px solid #ff3527;
-        border-bottom: 34.5px solid transparent;
-
-        right: -13px;
-        top: 0;
-      }
-
-      .pattern-list__text {
-        text-decoration: none;
-        border: none;
-        padding-bottom: 0;
-      }
+      background-color: $pattern-info-bg;
     }
   }
 
@@ -60,13 +38,93 @@
 
     font: {
       size: 1em;
-      family: $medium-font;
+      family: $pt-regular;
     }
 
     color: $text-white;
-    line-height: 1.2;
-
     text-transform: uppercase;
-    border-bottom: 1px dashed #ffffff;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: inline-flex;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .pattern-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    width: 505px;
+    margin-left: 51px;
+
+    &__item {
+      position: relative;
+
+      width: 100%;
+
+      padding-left: 42px;
+      padding-top: 26px;
+      padding-bottom: 27px;
+
+      cursor: pointer;
+
+      &--active {
+        text-decoration: none;
+
+        background: #ff8d16; /* Old browsers */
+        background: -moz-linear-gradient(left, #ff8d16 1%, #ff3527 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #ff8d16 1%,#ff3527 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #ff8d16 1%,#ff3527 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d16', endColorstr='#ff3527',GradientType=1 ); /* IE6-9 */
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 0;
+          height: 0;
+
+          border-top: 34.5px solid transparent;
+          border-left: 13px solid #ff3527;
+          border-bottom: 34.5px solid transparent;
+
+          right: -13px;
+          top: 0;
+        }
+
+        .pattern-list__text {
+          text-decoration: none;
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &__text {
+      position: relative;
+      padding-bottom: 4px;
+
+      font: {
+        size: 1em;
+        family: $medium-font;
+      }
+
+      color: $text-white;
+      line-height: 1.2;
+
+      text-transform: uppercase;
+      border-bottom: 1px dashed #ffffff;
+    }
   }
 }

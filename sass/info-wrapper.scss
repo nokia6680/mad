@@ -1,57 +1,113 @@
 .info-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
   width: 100%;
 
-  padding-top: 55px;
-  padding-bottom: 220px;
+  padding-bottom: 35px;
 
   position: relative;
 
   /*Стилизация для блока изображения*/
   &__background {
+    width: 320px;
+
     position: absolute;
-
-    top: 88px;
-    left: -18px;
-
-    width: 1150px;
-    height: 640px;
-
-    max-width: 1150px;
-    max-height: 640px;
-
-    z-index: -1;
-
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+
+    top: -201px;
+    z-index: -1;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 100%;
+      height: 500px;
+
+      left: 0;
+      top: 0;
+
+      background: linear-gradient(219.37deg, rgba(255, 255, 255, 0.5) 5.84%, rgba(255, 255, 255, 0) 70.4%);
+    }
   }
 
   &__frame {
-    max-width: 943px;
-    max-height: 638px;
+
   }
 
-  /*
-  &::before {
-    position: absolute;
-    content: '';
+  &__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    background-image: url('../img/info-book.svg');
-    background-size: 1150px 640px;
-    background-repeat: no-repeat;
+    width: 300px;
+    height: 60px;
 
-    width: 1150px;
-    height: 640px;
+    border: none;
 
-    top: 88px;
-    left: -18px;
+    background: linear-gradient(90deg, #FF8C27 0%, #FF3829 100%);
+    border-radius: 5px;
 
-    z-index: -1;
-  }*/
+    font: {
+      family: $pt-medium;
+      size: 0.875em;
+      weight: 500;
+    }
+
+    color: $text-white;
+    text-transform: uppercase;
+    line-height: normal;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .info-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+
+    padding-top: 55px;
+    padding-bottom: 220px;
+
+    position: relative;
+
+    /*Стилизация для блока изображения*/
+    &__background {
+      position: absolute;
+
+      top: 88px;
+      left: -18px;
+
+      width: 1150px;
+      height: 640px;
+
+      max-width: 1150px;
+      max-height: 640px;
+
+      z-index: -1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__frame {
+      max-width: 943px;
+      max-height: 638px;
+    }
+
+    &__count {
+      display: none;
+    }
+  }
 }

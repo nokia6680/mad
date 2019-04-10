@@ -5,18 +5,14 @@
 
   position: relative;
 
-  width: 575px;
+  width: 300px;
+
+  border: 4px solid #DADADA;
+  margin-bottom: 83px;
 
   &__tab {
-    opacity: 0;
-    position: absolute;
-    width: 595px;
-
-    padding-left: 18px;
-    padding-bottom: 25px;
-
-    max-height: 255px;
-    height: auto;
+    display: none;
+    width: 100%;
   }
 
   &__tab--active {
@@ -25,17 +21,119 @@
     opacity: 1;
   }
 
+  &__title {
+    font: {
+      size: 1em;
+      family: $pt-regular;
+      weight: 400;
+    }
+
+    color: $text-black;
+    line-height: normal;
+    text-align: left;
+
+    position: relative;
+
+    margin: 0;
+    margin-left: 14px;
+    margin-right: 14px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #DADADA;
+
+    &::before {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+
+      height: 7px;
+      width: 18px;
+
+      display: block;
+
+      background-image: url('../img/arrow-down.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 18px 7px;
+    }
+
+    &--active {
+      &::before {
+        background-image: url('../img/arrow-up.png');
+        transition: .3s ease-in;
+      }
+    }
+  }
+
   &__description {
     font: {
-      size: 1.125em;
-      family: $regular-font;
+      size: 0.75em;
+      family: $pt-regular;
+      weight: 400;
     }
 
     color: $text-lightblack;
-    line-height: 1.5em;
+    line-height: normal;
 
-    width: 100%;
+    width: 280px;
 
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+}
+
+
+@media only screen and (min-width: $laptop-wide) {
+  .faq-answer {
     margin: 0;
+    padding: 0;
+    list-style: none;
+
+    position: relative;
+
+    width: 575px;
+
+    border: none;
+
+    &__title {
+      display: none;
+    }
+
+    &__tab {
+      width: 595px;
+
+      padding-left: 18px;
+      padding-bottom: 25px;
+
+      max-height: 255px;
+      height: auto;
+    }
+
+    &__tab--active {
+      transition: .3s ease-in;
+      z-index: 2;
+      opacity: 1;
+    }
+
+    &__description {
+      font: {
+        size: 1.125em;
+        family: $regular-font;
+      }
+
+      color: $text-lightblack;
+      line-height: 1.5em;
+
+      width: 100%;
+
+      margin: 0;
+    }
   }
 }

@@ -4,74 +4,69 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
 
   &__description {
-    position: relative;
+    display: none;
+  }
 
-    display: block;
+  &__description--mobile {
+    order: 2;
 
-    width: 512px;
-    padding-top: 195px;
+    display: inline-flex;
+
+    max-width: 300px;
 
     font: {
-      size: 1.125em;
-      family: $regular-font;
+      size: 1em;
+      family: $pt-regular;
+      weight: 400;
     }
 
     color: $text-black;
-    line-height: 1.25em;
-
-    margin: 0;
-    margin-bottom: 90px;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 609px;
-      height: 595px;
-
-      top: 45px;
-      right: -659px;
-
-      background-image: url('../img/checklist-bg.png');
-      background-repeat: no-repeat;
-      background-size: 609px 595px;
-    }
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: left;
   }
 
   &__subtitle {
-    margin-top: 0;
-    margin-bottom: 20px;
+    order: 1;
+
+    margin-top: 48px;
+    margin-bottom: 30px;
 
     font: {
-      size: 1.25em;
-      family: $thin-font;
+      size: 1.5em;
+      family: $pt-bold;
+      weight: 700;
     }
 
     color: $text-lightblack;
     line-height: 1;
-
-    text-transform: uppercase;
   }
 
   &__btn {
-    position: relative;
-    display: block;
+    order: 3;
 
-    padding-top: 23px;
-    padding-bottom: 23px;
-    padding-left: 49px;
-    padding-right: 26px;
+    position: relative;
+    display: inline-flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 60px;
 
     border-radius: 5px;
 
-    margin-bottom: 135px;
+    margin-bottom: 63px;
 
     font: {
       size: 0.875em;
-      family: $bold-font;
+      family: $pt-medium;
+      weight: 500;
     }
 
     color: $text-white;
@@ -81,25 +76,110 @@
     text-decoration: none;
     text-align: center;
 
-    background: #ff8d16; /* Old browsers */
-    background: -moz-linear-gradient(left, #ff8d16 1%, #ff3527 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #ff8d16 1%,#ff3527 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #ff8d16 1%,#ff3527 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d16', endColorstr='#ff3527',GradientType=1 ); /* IE6-9 */
+    background: linear-gradient(90deg, #FF8C27 0%, #FF3829 100%);
+  }
+}
 
-    &::after {
-      position: absolute;
-      content: '';
+@media only screen and (min-width: $laptop-wide) {
+  .checklist {
+    @include container;
 
-      background-image: url('../img/check-list.png');
-      background-repeat: no-repeat;
-      background-size: 16px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 
-      width: 16px;
-      height: 19px;
+    &__description {
+      position: relative;
 
-      top: 23px;
-      left: 20px;
+      display: block;
+
+      width: 512px;
+      padding-top: 195px;
+
+      font: {
+        size: 1.125em;
+        family: $regular-font;
+      }
+
+      color: $text-black;
+      line-height: 1.25em;
+
+      margin: 0;
+      margin-bottom: 90px;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 609px;
+        height: 595px;
+
+        top: 45px;
+        right: -659px;
+
+        background-image: url('../img/checklist-bg.png');
+        background-repeat: no-repeat;
+        background-size: 609px 595px;
+      }
+    }
+
+    &__description--mobile {
+      display: none;
+    }
+
+    &__subtitle {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      font: {
+        size: 1.25em;
+        family: $thin-font;
+      }
+
+      color: $text-lightblack;
+      line-height: 1;
+
+      text-transform: uppercase;
+    }
+
+    &__btn {
+      position: relative;
+
+      width: 210px;
+
+      padding-left: 49px;
+
+      border-radius: 5px;
+
+      margin-bottom: 135px;
+
+      font: {
+        size: 0.875em;
+        family: $bold-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/check-list.png');
+        background-repeat: no-repeat;
+        background-size: 16px 19px;
+
+        width: 16px;
+        height: 19px;
+
+        top: 23px;
+        left: 20px;
+      }
     }
   }
 }
