@@ -15,7 +15,8 @@
 
     display: inline-flex;
 
-    max-width: 300px;
+    min-width: 300px;
+    max-width: 100%;
 
     font: {
       size: 1em;
@@ -77,6 +78,33 @@
     text-align: center;
 
     background: linear-gradient(90deg, #FF8C27 0%, #FF3829 100%);
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__description--mobile {
+      order: 2;
+
+      min-width: 335px;
+      max-width: 100%;
+    }
+
+    &__subtitle {
+      order: 1;
+    }
+
+    &__btn {
+      order: 3;
+
+      width: 335px;
+      height: 60px;
+    }
   }
 }
 

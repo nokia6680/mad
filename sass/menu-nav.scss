@@ -1,7 +1,13 @@
 .menu-nav {
-  background-color: #fff;
+  background-color: transparent;
+}
 
-  padding-left: 20px;
+@media only screen and (min-width: $laptop-wide) {
+  .menu-nav {
+    background-color: #fff;
 
-  height: 65px;
+    padding-left: 20px;
+
+    height: 65px;
+  }
 }

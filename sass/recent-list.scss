@@ -145,6 +145,36 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .recent-list {
+    width: 100%;
+
+    &__item {
+      width: 335px;
+      height: 335px;
+
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    &__frame {
+      width: 335px;
+      height: 335px;
+    }
+
+    &__image {
+      width: 335px;
+      height: 335px;
+    }
+
+    /*Появляющаяся штука*/
+    &__link {
+      width: 335px;
+      height: 335px;
+    }
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .recent-list {
     display: flex;

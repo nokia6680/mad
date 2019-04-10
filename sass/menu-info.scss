@@ -4,33 +4,61 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #fff;
+  margin-bottom: 50px;
 
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
-  height: 100%;
-
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-left: 60px;
 
   &__link {
     display: block;
 
     font: {
       size: 0.75em;
-      family: $bold-font;
+      family: $pt-medium;
+      weight: 500;
     }
 
-    color: $text-lightgray;
-    line-height: 1;
+    color: $text-white;
 
     text-decoration: none;
     padding-bottom: 5px;
-    border-bottom: 1px dashed $text-mail;
+  }
+}
 
-    cursor: pointer;
+@media only screen and (min-width: $laptop-wide) {
+  .menu-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    height: 100%;
+
+    padding-right: 40px;
+    padding-left: 40px;
+
+    &__link {
+      display: block;
+
+      font: {
+        size: 0.75em;
+        family: $bold-font;
+      }
+
+      color: $text-lightgray;
+      line-height: 1;
+
+      text-decoration: none;
+      padding-bottom: 5px;
+      border-bottom: 1px dashed $text-mail;
+
+      cursor: pointer;
+    }
   }
 }

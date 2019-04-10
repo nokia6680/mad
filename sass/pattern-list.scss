@@ -54,6 +54,13 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .pattern-list {
+    width: 335px;
+    height: 65px;
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .pattern-list {
     display: flex;

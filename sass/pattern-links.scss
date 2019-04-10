@@ -83,6 +83,19 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .pattern-links {
+    min-width: 335px;
+    min-height: 355px;
+    padding-bottom: 69px;
+    padding-top: 42px;
+
+    &__list {
+      width: 335px;
+    }
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .pattern-links {
     display: flex;

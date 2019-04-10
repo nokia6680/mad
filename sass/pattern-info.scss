@@ -25,13 +25,29 @@
 
     font: {
       size: 1.375em;
-      family: $pt-light;
+      family: $pt-regular;
+      weight: 400;
     }
 
     color: $text-white;
 
     margin-top: 0;
     margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .pattern-info {
+    min-width: 320px;
+    width: 100vw;
+
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__title {
+      width: 335px;
+    }
   }
 }
 

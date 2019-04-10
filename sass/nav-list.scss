@@ -1,72 +1,113 @@
 .nav-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   margin: 0;
   padding: 0;
   list-style: none;
 
+  padding-left: 60px;
+
   height: 100%;
 
   &__item {
-    height: 100%;
-
-    &--top {
-      background-color: $link-hover-bg;
-
-      .nav-list__link {
-        color: $link-hover-text;
-      }
-    }
-
-    &--active {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: '';
-
-        bottom: 0;
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        width: 0;
-        height: 0;
-
-        border-left: 6.5px solid transparent;
-        border-right: 6.5px solid transparent;
-        border-bottom: 4px solid #1c1c1a;
-      }
-    }
+    width: 100%;
+    margin-bottom: 28px;
   }
 
   &__link {
     display: block;
 
     width: 100%;
-    height: 100%;
-
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-top: 25px;
-    padding-bottom: 28px;
 
     font: {
-      size: 0.75em;
-      family: $bold-font;
+      size: 1.125em;
+      family: $pt-bold;
     }
 
-    color: $text-lightblack;
-    line-height: 1;
-
+    color: $text-white;
     text-transform: uppercase;
     text-decoration: none;
 
     &:hover {
-      color: #ef820d;
+      color: #000000;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    height: 100%;
+
+    &__item {
+      height: 100%;
+
+      &--top {
+        background-color: $link-hover-bg;
+
+        .nav-list__link {
+          color: $link-hover-text;
+        }
+      }
+
+      &--active {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          bottom: 0;
+          left: 50%;
+
+          transform: translateX(-50%);
+
+          width: 0;
+          height: 0;
+
+          border-left: 6.5px solid transparent;
+          border-right: 6.5px solid transparent;
+          border-bottom: 4px solid #1c1c1a;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-top: 25px;
+      padding-bottom: 28px;
+
+      font: {
+        size: 0.75em;
+        family: $bold-font;
+      }
+
+      color: $text-lightblack;
+      line-height: 1;
+
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        color: #ef820d;
+      }
     }
   }
 }

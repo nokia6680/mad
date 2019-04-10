@@ -142,6 +142,28 @@
     line-height: 1.2;
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .sample-list {
+    &__item {
+      width: 335px;
+      height: 335px;
+
+      margin-left: 0;
+    }
+
+    &__image {
+      width: 335px;
+      height: 335px;
+    }
+    /*Появляющаяся штука*/
+    &__link {
+      width: 335px;
+      height: 335px;
+    }
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .sample-list {
     display: flex;

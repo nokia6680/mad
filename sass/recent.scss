@@ -39,6 +39,16 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .recent {
+    width: 335px;
+
+    &__title {
+      margin-left: 0;
+    }
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .recent {
     @include container;

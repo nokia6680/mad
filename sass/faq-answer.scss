@@ -43,6 +43,10 @@
 
     border-bottom: 1px solid #DADADA;
 
+    &:last-of-type {
+      border-bottom: none;
+    }
+
     &::before {
       position: absolute;
       right: 0px;
@@ -76,7 +80,7 @@
       weight: 400;
     }
 
-    color: $text-lightblack;
+    color: $text-black;
     line-height: normal;
 
     width: 280px;
@@ -89,6 +93,15 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .faq-answer {
+    width: 335px;
+
+    &__description {
+      width: 304px;
+    }
+  }
+}
 
 @media only screen and (min-width: $laptop-wide) {
   .faq-answer {

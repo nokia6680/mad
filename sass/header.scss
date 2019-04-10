@@ -6,7 +6,9 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 26px;
+  padding-top: 20px;
+
+  background-color: #cdcdcd;
 
   &__logo {
     min-width: 100px;
@@ -18,10 +20,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+
+    z-index: 3;
   }
 
   &__opener {
-    display: inline-flex;
+    display: block;
 
     width: 21px;
     height: 16px;
@@ -32,6 +36,8 @@
 
     background-color: transparent;
     border: none;
+
+    z-index: 3;
   }
 
   &__link {
@@ -53,10 +59,14 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .header {
+    padding-top: 25px;
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .header {
-    @include container;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -4,41 +4,30 @@
   justify-content: flex-start;
   align-items: center;
 
-  width: 100%;
-
   padding-bottom: 35px;
 
   position: relative;
 
+  z-index: 1;
+
   /*Стилизация для блока изображения*/
   &__background {
-    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    position: absolute;
+  &__frame {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    top: -201px;
-    z-index: -1;
+    min-width: 300px;
+    max-width: 300px;
 
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 100%;
-      height: 500px;
-
-      left: 0;
-      top: 0;
-
-      background: linear-gradient(219.37deg, rgba(255, 255, 255, 0.5) 5.84%, rgba(255, 255, 255, 0) 70.4%);
-    }
-  }
-
-  &__frame {
-
+    margin-bottom: 20px;
   }
 
   &__count {
@@ -63,6 +52,26 @@
     color: $text-white;
     text-transform: uppercase;
     line-height: normal;
+
+    z-index: 44;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .info-wrapper {
+    padding-bottom: 35px;
+    max-height: 767px;
+
+    /*Стилизация для блока изображения*/
+    &__frame {
+      min-width: 340px;
+      max-width: 340px;
+    }
+
+    &__count {
+      width: 335px;
+      height: 60px;
+    }
   }
 }
 

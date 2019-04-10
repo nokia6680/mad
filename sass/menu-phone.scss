@@ -1,58 +1,29 @@
 .menu-phone {
-  position: absolute;
-  top: 0;
-  left: 715px;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   align-items: flex-start;
 
-  height: 100%;
   width: 100%;
 
-  padding-left: 32px;
-
-  background: #ff3b28; /* Old browsers */
-  background: -moz-linear-gradient(left, #ff3b28 0%, #ff8c26 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #ff3b28 0%,#ff8c26 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #ff3b28 0%,#ff8c26 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3b28', endColorstr='#ff8c26',GradientType=1 ); /* IE6-9 */
+  padding-left: 60px;
 
   &__link {
     position: relative;
 
-    display: block;
-
-    padding-left: 42px;
+    display: inline-flex;
 
     font: {
       size: 1.125em;
-      family: $medium-font;
+      family: $pt-medium;
+      weight: 500;
     }
 
     color: $text-white;
-    line-height: 1;
 
     text-decoration: none;
-
-    cursor: pointer;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 17px;
-      height: 15px;
-
-      background-image: url('../img/phone.svg');
-      background-size: 17px 15px;
-      background-repeat: no-repeat;
-
-      left: 15px;
-      top: 2px;
-    }
+    margin-bottom: 15px;
   }
 
   &__text {
@@ -60,7 +31,8 @@
 
     font: {
       size: 0.75em;
-      family: $medium-font;
+      family: $pt-medium;
+      weight: 500;
     }
 
     color: $text-white;
@@ -68,7 +40,82 @@
 
     text-decoration-style: dashed;
     margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 62px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .menu-phone {
+    position: absolute;
+    top: 0;
+    left: 715px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
+
+    height: 100%;
+    width: 100%;
+
+    padding-left: 32px;
+
+    background: #ff3b28; /* Old browsers */
+    background: -moz-linear-gradient(left, #ff3b28 0%, #ff8c26 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ff3b28 0%,#ff8c26 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ff3b28 0%,#ff8c26 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3b28', endColorstr='#ff8c26',GradientType=1 ); /* IE6-9 */
+
+    &__link {
+      position: relative;
+
+      display: block;
+
+      padding-left: 42px;
+
+      font: {
+        size: 1.125em;
+        family: $medium-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 17px;
+        height: 15px;
+
+        background-image: url('../img/phone.svg');
+        background-size: 17px 15px;
+        background-repeat: no-repeat;
+
+        left: 15px;
+        top: 2px;
+      }
+    }
+
+    &__text {
+      display: block;
+
+      font: {
+        size: 0.75em;
+        family: $medium-font;
+      }
+
+      color: $text-white;
+      line-height: 1;
+
+      text-decoration-style: dashed;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 62px;
+    }
   }
 }

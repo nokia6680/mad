@@ -35,6 +35,14 @@
   }
 }
 
+@media only screen and (min-width: $mobile) {
+  .sample-info {
+    &__title {
+      margin-left: 0px;
+    }
+  }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .sample-info {
     display: flex;

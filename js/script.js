@@ -1,3 +1,32 @@
+var menuMobile = document.querySelector(".upper-menu");
+var openButton = document.querySelectorAll(".header__opener");
+var closeButton = document.querySelector(".upper-menu__closer")
+
+if (menuMobile) {
+  for (var i = 0; i < openButton.length; i++) openButton[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    menuMobile.classList.add("upper-menu--active");
+  });
+
+  menuMobile.addEventListener("click", function() {
+    menuMobile.classList.remove("upper-menu--active");
+  });
+
+  menuMobile.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
+  closeButton.addEventListener("click", function() {
+    menuMobile.classList.remove("upper-menu--active");
+  });
+
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+      menuMobile.classList.remove("upper-menu--active");
+    }
+  });
+}
+
 //СКРИПТ ЗАПУСКА СЛАЙДЕРА ПРИМЕРОВ
 $(window).on('resize', function(e){
   // Переменная, по которой узнаем запущен слайдер или нет.
