@@ -53,21 +53,16 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .pattern-info {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-end;
 
     padding-top: 145px;
     margin-bottom: 160px;
+    padding-left: 0;
+    padding-right: 0;
+
+    width: auto;
 
     height: 590px;
-
-    z-index: 2;
-
-    background-color: $pattern-info-bg;
 
     &::before {
       position: absolute;
@@ -85,21 +80,13 @@
     }
 
     &__title {
-      display: block;
       width: 515px;
       align-self: flex-start;
 
-      position: relative;
-
       font: {
         size: 2.25em;
-        family: $thin-font;
       }
 
-      color: $text-white;
-      line-height: 1.1;
-
-      margin-top: 0;
       margin-bottom: 123px;
 
       &::before {
@@ -112,7 +99,7 @@
         background-color: transparent;
         border: 6px solid #2b2b27;
 
-        top: -40px;
+        top: -30px;
         left: 50px;
         z-index: -1;
       }

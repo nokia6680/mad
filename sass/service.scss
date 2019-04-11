@@ -34,24 +34,19 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .service {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include container;
     align-items: flex-start;
 
     &__title {
       margin-top: 0;
       margin-bottom: 60px;
+      margin-left: 0;
 
       font: {
         size: 2.75em;
-        family: $thin-font;
       }
 
       color: $text-lightblack;
-      line-height: 1;
-
     }
   }
 }

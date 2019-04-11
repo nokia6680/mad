@@ -91,9 +91,31 @@
     justify-content: flex-start;
     align-items: center;
 
+    overflow: visible;
+
     width: 100%;
     height: 65px;
 
     position: relative;
+
+    &__closer {
+      display: none;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__nav {
+      order: 1;
+    }
+
+    &__phone {
+      order: 3;
+    }
+
+    &__info {
+      order: 2;
+    }
   }
 }

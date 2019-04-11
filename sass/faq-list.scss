@@ -1,43 +1,5 @@
 .faq-list {
   display: none;
-  /*  margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    width: 300px;
-
-    margin-bottom: 40px;
-
-    &__item {
-      width: 100%;
-      margin-bottom: 20px;
-      cursor: pointer;
-
-      &:hover {
-        width: 100%;
-      }
-    }
-
-    &__item--active {
-      position: relative;
-      width: 100%;
-    }
-
-    &__text {
-      font: {
-        size: 1em;
-        family: $pt-light;
-      }
-
-      color: $text-black;
-      margin: 0;
-    }*/
 }
 
 @media only screen and (min-width: $laptop-wide) {
@@ -57,7 +19,7 @@
     margin-bottom: 120px;
 
     &__item {
-      width: 410px;
+      width: 520px;
       margin-bottom: 30px;
       cursor: pointer;
 
@@ -65,7 +27,7 @@
         width: 520px;
 
         .faq-list__text {
-          font-family: $bold-font;
+          font-family: $pt-bold;
         }
       }
     }
@@ -85,10 +47,16 @@
         background-size: 315px 97px;
         background-repeat: no-repeat;
 
-        top: -20px;
+        top: -30px;
         right: 35px;
       }
 
+      &:nth-of-type(2) {
+        &::before {
+          top: -20px;
+        }
+      }
+      
       &:nth-of-type(3),
       &:nth-of-type(4) {
         &::before {
@@ -97,14 +65,14 @@
       }
 
       .faq-list__text {
-        font-family: $bold-font;
+        font-family: $pt-bold;
       }
     }
 
     &__text {
       font: {
         size: 1.5em;
-        family: $light-font;
+        family: $pt-light;
       }
 
       color: $text-lightblack;

@@ -53,18 +53,12 @@
   .recent {
     @include container;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    overflow: visible;
 
     &__header {
-      display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-
-      width: 100%;
 
       margin-bottom: 90px;
     }
@@ -74,12 +68,9 @@
 
       font: {
         size: 2.75em;
-        family: $black-font;
       }
 
       color: $text-lightblack;
-      line-height: 1;
-      letter-spacing: -1px;
     }
 
     &__btn {
@@ -97,7 +88,7 @@
 
       font: {
         size: 0.75em;
-        family: $bold-font;
+        family: $pt-bold;
       }
 
       color: $text-mediumgray;

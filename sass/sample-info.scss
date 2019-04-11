@@ -45,12 +45,7 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .sample-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-end;
-
-    position: relative;
 
     margin-right: 65px;
     margin-top: 110px;
@@ -58,21 +53,16 @@
     width: 500px;
 
     &__title {
-      align-self: flex-start;
-
-      margin-top: 0;
       margin-bottom: 80px;
+      margin-left: 0;
 
       font: {
         size: 2.75em;
-        family: $black-font;
       }
 
       color: $text-lightblack;
       line-height: 1;
       letter-spacing: 0;
-
-      position: relative;
 
       &::before {
         position: absolute;

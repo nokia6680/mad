@@ -46,7 +46,7 @@
 
     text-decoration: none;
 
-    display: inline-flex;
+    display: block;
   }
 
   &__pic {
@@ -67,35 +67,22 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: flex-end;
+    background-color: transparent;
+    padding-top: 0;
 
     &__logo {
       min-width: 160px;
-      height: 100%;
 
       margin-right: 16px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: flex-start;
-    }
-
-    &__link {
-      width: 100%;
-      height: 100%;
-
-      text-decoration: none;
-
-      display: block;
-      margin-bottom: 40px;
     }
 
     &__opener {
       display: none;
+    }
+
+    &__link {
+      margin-bottom: 40px;
     }
 
     &__pic {
@@ -108,7 +95,7 @@
 
       font: {
         size: 1.125em;
-        family: $thin-font;
+        family: $pt-light;
       }
 
       color: $text-lightblack;

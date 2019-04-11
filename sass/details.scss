@@ -11,13 +11,6 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    position: relative;
-
     &::after {
       position: absolute;
       content: '';

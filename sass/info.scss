@@ -83,10 +83,12 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
+    background: transparent;
+
+    &::after {
+      display: none;
+    }
 
     &__title {
       margin-top: 40px;
@@ -94,7 +96,6 @@
 
       font: {
         size: 2.75em;
-        family: $thin-font;
       }
 
       color: $text-lightblack;
@@ -102,11 +103,11 @@
     }
 
     &__subtitle {
-      display: inline-flex;
+      display: block;
 
       font: {
-        size: 1em;
-        family: $black-font;
+        size: 1.125em;
+        family: $pt-bold;
       }
 
       color: $text-lightblack;

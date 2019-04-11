@@ -12,7 +12,7 @@
   &__link {
     position: relative;
 
-    display: inline-flex;
+    display: block;
 
     font: {
       size: 1.125em;
@@ -49,11 +49,7 @@
     top: 0;
     left: 715px;
 
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-
-    align-items: flex-start;
 
     height: 100%;
     width: 100%;
@@ -67,21 +63,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3b28', endColorstr='#ff8c26',GradientType=1 ); /* IE6-9 */
 
     &__link {
-      position: relative;
-
-      display: block;
-
       padding-left: 42px;
+      margin-bottom: 0;
 
       font: {
         size: 1.125em;
-        family: $medium-font;
       }
 
-      color: $text-white;
       line-height: 1;
-
-      text-decoration: none;
 
       cursor: pointer;
 
@@ -102,11 +91,8 @@
     }
 
     &__text {
-      display: block;
-
       font: {
         size: 0.75em;
-        family: $medium-font;
       }
 
       color: $text-white;

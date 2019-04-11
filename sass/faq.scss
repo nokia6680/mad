@@ -29,15 +29,12 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .faq {
-    @include container;
-
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 
-    position: relative;
-
+    overflow: visible;
+    
     &__title {
       &--mobile {
         display: none;

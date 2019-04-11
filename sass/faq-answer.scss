@@ -105,15 +105,10 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .faq-answer {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    position: relative;
-
     width: 575px;
 
     border: none;
+    margin-bottom: 0;
 
     &__title {
       display: none;
@@ -129,16 +124,10 @@
       height: auto;
     }
 
-    &__tab--active {
-      transition: .3s ease-in;
-      z-index: 2;
-      opacity: 1;
-    }
-
     &__description {
       font: {
         size: 1.125em;
-        family: $regular-font;
+        family: $pt-regular;
       }
 
       color: $text-lightblack;
@@ -147,6 +136,7 @@
       width: 100%;
 
       margin: 0;
+      padding: 0;
     }
   }
 }

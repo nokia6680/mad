@@ -127,62 +127,24 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .info-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    margin-right: auto;
+    margin-bottom: 0;
 
     &__item {
-      position: relative;
-
       font: {
         size: 1.125em;
-        family: $regular-font;
       }
 
-      color: $text-lightblack;
-      line-height: 1;
-
-      padding-left: 26px;
-      margin-bottom: 20px;
-
       &::before {
-        position: absolute;
-        content: '';
-
         width: 9px;
         height: 9px;
-
-        left: 0;
-        top: 4px;
-
-        background-color: #ea5b0a;
-        border-radius: 50%;
       }
 
       &::after {
-        position: absolute;
-        content: '';
-
         width: 1px;
         height: 15px;
 
         bottom: -16px;
         left: 4px;
-
-        background-color: #d0d0d0;
-      }
-
-      &:last-of-type {
-        &::after {
-          display: none;
-        }
       }
     }
   }

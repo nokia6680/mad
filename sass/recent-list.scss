@@ -116,7 +116,7 @@
 
   &__name {
     order: 2;
-    display: inline-flex;
+    display: block;
     width: auto;
     text-align: left;
     font: {
@@ -131,7 +131,7 @@
 
   &__type {
     order: 1;
-    display: inline-flex;
+    display: block;
     width: 107px;
     text-align: left;
 
@@ -183,16 +183,20 @@
     align-items: flex-start;
     flex-wrap: nowrap;
 
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
+    padding-bottom: 0;
     margin-bottom: 220px;
 
     &__item {
       width: 383px;
       height: 383px;
       position: relative;
+
+      margin: 0;
+    }
+
+    &__frame {
+      width: 383px;
+      height: 383px;
     }
 
     &__image {
@@ -202,7 +206,6 @@
 
     /*Появляющаяся штука*/
     &__link {
-      position: absolute;
       display: none;
 
       width: 425px;
@@ -212,11 +215,12 @@
       left: -20px;
       z-index: 1;
 
-      text-decoration: none;
-
       box-shadow:18px 17px 19px 0px rgba(106,100,35,0.25);
       -webkit-box-shadow:18px 17px 19px 0px rgba(106,100,35,0.25);
       -moz-box-shadow:18px 17px 19px 0px rgba(106,100,35,0.25);
+    }
+    &__framefade {
+      display: flex;
     }
     /*Увеличенное изображение*/
     &__fade {
@@ -236,34 +240,33 @@
       background: linear-gradient(to right, rgba(255,141,22,0.93) 0%,rgba(255,53,39,0.93) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edff8d16', endColorstr='#edff3527',GradientType=1 ); /* IE6-9 */
 
-      width: 100%;
       height: 100%;
 
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      position: relative;
+      left: auto;
+      bottom: auto;
     }
 
     &__name {
-      display: block;
+      order: 1;
       width: 145px;
 
       text-align: center;
 
       font: {
         size: 1.5em;
-        family: $regular-font;
       }
 
       color: $text-white;
-      line-height: 1.2;
 
       margin-bottom: 45px;
     }
 
     &__type {
-      display: block;
+      order: 2;
       width: 145px;
 
       text-align: center;
@@ -273,11 +276,9 @@
 
       font: {
         size: 1em;
-        family: $bold-font;
       }
 
       color: $text-white;
-      line-height: 1.2;
 
       margin-top: 14px;
 

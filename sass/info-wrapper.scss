@@ -77,7 +77,6 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .info-wrapper {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -86,8 +85,6 @@
 
     padding-top: 55px;
     padding-bottom: 220px;
-
-    position: relative;
 
     /*Стилизация для блока изображения*/
     &__background {
@@ -104,8 +101,6 @@
 
       z-index: -1;
 
-      display: flex;
-      flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
     }
@@ -113,6 +108,8 @@
     &__frame {
       max-width: 943px;
       max-height: 638px;
+
+      margin-bottom: 0;
     }
 
     &__count {

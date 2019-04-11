@@ -67,7 +67,7 @@
 
     font: {
       size: 0.75em;
-      family: $medium-font;
+      family: $pt-medium;
     }
 
     color: $text-white;
@@ -84,7 +84,7 @@
 @media only screen and (min-width: $laptop-wide) {
   .lower-menu {
     display: block;
-    
+
     width: 100%;
     height: 90px;
 
@@ -151,7 +151,7 @@
 
       font: {
         size: 0.75em;
-        family: $medium-font;
+        family: $pt-medium;
       }
 
       color: $text-white;
