@@ -2,6 +2,11 @@ var menuMobile = document.querySelector(".upper-menu");
 var openButton = document.querySelectorAll(".header__opener");
 var closeButton = document.querySelector(".upper-menu__closer")
 
+var popupMobile = document.querySelector(".popup-recall");
+var openPopup = document.querySelectorAll(".info-wrapper__count");
+var closePopup = document.querySelector(".popup-recall__closer");
+
+
 if (menuMobile) {
   for (var i = 0; i < openButton.length; i++) openButton[i].addEventListener("click", function(event) {
     event.preventDefault();
@@ -27,6 +32,27 @@ if (menuMobile) {
   });
 }
 
+if (popupMobile) {
+  for (var i = 0; i < openPopup.length; i++) openPopup[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    popupMobile.classList.add("popup-recall--active");
+  });
+
+  popupMobile.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+
+  closePopup.addEventListener("click", function() {
+    popupMobile.classList.remove("popup-recall--active");
+  });
+
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+      popupMobile.classList.remove("popup-recall--active");
+    }
+  });
+}
+
 //СКРИПТ ЗАПУСКА СЛАЙДЕРА ПРИМЕРОВ
 $(window).on('resize', function(e){
   // Переменная, по которой узнаем запущен слайдер или нет.
@@ -39,8 +65,7 @@ $(window).on('resize', function(e){
       // Запускаем слайдер и записываем в data init-slider = 1
       $('.sample-list').slick({
         dots: true,
-        fade: true,
-        infinite: false,
+        infinite: true,
         arrows: false,
         speed: 300,
         slidesToShow: 1,

@@ -3,9 +3,6 @@
   overflow: hidden;
   width: 0;
 
-  transition: 0.2s ease-in;
-  transition-property: width;
-
   &--active {
     display: flex;
     flex-direction: column;
@@ -23,7 +20,8 @@
     z-index: 900;
     background-color: #ef820d;
     padding-top: 20px;
-    transition-duration: 0.5s;
+
+    transition: 0.1s ease-in-out;
     transition-property: width;
   }
 
