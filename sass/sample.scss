@@ -9,6 +9,10 @@
   align-items: center;
 
   overflow: hidden;
+
+  &--main {
+    background-color: $bg-body;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -26,5 +30,9 @@
     align-items: flex-start;
 
     overflow: visible;
+
+    &--main {
+      background-color: transparent;
+    }
   }
 }

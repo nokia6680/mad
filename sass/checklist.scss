@@ -6,6 +6,10 @@
   justify-content: flex-end;
   align-items: center;
 
+  &--main {
+    background-color: $bg-body;
+  }
+
   &__description {
     display: none;
   }
@@ -111,6 +115,10 @@
 @media only screen and (min-width: $laptop-wide) {
   .checklist {
     align-items: flex-start;
+
+    &--main {
+      background-color: transparent;
+    }
 
     &__description {
       position: relative;

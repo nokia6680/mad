@@ -23,28 +23,40 @@
     justify-content: center;
     align-items: center;
 
-    &--preparing {
+    &--0 {
       border-top: 2px solid #8ea2d5;
     }
 
-    &--concept {
+    &--1 {
       border-top: 2px solid #00ad87;
     }
 
-    &--design {
+    &--2 {
       border-top: 2px solid #FF770D;
     }
 
-    &--dev {
+    &--3 {
       border-top: 2px solid #FE624C;
     }
 
-    &--prepress {
+    &--4 {
       border-top: 2px solid #4787d6;
     }
 
-    &--print {
+    &--5 {
       border-top: 2px solid #ff624d;
+    }
+
+    &--6 {
+      border-top: 2px solid #E175A7;
+    }
+
+    &--7 {
+      border-top: 2px solid #4A87D7;
+    }
+
+    &--8 {
+      border-top: 2px solid #1E986F;
     }
   }
 
@@ -75,11 +87,83 @@
       color: #ef820d;
     }
   }
+  /*Стилизация и порядок элементов для страницы main*/
+  &--main {
+    margin-bottom: 0;
+
+    .service-list__item {
+      &--0 {
+        order: 5;
+        border-top: 2px solid #4787d6;
+      }
+
+      &--1 {
+        order: 6;
+        border-top: 2px solid #02AE88;
+      }
+
+      &--2 {
+        order: 1;
+        border-top: 2px solid #8ea2d5;
+      }
+
+      &--3 {
+        order: 2;
+        border-top: 2px solid #00ad87;
+      }
+
+      &--4 {
+        order: 8;
+        border-top: 2px solid #4A87D7;
+      }
+
+      &--5 {
+        order: 4;
+        border-top: 2px solid #FE624C;
+      }
+
+      &--6 {
+        order: 7;
+
+        border-top: 2px solid #E175A7;
+      }
+
+      &--7 {
+        order: 3;
+        border-top: 2px solid #FF770D;
+      }
+
+      &--8 {
+        order: 9;
+        border-top: 2px solid #1E986F;
+
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          top: -2px;
+          right: -100%;
+
+          width: 100%;
+          height: 2px;
+          background-color: #FE624C;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .service-list {
     margin-bottom: 110px;
+
+    &--main {
+      @include container;
+      margin-bottom: 0;
+      background-color: $bg-body;
+    }
 
     &__item {
       width: 360px;
@@ -87,27 +171,27 @@
       padding-top: 56px;
       padding-bottom: 56px;
 
-      &--preparing {
+      &--0 {
         border-top: 2px solid #8ea2d5;
       }
 
-      &--concept {
+      &--1 {
         border-top: 2px solid #00ad87;
       }
 
-      &--design {
+      &--2 {
         border-top: 2px solid #00b5d7;
       }
 
-      &--dev {
+      &--3 {
         border-top: 2px solid #85aa14;
       }
 
-      &--prepress {
+      &--4 {
         border-top: 2px solid #4787d6;
       }
 
-      &--print {
+      &--5 {
         border-top: 2px solid #ff624d;
       }
 
@@ -133,6 +217,75 @@
 
     &__frame {
       margin-right: 60px;
+    }
+
+    &--main {
+      margin-bottom: 0;
+
+      .service-list__item {
+        padding-top: 41px;
+        padding-bottom: 41px;
+
+        &--0 {
+          order: 5;
+          border-top: 2px solid #4787d6;
+          margin-right: 35px;
+        }
+
+        &--1 {
+          order: 6;
+          border-top: 2px solid #02AE88;
+          margin: 0;
+        }
+
+        &--2 {
+          order: 2;
+          border-top: 2px solid #8ea2d5;
+          margin-right: 35px;
+        }
+
+        &--3 {
+          order: 3;
+          border-top: 2px solid #00ad87;
+          margin: 0;
+        }
+
+        &--4 {
+          order: 8;
+          border-top: 2px solid #4A87D7;
+          margin-right: 35px;
+        }
+
+        &--5 {
+          order: 4;
+          border-top: 2px solid #FE624C;
+
+          margin-right: 35px;
+        }
+
+        &--6 {
+          order: 7;
+          border-top: 2px solid #E175A7;
+          margin-right: 35px;
+        }
+
+        &--7 {
+          order: 1;
+          border-top: 2px solid #FF770D;
+
+          margin-right: 35px;
+        }
+
+        &--8 {
+          order: 9;
+          border-top: 2px solid #1E986F;
+          margin: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

@@ -3,12 +3,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>MAD | Изготовление брошюр</title>
+	<title>MAD | Главная</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -16,12 +16,12 @@
 	<![endif]-->
 </head>
 
-<body class="body-index">
+<body class="body-main">
 	<!--Page header-->
-	<header class="header">
+	<header class="header header--main">
 		<div class="header__logo">
 			<a class="header__link" href="index.html" target="_self">
-				<img class="header__pic" src="img/logo-2.svg" alt="MAD">
+				<img class="header__pic" src="img/logo-2.svg" alt="MAD" />
 			</a>
 			<b class="header__title">Студия дизайна</b>
 		</div>
@@ -32,7 +32,7 @@
 			<div class="header-menu__upper upper-menu">
 				<span class="upper-menu__closer"></span>
 				<!--Лого для открытого меню-->
-				<img class="upper-menu__logo" src="img/logo-2.svg" alt="MAD">
+				<img class="upper-menu__logo" src="img/logo-2.svg" alt="MAD" />
 				<!--Навигация-->
 				<nav class="upper-menu__nav menu-nav">
 					<ul class="menu-nav__list nav-list">
@@ -143,77 +143,24 @@
 	</header>
 	<!--Page main part-->
 	<main class="main">
-		<!--Breadcrumbs-->
-		<div class="main__breadcrumbs breadcrumbs">
-			<ul class="breadcrumbs__list breadcrumbs-list">
-				<li class="breadcrumbs-list__item">
-					<a class="breadcrumbs-list__link breadcrumbs-list__link--main" href="index.html">Главная</a>
-				</li>
-				<li class="breadcrumbs-list__item">
-					<a class="breadcrumbs-list__link breadcrumbs-list__link--brochure" href="#">Брошюры</a>
-				</li>
-				<li class="breadcrumbs-list__item">
-					<a class="breadcrumbs-list__link breadcrumbs-list__link--designbroshure" href="#">Дизайн брошюры</a>
-				</li>
-			</ul>
-		</div>
 		<!--Секция информации-->
-		<section class="main__info info">
-			<h1 class="info__title">Изготовление брошюр под ключ</h1>
-			<b class="info__subtitle">от идеи до тиража</b>
+		<section class="main__info intro">
+			<h1 class="intro__title">Студия Media Aid Design</h1>
 
-			<div class="info__wrapper info-wrapper">
-				<ul class="info-wrapper__list info-list">
-					<li class="info-list__item">
-						<span class="info-list__text">от идеи до тиража &mdash; 4 недели</span>
-					</li>
-					<li class="info-list__item">
-						<span class="info-list__text">цена от 100 000 руб</span>
-					</li>
-				</ul>
-				<!--Фоновое, загружаемое изображение-->
-				<div class="info-wrapper__background">
-					<picture class="info-wrapper__frame">
-						<source media="(min-width: 1152px)" srcset="img/info-book.png">
-						<img class="info-wrapper__image" src="img/bg-mag.png" alt="Брошюра">
-					</picture>
+			<div class="intro__wrapper intro-wrapper">
+				<div class="intro-wrapper__contacts">
+					<a class="intro-wrapper__link intro-wrapper__link--phone" href="tel:+74950218126">+7 (495) 021 81 26</a>
+					<a class="intro-wrapper__link intro-wrapper__link--mail" href="mailto:mail@mediaaid.ru">mail@mediaaid.ru</a>
 				</div>
-				<!--Форма обратного звонка-->
-				<div class="info-wrapper__recall info-recall">
-					<b class="info-recall__title">Узнайте стоимость заказа прямо сейчас!</b>
-					<form class="info-recall__form recall-form" method="post" action="#" autocomplete="off">
-						<ul class="recall-form__list recall-list">
-							<li class="recall-list__item recall-list__item--name">
-								<input class="recall-list__input recall-list__input--name" type="text" name="name" id="name" placeholder="Ваше имя">
-							</li>
-							<li class="recall-list__item recall-list__item--tel">
-								<input class="recall-list__input recall-list__input--tel" type="tel" name="tel" id="tel" placeholder="Контактный телефон">
-							</li>
-						</ul>
-						<button class="recall-form__submit" type="submit">Позвоните мне</button>
-						<p class="recall-form__item">
-							<input class="recall-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement" checked="">
-							<label class="recall-form__label" for="agreement">Согласен на обработку&nbsp;<a class="recall-form__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">персональных данных</a></label>
-						</p>
-					</form>
-				</div>
+				<span class="intro-wrapper__text">109125 г. Москва, ул. Рабочая 93, стр 2<br />БЦ "Новорогожский", офис 241<br />Пн-Пт 10:00&mdash;19:00</span>
 				<!--Кнопка расчета стоимости только для мобильных-->
-				<button class="info-wrapper__count" type="button">Расчитать стоимость брошюры</button>
+				<button class="intro-wrapper__count" type="button">Узнайте стоимость дизайна</button>
 			</div>
 		</section>
-		<!--Секция чек-листа-->
-		<section class="main__checklist checklist">
-			<h2 class="checklist__title visually-hidden">Скачать чек-лист</h2>
-			<p class="checklist__description">Дизайнерский продукт — плод совместного труда клиента и студии. Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы. Исходя из этого мы вместе планируем время на этапы, назначаем ответственных с обеих сторон, рассчитываем стоимость нашей части работ. Чем больше делает студия — тем дольше срок и выше стоимость.</p>
-			<!--Для мобильного описание-->
-			<p class="checklist__description checklist__description--mobile">Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы.</p>
-			<b class="checklist__subtitle">Что нужно для создания брошюры?</b>
-			<a class="checklist__btn checklist__btn--download" href="#" download="">Скачать чек-лист</a>
-		</section>
-		<!--Секция услуг-->
-		<section class="main__service service service--index">
-			<h2 class="service__title">Этапы создания брошюры</h2>
-			<ul class="service__list service-list">
+		<!--Секция списка услуг-->
+		<section class="main__service service service--main">
+			<h2 class="visually-hidden">Услуги компании</h2>
+			<ul class="service__list service-list service-list--main">
 				<li class="service-list__item service-list__item--0">
 					<a class="service-list__link" href="#" target="_self">
 						<picture class="service-list__frame">
@@ -268,10 +215,46 @@
 						<span class="service-list__text">Печать</span>
 					</a>
 				</li>
+				<li class="service-list__item service-list__item--6">
+					<a class="service-list__link" href="#" target="_self">
+						<picture class="service-list__frame">
+							<source srcset="img/7.webp" type="image/webp" />
+							<img class="service-list__image" src="img/7.png" alt="Иллюстрации" />
+						</picture>
+						<span class="service-list__text">Инфографика</span>
+					</a>
+				</li>
+				<li class="service-list__item service-list__item--7">
+					<a class="service-list__link" href="#" target="_self">
+						<picture class="service-list__frame">
+							<source srcset="img/8.webp" type="image/webp" />
+							<img class="service-list__image" src="img/8.png" alt="Под ключ" />
+						</picture>
+						<span class="service-list__text">Под ключ</span>
+					</a>
+				</li>
+				<li class="service-list__item service-list__item--8">
+					<a class="service-list__link" href="#" target="_self">
+						<picture class="service-list__frame">
+							<source srcset="img/9.webp" type="image/webp" />
+							<img class="service-list__image" src="img/9.png" alt="Фотография" />
+						</picture>
+						<span class="service-list__text">Фотография</span>
+					</a>
+				</li>
 			</ul>
 		</section>
+		<!--Секция чек-листа-->
+		<section class="main__checklist checklist checklist--main">
+			<h2 class="checklist__title visually-hidden">Скачать чек-лист</h2>
+			<p class="checklist__description">Дизайнерский продукт — плод совместного труда клиента и студии. Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы. Исходя из этого мы вместе планируем время на этапы, назначаем ответственных с обеих сторон, рассчитываем стоимость нашей части работ. Чем больше делает студия — тем дольше срок и выше стоимость.</p>
+			<!--Для мобильного описание-->
+			<p class="checklist__description checklist__description--mobile">Изготовление брошюры требует строгой последовательности шагов: концепция, подготовка текста, изготовление изображений и так далее. Поэтому на первом этапе договариваемся о том, какие действия выполняет студия, а какие делаете вы.</p>
+			<b class="checklist__subtitle">Что нужно для создания брошюры?</b>
+			<a class="checklist__btn checklist__btn--download" href="#" download>Скачать чек-лист</a>
+		</section>
 		<!--Секция примеров работ-->
-		<section class="main__sample sample">
+		<section class="main__sample sample sample--main">
 			<div class="sample__info sample-info">
 				<h2 class="sample-info__title">Примеры наших работ</h2>
 				<b class="sample-info__subtitle">Работы</b>
@@ -280,13 +263,13 @@
 			<div class="sample__list sample-list" id="sample-list">
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-1.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-1.jpg" alt="Пример-1">
+						<source srcset="img/sample-1.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-1.jpg" alt="Пример-1" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-1.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-1.jpg" alt="Пример-1">
+							<source srcset="img/sample-1.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-1.jpg" alt="Пример-1" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -296,13 +279,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-2.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-2.jpg" alt="Пример-2">
+						<source srcset="img/sample-2.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-2.jpg" alt="Пример-2" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-2.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-2.jpg" alt="Пример-2">
+							<source srcset="img/sample-2.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-2.jpg" alt="Пример-2" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -312,13 +295,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-3.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-3.jpg" alt="Пример-3">
+						<source srcset="img/sample-3.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-3.jpg" alt="Пример-3" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-3.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-3.jpg" alt="Пример-3">
+							<source srcset="img/sample-3.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-3.jpg" alt="Пример-3" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -328,13 +311,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-4.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-4.jpg" alt="Пример-4">
+						<source srcset="img/sample-4.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-4.jpg" alt="Пример-4" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-4.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-4.jpg" alt="Пример-4">
+							<source srcset="img/sample-4.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-4.jpg" alt="Пример-4" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -344,13 +327,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-5.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-5.jpg" alt="Пример-5">
+						<source srcset="img/sample-5.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-5.jpg" alt="Пример-5" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-5.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-5.jpg" alt="Пример-5">
+							<source srcset="img/sample-5.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-5.jpg" alt="Пример-5" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -360,13 +343,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-6.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-6.jpg" alt="Пример-6">
+						<source srcset="img/sample-6.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-6.jpg" alt="Пример-6" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-6.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-6.jpg" alt="Пример-6">
+							<source srcset="img/sample-6.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-6.jpg" alt="Пример-6" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -376,13 +359,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-7.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-7.jpg" alt="Пример-7">
+						<source srcset="img/sample-7.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-7.jpg" alt="Пример-7" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-7.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-7.jpg" alt="Пример-7">
+							<source srcset="img/sample-7.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-7.jpg" alt="Пример-7" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -392,13 +375,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-8.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-8.jpg" alt="Пример-8">
+						<source srcset="img/sample-8.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-8.jpg" alt="Пример-8" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-8.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-8.jpg" alt="Пример-8">
+							<source srcset="img/sample-8.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-8.jpg" alt="Пример-8" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -408,13 +391,13 @@
 				</div>
 				<div class="sample-list__item">
 					<picture class="sample-list__frame">
-						<source srcset="img/sample-9.webp" type="image/webp">
-						<img class="sample-list__image" src="img/sample-9.jpg" alt="Пример-9">
+						<source srcset="img/sample-9.webp" type="image/webp" />
+						<img class="sample-list__image" src="img/sample-9.jpg" alt="Пример-9" />
 					</picture>
 					<a class="sample-list__link" href="#" target="_self">
 						<picture class="sample-list__framefade">
-							<source srcset="img/sample-9.webp" type="image/webp">
-							<img class="sample-list__fade" src="img/sample-9.jpg" alt="Пример-9">
+							<source srcset="img/sample-9.webp" type="image/webp" />
+							<img class="sample-list__fade" src="img/sample-9.jpg" alt="Пример-9" />
 						</picture>
 						<div class="sample-list__text">
 							<b class="sample-list__name">Название организации</b>
@@ -425,7 +408,7 @@
 			</div>
 		</section>
 		<!--Секция FAQ-->
-		<section class="main__faq faq">
+		<section class="main__faq faq faq--main">
 			<!--Заголовок для мобильной версии-->
 			<h2 class="faq__title faq__title--mobile">Часто задаваемые вопросы</h2>
 			<!--Заголовок для десктопной версии-->
@@ -478,7 +461,7 @@
 			</div>
 		</section>
 		<!--Секция образцов презентаций-->
-		<section class="main__pattern pattern">
+		<section class="main__pattern pattern pattern--main">
 			<h2 class="pattern__title visually-hidden">Образцы&nbsp;наших&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</h2>
 			<div class="pattern__info pattern-info">
 				<b class="pattern-info__title pattern-info__title--framed">Образцы&nbsp;коммерческих предложений&nbsp;и&nbsp;презентаций</b>
@@ -497,27 +480,27 @@
 				<!--Список комм.предложений-->
 				<ul class="pattern-links__list pattern-links__list--active">
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Евролифлет:</b> концепт, верстка + препресс</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Буклет:</b> дизайн, верстка А4, препресс, печать1</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
@@ -525,27 +508,27 @@
 				<!--Список с презентациями-->
 				<ul class="pattern-links__list">
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Евролифлет:</b> концепт, верстка + препресс</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Буклет:</b> дизайн, верстка А4, препресс, печать1</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
 					<li class="pattern-links__item">
-						<a class="pattern-links__link" href="#" download="">
+						<a class="pattern-links__link" href="#" download>
 							<h3 class="pattern-links__text"><b class="pattern-links__text--bold">Годовой отчёт:</b> концепт, верстка 320 полос, перевод</h3>
 						</a>
 					</li>
@@ -553,7 +536,7 @@
 			</div>
 		</section>
 		<!--Секция свежих кейсов-->
-		<section class="main__recent recent">
+		<section class="main__recent recent recent--main">
 			<header class="recent__header">
 				<h2 class="recent__title">Свежие кейсы</h2>
 				<a class="recent__btn recent__btn--showall" href="/blog/design" target="_self">Смотреть все кейсы</a>
@@ -561,13 +544,13 @@
 			<div class="recent__list recent-list" id="recent-list">
 				<div class="recent-list__item">
 					<picture class="recent-list__frame">
-						<source srcset="img/recent-1.webp" type="image/webp">
-						<img class="recent-list__image" src="img/recent-1.jpg" alt="recent-1">
+						<source srcset="img/recent-1.webp" type="image/webp" />
+						<img class="recent-list__image" src="img/recent-1.jpg" alt="recent-1" />
 					</picture>
 					<a class="recent-list__link" href="#" target="_self">
 						<picture class="recent-list__framefade">
-							<source srcset="img/recent-1.webp" type="image/webp">
-							<img class="recent-list__fade" src="img/recent-1.jpg" alt="recent-1">
+							<source srcset="img/recent-1.webp" type="image/webp" />
+							<img class="recent-list__fade" src="img/recent-1.jpg" alt="recent-1" />
 						</picture>
 						<div class="recent-list__text">
 							<b class="recent-list__name">Название организации</b>
@@ -577,13 +560,13 @@
 				</div>
 				<div class="recent-list__item">
 					<picture class="recent-list__frame">
-						<source srcset="img/recent-2.webp" type="image/webp">
-						<img class="recent-list__image" src="img/recent-2.jpg" alt="recent-2">
+						<source srcset="img/recent-2.webp" type="image/webp" />
+						<img class="recent-list__image" src="img/recent-2.jpg" alt="recent-2" />
 					</picture>
 					<a class="recent-list__link" href="#" target="_self">
 						<picture class="recent-list__framefade">
-							<source srcset="img/recent-2.webp" type="image/webp">
-							<img class="recent-list__fade" src="img/recent-2.jpg" alt="recent-2">
+							<source srcset="img/recent-2.webp" type="image/webp" />
+							<img class="recent-list__fade" src="img/recent-2.jpg" alt="recent-2" />
 						</picture>
 						<div class="recent-list__text">
 							<b class="recent-list__name">Название организации</b>
@@ -593,13 +576,13 @@
 				</div>
 				<div class="recent-list__item">
 					<picture class="recent-list__frame">
-						<source srcset="img/recent-3.webp" type="image/webp">
-						<img class="recent-list__image" src="img/recent-3.jpg" alt="recent-3">
+						<source srcset="img/recent-3.webp" type="image/webp" />
+						<img class="recent-list__image" src="img/recent-3.jpg" alt="recent-3" />
 					</picture>
 					<a class="recent-list__link" href="#" target="_self">
 						<picture class="recent-list__framefade">
-							<source srcset="img/recent-3.webp" type="image/webp">
-							<img class="recent-list__fade" src="img/recent-3.jpg" alt="recent-3">
+							<source srcset="img/recent-3.webp" type="image/webp" />
+							<img class="recent-list__fade" src="img/recent-3.jpg" alt="recent-3" />
 						</picture>
 						<div class="recent-list__text">
 							<b class="recent-list__name">Название организации</b>
@@ -619,16 +602,16 @@
 				<form class="map-recall__form map-form" method="post" action="#" autocomplete="off">
 					<ul class="map-form__list map-list">
 						<li class="map-list__item map-list__item--name">
-							<input class="map-list__input map-list__input--name" type="text" name="name" id="name-map" placeholder="Ваше имя">
+							<input class="map-list__input map-list__input--name" type="text" name="name" id="name-map" placeholder="Ваше имя"/>
 						</li>
 						<li class="map-list__item map-list__item--tel">
-							<input class="map-list__input map-list__input--tel" type="tel" name="tel" id="tel-map" placeholder="Контактный телефон">
+							<input class="map-list__input map-list__input--tel" type="tel" name="tel" id="tel-map" placeholder="Контактный телефон"/>
 						</li>
 					</ul>
 					<textarea class="map-form__textarea" placeholder="Здравствуйте! Меня&nbsp;заинтересовали&nbsp;ваши&nbsp;услуги. Свяжитесь&nbsp;со&nbsp;мной&nbsp;по&nbsp;телефону"></textarea>
 					<button class="map-form__submit" type="submit">Позвоните мне</button>
 					<p class="map-form__item">
-						<input class="map-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-map" checked="">
+						<input class="map-form__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-map" checked />
 						<label class="map-form__label" for="agreement-map">Согласен на обработку&nbsp;<a class="map-form__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">персональных данных</a></label>
 					</p>
 				</form>
@@ -640,7 +623,7 @@
 		<section class="footer__details details">
 			<h2 class="visually-hidden">Верхняя часть футера</h2>
 			<div class="details__rights details-rights">
-				<span class="details-rights__copyright">&copy;&nbsp;2014&nbsp;-&nbsp;2019&nbsp;ООО&nbsp;&laquo;Медиа&nbsp;Эйд&nbsp;Дизайн&raquo;.<br>Все права защищены</span>
+				<span class="details-rights__copyright">&copy;&nbsp;2014&nbsp;-&nbsp;2019&nbsp;ООО&nbsp;&laquo;Медиа&nbsp;Эйд&nbsp;Дизайн&raquo;.<br />Все права защищены</span>
 				<div class="details-rights__requisites">
 					<span class="details-rights__title">Наши реквизиты:</span>
 					<span class="details-rights__nr details-rights__nr--inn">ИНН: 7725403320  / КПП: 772501001</span>
@@ -650,7 +633,7 @@
 			<div class="details__address details-address">
 				<!--Лого для мобильных-->
 				<a class="details-address__logo" href="#" target="_self">
-					<img class="details-address__img" src="img/footer-logo.png" alt="Media Aid Design">
+					<img class="details-address__img" src="img/footer-logo.png" alt="Media Aid Design"/>
 				</a>
 				<p class="details-address__description">109125 г. Москва, ул. Рабочая 93, стр.2 БЦ "Новорогожский", офис 241</p>
 				<a class="details-address__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">Политика конфиденциальности</a>
@@ -798,15 +781,15 @@
 			<form class="popup-recall__form recall-form" method="post" action="#" autocomplete="off">
 				<ul class="recall-form__list recall-list">
 					<li class="recall-list__item recall-list__item--name">
-						<input class="recall-list__input recall-list__input--name" type="text" name="name3" id="name3" placeholder="Ваше имя">
+						<input class="recall-list__input recall-list__input--name" type="text" name="name3" id="name3" placeholder="Ваше имя"/>
 					</li>
 					<li class="recall-list__item recall-list__item--tel">
-						<input class="recall-list__input recall-list__input--tel" type="tel" name="tel3" id="tel3" placeholder="Контактный телефон">
+						<input class="recall-list__input recall-list__input--tel" type="tel" name="tel3" id="tel3" placeholder="Контактный телефон"/>
 					</li>
 				</ul>
 				<button class="recall-form__submit" type="submit">Позвоните мне</button>
 				<p class="recall-form__item">
-					<input class="recall-form__checkbox visually-hidden" type="checkbox" name="agreement3" id="agreement3" checked="">
+					<input class="recall-form__checkbox visually-hidden" type="checkbox" name="agreement3" id="agreement3" checked />
 					<label class="recall-form__label" for="agreement3">Согласен на обработку&nbsp;<a class="recall-form__policy" href="https://mediaaid.ru/Politika_konfidentsialnosti_OOO-media-e-yd.pdf" target="_blank">персональных данных</a></label>
 				</p>
 			</form>

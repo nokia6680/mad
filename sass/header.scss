@@ -10,6 +10,10 @@
 
   background-color: #cdcdcd;
 
+  &--main {
+    background-color: transparent;
+  }
+
   &__logo {
     min-width: 100px;
     height: 100%;

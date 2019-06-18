@@ -9,6 +9,10 @@
 
   overflow: hidden;
 
+  &--main {
+    background-color: $bg-body;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -54,6 +58,10 @@
     @include container;
 
     overflow: visible;
+
+    &--main {
+      background-color: transparent;
+    }
 
     &__header {
       flex-direction: row;

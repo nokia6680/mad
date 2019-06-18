@@ -22,6 +22,12 @@
     line-height: 1;
 
   }
+
+  /*Страница MAIN*/
+
+  &--main {
+    background-color: #fff;
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -34,8 +40,16 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .service {
-    @include container;
     align-items: flex-start;
+
+    &--index {
+      @include container;
+    }
+
+    &--main {
+      background-color: transparent;
+      padding-bottom: 106px;
+    }
 
     &__title {
       margin-top: 0;

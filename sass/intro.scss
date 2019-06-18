@@ -1,0 +1,49 @@
+.intro {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin: 0;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &__title {
+    font: {
+      size: 1.625em;
+      family: $pt-light;
+      weight: 300;
+    }
+
+    color: $text-black;
+    line-height: normal;
+
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .intro {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .intro {
+    @include container;
+
+    &__title {
+      font: {
+        size: 3.438em;
+        family: $pt-light;
+        weight: 300;
+      }
+
+      margin-top: 0;
+      margin-bottom: 45px;
+    }
+  }
+}

@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  &--main {
+    background-color: $bg-body;
+  }
 }
 
 @media only screen and (min-width: $laptop-wide) {
@@ -13,5 +17,9 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: nowrap;
+
+    &--main {
+      background-color: transparent;
+    }
   }
 }
