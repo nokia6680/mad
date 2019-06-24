@@ -1,5 +1,5 @@
 {
-  "name": "MAD",
+  "name": "mad",
   "version": "0.1.0",
   "private": true,
   "description": "MAD",
@@ -54,7 +54,18 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
-    "gulp-cli": "^2.0.1",
+    "gulp-cli": "^2.2.0",
     "gulp-sequence": "^1.0.0"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokia6680/mad.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nokia6680/mad/issues"
+  },
+  "homepage": "https://github.com/nokia6680/mad#readme"
 }

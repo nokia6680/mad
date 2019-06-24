@@ -1,0 +1,51 @@
+.navigation {
+  display: none;
+}
+
+
+@media only screen and (min-width: $laptop-wide) {
+  .navigation {
+    @include container;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__block {
+      width: auto;
+      padding: 5px 5px;
+
+      background-color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+      /*
+      box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+      -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);*/
+
+      margin-bottom: 40px;
+    }
+
+    &__parent {
+      font: {
+        size: 0.75em;
+        family: $pt-regular;
+        weight: 400;
+      }
+
+      color: $text-gray;
+      text-transform: uppercase;
+    }
+
+    &__destination {
+      font: {
+        size: 0.75em;
+        family: $pt-regular;
+      }
+
+      color: $text-gray;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
+}
