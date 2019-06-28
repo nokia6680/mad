@@ -107,7 +107,6 @@ gulp.task("build", function(done) {
     "copy",
     "style",
     "sprite",
-    "scripts",
     "html",
     done
   );
