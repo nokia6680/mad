@@ -32,7 +32,11 @@
   cursor: pointer;
 
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
+
+  @media only screen and (min-width: 1024px) {
+    padding-left: 0;
+  }
 }
 
 @mixin custom-checkbox {
@@ -40,29 +44,36 @@
   content: "";
   display: block;
 
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
 
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
 
-  background-color: #99999e;
-  border: 1px solid #919197;
-  border-radius: 2px;
+  background-color: transparent;
+  border: 1px solid #000000;
+
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
 }
 
 @mixin checkbox-checked {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
   display: block;
-  width: 8px;
-  height: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: #000000;
+  border: 1px solid #000000;
 
-  background-image: url('../img/tick.png');
-  background-size: 8px 6px;
-  background-repeat: no-repeat;
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
 }
 
 @mixin soft-animation {

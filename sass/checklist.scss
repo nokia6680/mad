@@ -6,12 +6,15 @@
   justify-content: flex-end;
   align-items: center;
 
-  &--main {
-    background-color: $bg-body;
-  }
-
   &__description {
     display: none;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__description--mobile {
@@ -33,6 +36,10 @@
     margin-top: 0;
     margin-bottom: 50px;
     text-align: left;
+  }
+
+  &__frame {
+    display: none;
   }
 
   &__subtitle {
@@ -114,19 +121,22 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .checklist {
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
-    &--main {
-      background-color: transparent;
+    padding-top: 100px;
+
+    &__wrap {
+      align-items: flex-start;
     }
 
     &__description {
       position: relative;
 
-      display: block;
+      display: inline-flex;
 
       width: 512px;
-      padding-top: 195px;
 
       font: {
         size: 1.125em;
@@ -137,23 +147,21 @@
       line-height: 1.25em;
 
       margin: 0;
-      margin-bottom: 90px;
-
-      &::after {
-        position: absolute;
-        content: '';
-
-        width: 609px;
-        height: 595px;
-
-        top: 45px;
-        right: -659px;
-
-        background-image: url('../img/checklist-bg.png');
-        background-repeat: no-repeat;
-        background-size: 609px 595px;
-      }
+      margin-bottom: 50px;
     }
+
+    &__frame {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 367px;
+      max-width: 367px;
+      height: 505px;
+      max-height: 505px;
+    }
+
 
     &__description--mobile {
       display: none;
@@ -175,7 +183,7 @@
       width: 210px;
 
       padding-left: 49px;
-      margin-bottom: 135px;
+      margin: 0;
 
       font: {
         size: 0.875em;

@@ -29,6 +29,24 @@
     &--active {
       text-decoration: none;
       background-color: $pattern-info-bg;
+      position: relative;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #FF770D;
+
+        bottom: -20px;
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -92,6 +110,10 @@
         background: -webkit-linear-gradient(left, #ff8d16 1%,#ff3527 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to right, #ff8d16 1%,#ff3527 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8d16', endColorstr='#ff3527',GradientType=1 ); /* IE6-9 */
+
+        &::before {
+          display: none;
+        }
 
         &::after {
           position: absolute;

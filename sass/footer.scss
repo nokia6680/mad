@@ -1,15 +1,247 @@
 .footer {
-  width: 100%;
+  padding: 45px 0 30px;
+  font-size: 13px;
+  font-family: $pt-regular;
+  text-align: center;
+  color: #968B8E;
+  background: #231F20 url(../img/general/sep.jpg) repeat-x top;
 
-  padding-top: 20px;
-  padding-bottom: 65px;
+  .l-wraper,
+  .wraper {
+    width: 1170px;
+    max-width: 90%;
+    max-width: calc(100% - 30px);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
-  background-color: $bg-footer;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__row {
+    &--nav {
+      display: none;
+    }
+  }
+
+  &__col {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--logo {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    width: 160px;
+    height: 40px;
+    font-size: 13px;
+    color: #000000;
+    background-color: #F1823E;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    display: none;
+    margin-top: 10px;
+    color: #000;
+
+    &__hover {
+      background-color: #ef7326;
+    }
+  }
+
+  .footer__button {
+    color: #000;
+  }
+
+  &__phone {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .b-footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+  }
+
+  .b-footer-social__item {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    background: #383132;
+    border-radius: 4px;
+  }
+
+  .b-footer-social__item-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .b-footer-social__item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: -7.5px;
+    margin-top: -7.5px;
+  }
 }
 
-@media only screen and (min-width: $laptop-wide) {
+@media only screen and (min-width: 720px) {
+  .footer {
+    text-align: left;
+
+    .l-wraper,
+    .wraper {
+      max-width: 90%;
+    }
+
+    &__row {
+      &-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &--info {
+        .footer__col:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    &__col {
+      margin: 0;
+
+      &--flex_alight {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+
+    &__button {
+      display: inline-flex;
+    }
+  }
+
+  .b-footer-social {
+    justify-content: flex-start;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .footer {
     padding-top: 42px;
     padding-bottom: 42px;
+
+    &__row {
+      display: block;
+
+      &-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &__row + &__row {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid #40393B;
+    }
+
+    &__col {
+      display: block;
+      margin: 0;
+
+      &--flex_alight {
+        display: flex;
+      }
+
+      &--logo {
+        margin-right: 40px;
+
+        & + .footer__col {
+          margin-left: 0;
+        }
+      }
+
+      &--address {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &-caption {
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #D6CBCD;
+        margin-bottom: 1em;
+      }
+    }
+
+    &--cols-6 {
+      .footer__col {
+        flex: 0 0 100%/6;
+        max-width: 100%/6;
+      }
+    }
+
+    &__menu {
+      margin: 0;
+      padding: 0;
+      text-indent: 0;
+      list-style: none;
+      list-style-position: outside;
+
+      & > li {
+        margin-bottom: 1em;
+      }
+
+      & > li > a {
+        color: currentColor;
+      }
+
+      & > li > a:hover {
+        color: #ffffff;
+      }
+    }
   }
 }

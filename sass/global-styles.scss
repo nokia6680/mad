@@ -37,23 +37,18 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
+  ._menu_opened {
+    .header__inner {
+      color: #fff;
+    }
+  }
+
   @media only screen and (min-width: $laptop-wide) {
     background-color: $bg-body;
     background-image: url('../img/upper-bg.jpg');
     background-repeat: no-repeat;
     background-position: top center;
-  }
-}
-
-.body-main {
-  background-color: $bg-body;
-  background-image: url('../img/bg-main.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: auto;
-
-  @media only screen and (min-width: $laptop-wide) {
-    background-size: 2000px 837px;
+    background-size: contain;
   }
 }
 

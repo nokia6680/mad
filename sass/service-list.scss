@@ -57,6 +57,20 @@
 
     &--8 {
       border-top: 2px solid #1E986F;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        top: -2px;
+        right: -100%;
+
+        width: 100%;
+        height: 2px;
+        background-color: #FE624C;
+      }
     }
   }
 
@@ -205,6 +219,12 @@
 
       &:nth-of-type(3n+3) {
         margin-right: 0;
+      }
+
+      &--8 {
+        &::after {
+          display: none;
+        }
       }
     }
 
