@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -465,233 +466,359 @@
 		</div>
 	</header>
 	<!--Page main part-->
-	<main class="main">
-		<!--Блок фильтра портфолио-->
-		<div class="main__filter filter">
-			<h1 class="filter__title">Портфолио</h1>
-			<form class="filter__form" method="get" action="#">
-				<button class="filter__open" type="button">
-					<span class="filter__text">Категория</span>
-					<img class="filter__arrow" src="img/down-filter.svg" alt="Открыть меню" title="#" />
-				</button>
-				<div class="filter__wrap">
-					<b class="filter__subtitle">Выберите категорию:</b>
-					<ul class="filter__list filter-nav filter-button-group">
-						<li class="filter-nav__item filter-nav__item--large">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="all" id="filter-0" />
-							<label class="filter-nav__btn filter-nav__btn--large" for="filter-0">Все</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="poligraphy" id="filter-1" />
-							<label class="filter-nav__btn" for="filter-1">Полиграфия</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="sites" id="filter-2" />
-							<label class="filter-nav__btn" for="filter-2">Сайты</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="branding" id="filter-3" />
-							<label class="filter-nav__btn" for="filter-3">Брэндинг</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="design" id="filter-4" />
-							<label class="filter-nav__btn" for="filter-4">Дизайн</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="brochure" id="filter-5" />
-							<label class="filter-nav__btn" for="filter-5">Брошюры</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="catalog" id="filter-6" />
-							<label class="filter-nav__btn" for="filter-6">Каталоги</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="identity" id="filter-7" />
-							<label class="filter-nav__btn" for="filter-7">Айдентика</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="graphics" id="filter-8" />
-							<label class="filter-nav__btn" for="filter-8">Графика</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="banks" id="filter-9" />
-							<label class="filter-nav__btn" for="filter-9">Банки</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="estate" id="filter-10" />
-							<label class="filter-nav__btn" for="filter-10">Недвижимость</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="finance" id="filter-11" />
-							<label class="filter-nav__btn" for="filter-11">Финансы</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="media" id="filter-12" />
-							<label class="filter-nav__btn" for="filter-12">Медиа</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="building" id="filter-13" />
-							<label class="filter-nav__btn" for="filter-13">Строительство</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="restaurants" id="filter-14" />
-							<label class="filter-nav__btn" for="filter-14">Рестораны</label>
-						</li>
-						<li class="filter-nav__item">
-							<input class="filter-nav__checkbox visually-hidden" name="filter" type="radio" value="industry" id="filter-15" />
-							<label class="filter-nav__btn" for="filter-15">Промышленность</label>
-						</li>
-					</ul>
-					<button class="filter__close" type="button">Выбрать</button>
+	<main class="main main--transparent">
+		<!--Single item-->
+		<section class="main__product product product--black">
+			<div class="product__info">
+				<h1 class="product__title">Годовой отчёт &laquo;МинБанка&raquo;</h1>
+				<ul class="product__specs">
+					<!--List of item info about production-->
+					<li class="product__specs-item">
+						<span class="product__specs-text">От идеи до тиража &mdash; 4 недели</span>
+					</li>
+					<li class="product__specs-item">
+						<span class="product__specs-text">Цена от 100 000 рублей</span>
+					</li>
+				</ul>
+			</div>
+			<!--Item photo block-->
+			<div class="product__details product-details product-details--1">
+				<!--List of product images-->
+				<ul class="product-details__list details-list details-list--1">
+					<!--Singe item details block (Изображение и текст (список))-->
+					<li class="details-list__item vertical vertical--center">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-6.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-6.png" />
+						</picture>
+						<!--Authors, designers etc-->
+						<ul class="details-list__credits credits-list">
+							<li class="credits-list__item">
+								<b class="credits-list__title">Руководитель </b>
+								<span class="credits-list__name">Андрей Алатин</span>
+							</li>
+							<li class="credits-list__item">
+								<b class="credits-list__title">Арт.директор </b>
+								<span class="credits-list__name">Дмитрий Киреев</span>
+							</li>
+							<li class="credits-list__item">
+								<b class="credits-list__title">Дизайнер </b>
+								<span class="credits-list__name">Марат Бакиров</span>
+							</li>
+							<li class="credits-list__item">
+								<b class="credits-list__title">Менеджеры </b>
+								<span class="credits-list__name">Елена Мамедова, Екатерина Белодедова, Дмитрий Мотузов</span>
+							</li>
+						</ul>
+					</li>
+					<!--Singe item details block (Изображение и текст (просто текст))-->
+					<li class="details-list__item horizontal horizontal--2">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-7.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-7.png" />
+						</picture>
+						<!--Some text-->
+						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+					</li>
+					<!--Singe item details block (Горизонтальное из трех элементов)-->
+					<li class="details-list__item horizontal horizontal--2-inv">
+						<!--Specs info text-->
+						<div class="details-list__info">
+							<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+							<ul class="details-list__specs details-specs">
+								<li class="details-specs__item">
+									<b class="details-specs__item-nr">24</b>
+									<span class="details-specs__item-text">таблицы</span>
+								</li>
+								<li class="details-specs__item">
+									<b class="details-specs__item-nr">12890</b>
+									<span class="details-specs__item-text">знаков</span>
+								</li>
+							</ul>
+						</div>
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-8.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-8.png" />
+						</picture>
+					</li>
+					<!--Singe item details block (Изображение + текст - Inverted)-->
+					<li class="details-list__item vertical vertical--middle">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-10.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-10.png" />
+						</picture>
+						<div class="details-list__info">
+							<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+							<ul class="details-list__specs details-specs">
+								<li class="details-specs__item">
+									<b class="details-specs__item-nr">24</b>
+									<span class="details-specs__item-text">таблицы</span>
+								</li>
+								<li class="details-specs__item">
+									<b class="details-specs__item-nr">12890</b>
+									<span class="details-specs__item-text">знаков</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!--List of product images-->
+				<ul class="product-details__list details-list details-list--5">
+					<!--Singe item details block (Изображение и текст (список))-->
+					<li class="details-list__item vertical">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-1.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-1.png" />
+						</picture>
+						<!--Authors, designers etc-->
+						<ul class="details-list__credits credits-list">
+							<li class="credits-list__item">
+								<b class="credits-list__title">Руководитель </b>
+								<span class="credits-list__name">Андрей Алатин</span>
+							</li>
+							<li class="credits-list__item">
+								<b class="credits-list__title">Арт.директор </b>
+								<span class="credits-list__name">Дмитрий Киреев</span>
+							</li>
+							<li class="credits-list__item">
+								<b class="credits-list__title">Дизайнер </b>
+								<span class="credits-list__name">Марат Бакиров</span>
+							</li>
+							<li class="credits-list__item">
+								<b class="credits-list__title">Менеджеры </b>
+								<span class="credits-list__name">Елена Мамедова, Екатерина Белодедова, Дмитрий Мотузов</span>
+							</li>
+						</ul>
+					</li>
+					<!--Singe item details block (Изображение и текст (просто текст))-->
+					<li class="details-list__item vertical">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-2.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-2.png" />
+						</picture>
+						<!--Some text-->
+						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+					</li>
+					<!--Singe item details block (Горизонтальное из трех элементов)-->
+					<li class="details-list__item horizontal horizontal--3">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-3.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-3.png" />
+						</picture>
+						<!--Specs info text-->
+						<ul class="details-list__specs details-specs">
+							<li class="details-specs__item">
+								<b class="details-specs__item-nr">24</b>
+								<span class="details-specs__item-text">таблицы</span>
+							</li>
+							<li class="details-specs__item">
+								<b class="details-specs__item-nr">12890</b>
+								<span class="details-specs__item-text">знаков</span>
+							</li>
+						</ul>
+						<!--Some text block-->
+						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+					</li>
+					<!--Singe item details block (Изображение + текст - Inverted)-->
+					<li class="details-list__item vertical vertical--reverse">
+						<!--Some text-->
+						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-4.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-4.png" />
+						</picture>
+					</li>
+				</ul>
+			</div>
+			<!--Item documents-->
+			<div class="product__data product-data">
+				<div class="product-data__wrap">
+					<a class="product-data__link product-data__link--doc" href="#" target="_blank" title="Техническое задание">Техническое задание</a>
+					<a class="product-data__link product-data__link--comment" href="#" target="_self" target="Комментарии">Комментарии</a>
+					<span class="product-data__publication">
+						Дата публикации:
+						<time class="product-data__publication-time" datetime="2018-05-25">25.05.2018</time>
+					</span>
 				</div>
-			</form>
-		</div>
+			</div>
+		</section>
 		<!--Раскладка блоков-->
-		<div class="main__grid grid-layout">
-			<a class="grid-item grid-item-1 tall-2-tb span-2-lg " href="portfolio-item.html" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-1.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-1.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
+		<div class="main__similar similar">
+			<div class="similar__wrap">
+				<h2 class="similar__title">Другие работы похожей тематики</h2>
+			</div>
+			<div class="similar-layout swiper-container">
+				<div class="swiper-wrapper">
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
 				</div>
-			</a>
-			<a class="grid-item grid-item-2 tall-1-lg" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-2.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-2.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
+				<div class="similar-layout__btn">
+					<div class="slide-prev"></div>
+					<div class="slide-next"></div>
 				</div>
-			</a>
-			<a class="grid-item grid-item-3 tall-2-sm tall-2-tb" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-4.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-4.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-4" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-3.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-3.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-5 grid-item--info" href="#" target="_self" title="">
-				<!--Инфо-->
-				<div class="grid-item__wrap">
-					<p class="grid-item__text"><b class="grid-item__text--bold">55 </b>довольных клиентов</p>
-				</div>
-			</a>
-			<a class="grid-item grid-item-6 row-full tall-2-sm grid-item--wide red" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame grid-item__frame--wide">
-					<source srcset="img/good-5.webp" type="image/webp" />
-					<img class="grid-item__pic grid-item__pic--wide" src="img/good-5.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info grid-item__info--wide">
-					<b class="grid-item__name grid-item__name--wide">Брошюра НСТ</b>
-					<span class="grid-item__description">Разработка концепции, дизайн и вёрстка для московского застройщика</span>
-				</div>
-			</a>
-			<a class="grid-item grid-item-7 grid-item--studio blue" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/studio.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/studio.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-8 span-2-lg" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-6.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-6.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-9 grid-item--info black" href="#" target="_self" title="">
-				<!--Инфо-->
-				<div class="grid-item__wrap">
-					<p class="grid-item__text grid-item__text--white"><b class="grid-item__text--bold">87 </b>работ в портфолио</p>
-				</div>
-			</a>
-			<a class="grid-item grid-item-10 grid-item--vertical tall-2-sm tall-2-tb tall-2-lg purple" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame grid-item__frame--vertical">
-					<source srcset="img/good-7.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-7.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-11" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-8.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-8.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-12 tall-2-sm tall-2-lg" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-10.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-10.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
-			<a class="grid-item grid-item-13" href="#" target="_self" title="">
-				<!--Картинка-->
-				<picture class="grid-item__frame">
-					<source srcset="img/good-9.webp" type="image/webp" />
-					<img class="grid-item__pic" src="img/good-9.png" />
-				</picture>
-				<!--Инфоблок-->
-				<div class="grid-item__info">
-					<span class="grid-item__type">Фирменный стиль</span>
-					<b class="grid-item__name">Михайлов и партнеры</b>
-				</div>
-			</a>
+			</div>
 		</div>
 	</main>
 	<!--Page footer-->
@@ -855,6 +982,8 @@
 		</div>
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="js/slider.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

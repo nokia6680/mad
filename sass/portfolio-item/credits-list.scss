@@ -1,0 +1,45 @@
+.credits-list {
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  max-width: 300px;
+
+  &__item {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 0.25rem;
+  }
+
+  &__title {
+    font: {
+      size: 0.875rem;
+      family: $pt-bold;
+      weight: 600;
+    }
+
+    color: $text-white;
+    line-height: 1.2;
+  }
+
+  &__name {
+    font: {
+      size: 0.875rem;
+      family: $pt-light;
+      weight: 300;
+    }
+
+    color: $text-white;
+    line-height: 1.2;
+  }
+}

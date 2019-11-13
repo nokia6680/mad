@@ -7,11 +7,32 @@
   &--portfolio {
     padding-bottom: 70px;
   }
+
+  /*5ый тип контента*/
+  &--black {
+    background-color: #1C1C1A;
+    padding-top: 200px;
+  }
+  /*1-2-3-4 тип контента*/
+  &--transparent {
+    background-color: transparent;
+    padding-top: 200px;
+  }
 }
 
 
 @media only screen and (min-width: $laptop-wide) {
   .main {
     padding-top: 120px;
+
+    &--black {
+      background-color: #1C1C1A;
+      padding-top: 200px;
+    }
+
+    &--transparent {
+      background-color: transparent;
+      padding-top: 200px;
+    }
   }
 }

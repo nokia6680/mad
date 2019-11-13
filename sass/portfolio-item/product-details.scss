@@ -1,0 +1,23 @@
+.product-details {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  /*BG для первых трех типов карточек портфолио*/
+  &--1,
+  &--2,
+  &--3 {
+    background-color: #011327;
+  }
+  /*BG для 4 типа карточек портфолио*/
+  &--4 {
+    background-color: #A3A8B5;
+  }
+  /*BG для 5 типа карточек портфолио*/
+  &--5 {
+    background-color: #2F2F2F;
+  }
+}

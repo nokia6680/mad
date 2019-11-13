@@ -1,0 +1,46 @@
+.similar {
+  width: 100%;
+
+  background-color: #F1F1F1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding-bottom: 140px;
+
+  &__wrap {
+    @include container;
+  }
+
+  &__title {
+    font: {
+      size: 2rem;
+      weight: 700;
+      family: $pt-bold;
+    }
+
+    color: $text-black;
+    line-height: 2.5rem;
+    text-align: left;
+
+    margin: 0;
+    margin-bottom: 9.25rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 60px;
+      height: 10px;
+
+      background-color: #FF770D;
+
+      bottom: -70px;
+      left: 0;
+    }
+  }
+}
