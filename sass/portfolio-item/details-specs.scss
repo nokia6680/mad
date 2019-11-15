@@ -19,6 +19,12 @@
 
     width: 100%;
 
+    margin-bottom: 1.375rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &-nr {
       font: {
         size: 1.875rem;
@@ -28,6 +34,10 @@
 
       line-height: 2.375rem;
       color: $text-white;
+
+      &.text-black {
+        color: $text-black;
+      }
     }
 
     &-text {
@@ -37,8 +47,12 @@
         weight: 300;
       }
 
-      line-height: 2.375rem;
+      line-height: 2rem;
       color: $text-white;
+
+      &.text-black {
+        color: $text-black;
+      }
     }
   }
 }

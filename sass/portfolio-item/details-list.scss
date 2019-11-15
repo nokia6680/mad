@@ -1,6 +1,5 @@
 .details-list {
   width: 100%;
-  max-width: 1170px;
 
   margin: 0;
   padding: 0;
@@ -15,12 +14,13 @@
   justify-content: flex-start;
   align-items: center;
 
-  &--1 {
-    margin-top: -10rem;
-  }
+  &__item {
+    width: 100%;
 
-  &--5 {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &__frame {
@@ -47,114 +47,444 @@
     text-align: left;
   }
 
-  &__item {
-    width: 100%;
+  /*ПЕРВЫЙ ТИП КАРТОЧКИ!!!*/
+  &--1 {
+    margin-top: -10rem;
+    padding-bottom: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: none;
 
-    margin-bottom: 7.5rem;
-
-    &.vertical {
-      .details-list__frame {
-        margin-bottom: 5rem;
-      }
-      /*Изображение по центру*/
-      &--center {
+    .details-list__item {
+      &.vertical {
+        max-width: 1170px;
         .details-list__frame {
-          margin-bottom: 0;
-          align-self: center;
-          margin-left: 7rem;
-          mix-blend-mode: normal;
-
-          position: relative;
-        }
-
-        .details-list__credits {
-          margin-top: -8rem;
-        }
-      }
-      /*ОБратный вертикальный порядок*/
-      &--reverse {
-        .details-list__description {
           margin-bottom: 5rem;
         }
+        /*Изображение по центру*/
+        &--center {
+          .details-list__frame {
+            margin-bottom: 0;
+            align-self: center;
+            margin-left: 7rem;
+            mix-blend-mode: normal;
 
-        .details-list__frame {
+            position: relative;
+          }
+
+          .details-list__credits {
+            margin-top: -8rem;
+          }
+        }
+        /*ОБратный вертикальный порядок*/
+        &--reverse {
+          .details-list__description {
+            margin-bottom: 5rem;
+          }
+
+          .details-list__frame {
+            margin-bottom: 0;
+          }
+        }
+
+        &--middle {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+
+          position: relative;
+
+          padding-bottom: 2.5rem;
+          padding-top: 5.5rem;
+
           margin-bottom: 0;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 200vw;
+            height: 100%;
+
+            background-color: #bfcace;
+
+            top: 0;
+            left: -75%;
+            right: 0;
+            bottom: 0;
+
+            z-index: 0;
+          }
+
+          .details-list__frame {
+            z-index: 2;
+            width: 100%;
+            max-width: 1289px;
+            margin-bottom: 2,5rem;
+          }
+
+          .details-list__pic {
+            width: 100%;
+            max-width: 1289px;
+            object-fit: contain;
+          }
+
+          .details-list__info {
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+
+            width: 100%;
+          }
+
+          .details-list__description {
+            max-width: 470px;
+            color: #000000;
+          }
         }
       }
 
-      &--middle {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+      &.horizontal {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
 
-        position: relative;
+        max-width: 1170px;
 
-        &::before {
-          position: absolute;
-          content: '';
-          width: 100vw;
-          height: 100%;
+        &--2 {
+          .details-list__frame {
+            width: 100%;
+            max-width: 1289px;
 
-          background-color: #bfcace;
+            margin-left: -70px;
+          }
 
-          top: 0;
-          left: -50%;
-          right: 0;
-          bottom: 0;
-
-          z-index: 0;
+          .details-list__description {
+            width: 206px;
+            margin-top: 2rem;
+          }
         }
 
-        .details-list__frame {
-          z-index: 2;
-        }
-
-        .details-list__info {
-          z-index: 2;
+        &--2-inv {
           flex-direction: row;
           justify-content: space-between;
           align-items: flex-start;
-          flex-wrap: nowrap;
 
-          width: 100%;
+          .details-list__frame {
+            width: 100%;
+            max-width: 1289px;
+
+            margin-right: -70px;
+          }
+
+          .details-list__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            height: 100%;
+          }
+
+          .details-list__description {
+            width: 206px;
+            margin-top: 2rem;
+          }
+        }
+        /*Для трех элементов в ряд*/
+        &--3 {
+          .details-list__frame {
+            min-width: 570px;
+            max-width: 570px;
+            margin-right: 5rem;
+          }
+
+          .details-list__description {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: 0;
+            max-width: 225px;
+          }
         }
       }
     }
+  }
+  /*ВТОРОЙ ТИП КАРТОЧКИ!!!*/
+  &--2 {
+    display: none;
 
-    &.horizontal {
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
+    margin-top: -5rem;
+    padding-bottom: 0;
 
-      &--2 {
+    .details-list__item {
+      &.vertical {
         .details-list__frame {
-          width: 100px;
-          min-width: 1289px;
+          margin-bottom: 5rem;
+        }
+        /*Изображение по центру*/
+        &--center {
+          max-width: 1170px;
 
-          margin-left: -350px;
+          .details-list__frame {
+            margin-bottom: 0;
+            align-self: center;
+            margin-left: 7rem;
+            mix-blend-mode: normal;
+
+            position: relative;
+          }
+
+          .details-list__credits {
+            margin-top: -4rem;
+          }
+        }
+        /*ОБратный вертикальный порядок*/
+        &--reverse {
+          max-width: 1170px;
+
+          .details-list__description {
+            margin: 0;
+          }
+
+          .details-list__frame {
+            align-self: center;
+            margin-bottom: 0;
+            margin-top: -4rem;
+          }
         }
 
-        .details-list__description {
-          width: 206px;
-          margin-top: 2rem;
+        &--triple {
+          max-width: 1170px;
+          justify-content: flex-start;
+          align-items: center;
+
+          position: relative;
+          margin-bottom: 0;
+
+          padding-top: 6.875rem;
+          padding-bottom: 8.25rem;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 200vw;
+            height: 100%;
+
+            background: linear-gradient(45deg, #b6b3b9 0%,#c9c7cc 28%,#dbd9de 44%,#dbd9de 44%,#dbd9de 51%,#dbd9de 56%,#dbd9de 64%,#dbd9de 64%,#b0aeb3 88%,#98969b 100%);
+
+            top: 0;
+            left: -75%;
+            right: 0;
+            bottom: 0;
+
+            z-index: 0;
+          }
+
+          .details-list__specs {
+            z-index: 2;
+
+            align-self: flex-end;
+          }
+
+          .details-list__frame {
+            z-index: 2;
+            width: 100%;
+            margin-top: -6rem;
+          }
+
+          .details-list__description {
+            z-index: 2;
+            align-self: flex-start;
+            color: $text-black;
+
+            margin-top: -15rem;
+            max-width: 305px;
+          }
         }
       }
 
-      &--2-inv {
+      &.double {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+
+        margin-bottom: 0;
+        padding: 0;
+
+        .details-list__frame {
+          width: 100%;
+          height: 763px;
+        }
+
+        .details-list__pic {
+          height: 100%;
+          max-height: 763px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  /*ТРЕТИЙ ТИП КАРТОЧКИ!!!*/
+  &--3 {
+    padding-bottom: 0;
+    margin-top: -5rem;
+
+    display: none;
+
+    .details-list__item {
+      &.vertical {
+        .details-list__frame {
+          margin-bottom: 5rem;
+        }
+        /*Изображение по центру*/
+        &--center {
+          max-width: 1170px;
+
+          .details-list__frame {
+            margin-bottom: 0;
+            align-self: center;
+            margin-left: 7rem;
+            mix-blend-mode: normal;
+
+            position: relative;
+          }
+
+          .details-list__credits {
+            margin-top: -7rem;
+          }
+        }
+
+        &--middle {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          max-width: 1170px;
+
+          padding-bottom: 2.5rem;
+          padding-top: 5.5rem;
+
+          margin-bottom: 0;
+
+          .details-list__imagewrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+          }
+
+          .details-list__frame {
+
+          }
+
+          .details-list__pic {
+            object-fit: contain;
+          }
+
+          .details-list__description {
+            max-width: 440px;
+            color: #fff;
+          }
+        }
+      }
+
+      &.double {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+
+        margin-bottom: 0;
+        padding: 0;
+
+        .details-list__frame {
+          width: 100%;
+          height: 800px;
+        }
+
+        .details-list__pic {
+          height: 100%;
+          max-height: 800px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  /*ЧЕТВЕРТЫЙ ТИП КАРТОЧКИ*/
+  &--4 {
+    padding-bottom: 8.25rem;
+    margin-top: -5rem;
+
+    display: none;
+
+    .details-list__item {
+      &.vertical {
+        .details-list__frame {
+          margin-bottom: 5rem;
+        }
+        /*Изображение по центру*/
+        &--center {
+          max-width: 1170px;
+
+          .details-list__frame {
+            margin-bottom: 2.5rem;
+            align-self: flex-start;
+            margin-left: 0;
+          }
+
+          .details-list__credits {
+            margin-top: 0;
+          }
+        }
+      }
+
+      &.double {
+        width: 100%;
+        max-width: 1170px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        margin-bottom: 0;
+        padding: 0;
+
+        .details-list__frame {
+          width: 100%;
+          height: 504px;
+        }
+
+        .details-list__pic {
+          height: 100%;
+          max-height: 504px;
+          object-fit: cover;
+        }
+      }
+
+      &.horizontal {
+        max-width: 1170px;
+        width: 100%;
+
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
 
         .details-list__frame {
-          width: 100px;
-          min-width: 1289px;
-
-          margin-right: -350px;
+          width: 50%;
         }
 
         .details-list__info {
@@ -163,28 +493,56 @@
           justify-content: space-between;
           align-items: flex-start;
 
-          height: 100%;
-        }
-
-        .details-list__description {
-          width: 206px;
-          margin-top: 2rem;
+          width: 50%;
+          height: auto;
         }
       }
-      /*Для трех элементов в ряд*/
-      &--3 {
+    }
+  }
+  /*ПЯТЫЙ ТИП КАРТОЧКИ*/
+  &--5 {
+    .details-list__item {
+      margin-bottom: 7.5rem;
+
+      &.vertical {
+        max-width: 1170px;
         .details-list__frame {
-          min-width: 570px;
-          max-width: 570px;
-          margin-right: 5rem;
+          margin-bottom: 5rem;
         }
 
-        .details-list__description {
-          margin-top: 0;
-          margin-bottom: 0;
-          margin-left: auto;
-          margin-right: 0;
-          max-width: 225px;
+        /*ОБратный вертикальный порядок*/
+        &--reverse {
+          .details-list__description {
+            margin-bottom: 5rem;
+          }
+
+          .details-list__frame {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.horizontal {
+        max-width: 1170px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        /*Для трех элементов в ряд*/
+        &--3 {
+          .details-list__frame {
+            min-width: 570px;
+            max-width: 570px;
+            margin-right: 5rem;
+          }
+
+          .details-list__description {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: 0;
+            max-width: 225px;
+          }
         }
       }
     }
