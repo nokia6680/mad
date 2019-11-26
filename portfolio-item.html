@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -102,7 +102,7 @@
 		</symbol>
 	</svg>
 	<header class="js-header header compensate-for-scrollbar">
-		<div class="header__inner">
+		<div class="header__inner black">
 			<!--Header logo-->
 			<div class="header__col header__col--logo">
 				<a href="/" class="header__logo">
@@ -325,9 +325,9 @@
 			<!--Кнопка-->
 			<div class="header__col header__col--toggle">
 				<button class="js-menu-toggle toggle-menu-btn" data-target="#mobile-navigation">
-					<span class="toggle-menu-btn__line"></span>
-					<span class="toggle-menu-btn__line"></span>
-					<span class="toggle-menu-btn__line"></span>
+					<span class="toggle-menu-btn__line black"></span>
+					<span class="toggle-menu-btn__line black"></span>
+					<span class="toggle-menu-btn__line black"></span>
 				</button>
 			</div>
 		</div>
@@ -466,11 +466,12 @@
 		</div>
 	</header>
 	<!--Page main part-->
-	<main class="main main--black">
+	<main class="main main--transparent">
 		<!--Single item-->
-		<section class="main__product product">
+		<section class="main__product product product--black">
 			<div class="product__info">
-				<h1 class="product__title">Годовой отчёт &laquo;МинБанка&raquo;</h1>
+				<h1 class="product__title">Портфолио</h1>
+				<h2 class="product__subtitle">Годовой отчёт &laquo;МинБанка&raquo;</h2>
 				<ul class="product__specs">
 					<!--List of item info about production-->
 					<li class="product__specs-item">
@@ -547,7 +548,7 @@
 					<!--Singe item details block (Изображение + текст - Inverted)-->
 					<li class="details-list__item vertical vertical--middle">
 						<!--Product image-->
-						<picture class="details-list__frame">
+						<picture class="details-list__frame details-list__frame--first">
 							<source srcset="img/port-item-9.webp" type="image/webp" />
 							<img class="details-list__pic" src="img/port-item-9.png" />
 						</picture>
@@ -564,11 +565,8 @@
 								</li>
 							</ul>
 						</div>
-					</li>
-					<!--Singe item details block (Изображение)-->
-					<li class="details-list__item vertical vertical--middle">
 						<!--Product image-->
-						<picture class="details-list__frame">
+						<picture class="details-list__frame details-list__frame--second">
 							<source srcset="img/port-item-10.webp" type="image/webp" />
 							<img class="details-list__pic" src="img/port-item-10.png" />
 						</picture>
@@ -653,8 +651,8 @@
 					<li class="details-list__item vertical vertical--center">
 						<!--Product image-->
 						<picture class="details-list__frame">
-							<source srcset="img/port-item-16.webp" type="image/webp" />
-							<img class="details-list__pic" src="img/port-item-16.png" />
+							<source srcset="img/port-item-11.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-11.png" />
 						</picture>
 						<!--Authors, designers etc-->
 						<ul class="details-list__credits credits-list">
@@ -677,16 +675,16 @@
 						</ul>
 					</li>
 					<!--Singe item details block (Текст и два изображения (просто текст))-->
-					<li class="details-list__item vertical vertical vertical--middle">
+					<li class="details-list__item vertical vertical--middle">
 						<!--Product image-->
 						<div class="details-list__imagewrap">
 							<picture class="details-list__frame">
-								<source srcset="img/port-item-17.webp" type="image/webp" />
-								<img class="details-list__pic" src="img/port-item-17.png" />
+								<source srcset="http://placehold.it/465x372" type="image/webp" />
+								<img class="details-list__pic" src="http://placehold.it/465x372" />
 							</picture>
 							<picture class="details-list__frame">
-								<source srcset="img/port-item-18.webp" type="image/webp" />
-								<img class="details-list__pic" src="img/port-item-18.png" />
+								<source srcset="http://placehold.it/256x420" type="image/webp" />
+								<img class="details-list__pic" src="http://placehold.it/256x420" />
 							</picture>
 						</div>
 						<!--Some text-->
@@ -711,8 +709,8 @@
 					<li class="details-list__item vertical vertical--center">
 						<!--Product image-->
 						<picture class="details-list__frame">
-							<source srcset="img/port-item-21.webp" type="image/webp" />
-							<img class="details-list__pic" src="img/port-item-21.png" />
+							<source srcset="img/port-item-11.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-11.png" />
 						</picture>
 						<!--Authors, designers etc-->
 						<ul class="details-list__credits credits-list">
@@ -738,33 +736,34 @@
 					<li class="details-list__item vertical vertical--center">
 						<!--Product image-->
 						<picture class="details-list__frame">
-							<source srcset="img/port-item-22.webp" type="image/webp" />
-							<img class="details-list__pic" src="img/port-item-22.png" />
+							<source srcset="http://placehold.it/465x372" type="image/webp" />
+							<img class="details-list__pic" src="http://placehold.it/465x372" />
 						</picture>
 						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
 					</li>
 					<!--Singe item details block (2 изображения)-->
 					<li class="details-list__item double">
 						<!--Product image-->
-						<picture class="details-list__frame">
-							<source srcset="img/port-item-23.webp" type="image/webp" />
-							<img class="details-list__pic" src="img/port-item-23.png" />
+						<picture class="details-list__frame details-list__frame--first">
+							<source srcset="http://placehold.it/465x372" type="image/webp" />
+							<img class="details-list__pic" src="http://placehold.it/465x372" />
 						</picture>
-						<picture class="details-list__frame">
-							<source srcset="img/port-item-24.webp" type="image/webp" />
-							<img class="details-list__pic" src="img/port-item-24.png" />
+						<picture class="details-list__frame details-list__frame--second">
+							<source srcset="http://placehold.it/465x372" type="image/webp" />
+							<img class="details-list__pic" src="http://placehold.it/465x372" />
 						</picture>
+						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
 					</li>
 					<!--Singe item details block (Изображение и блок с текстом)-->
 					<li class="details-list__item horizontal">
 						<!--Product image-->
 						<picture class="details-list__frame">
-							<source srcset="img/port-item-25.webp" type="image/webp" />
-							<img class="details-list__pic" src="img/port-item-25.png" />
+							<source srcset="http://placehold.it/465x372" type="image/webp" />
+							<img class="details-list__pic" src="http://placehold.it/465x372" />
 						</picture>
 						<!--Some text-->
 						<div class="details-list__info">
-							<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+							<p class="details-list__description text-black">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
 							<ul class="details-list__specs details-specs">
 								<li class="details-specs__item">
 									<b class="details-specs__item-nr text-black">24</b>
@@ -839,6 +838,14 @@
 						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
 					</li>
 					<!--Singe item details block (Изображение + текст - Inverted)-->
+					<li class="details-list__item mobile-image">
+						<!--Product image-->
+						<picture class="details-list__frame">
+							<source srcset="img/port-item-4.webp" type="image/webp" />
+							<img class="details-list__pic" src="img/port-item-4.png" />
+						</picture>
+					</li>
+					<!--Singe item details block (Изображение + текст - Inverted)-->
 					<li class="details-list__item vertical vertical--reverse">
 						<!--Some text-->
 						<p class="details-list__description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
@@ -853,7 +860,7 @@
 			<!--Item documents-->
 			<div class="product__data product-data">
 				<div class="product-data__wrap">
-					<a class="product-data__link product-data__link--doc" href="#" target="_blank" title="Техническое задание">Техническое задание</a>
+					<a class="product-data__link product-data__link--doc" href="#" target="_blank" title="Техническое задание">Техническое&nbsp;задание</a>
 					<a class="product-data__link product-data__link--comment" href="#" target="_self" target="Комментарии">Комментарии</a>
 					<span class="product-data__publication">
 						Дата публикации:
@@ -867,10 +874,10 @@
 			<div class="similar__wrap">
 				<h2 class="similar__title">Другие работы похожей тематики</h2>
 			</div>
-			<div class="similar-layout swiper-container">
-				<div class="swiper-wrapper">
+			<div class="similar-layout">
+				<div class="similar-layout__item similar-item">
 					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+					<a class="similar-item__link" href="#" target="_self" title="">
 						<!--Картинка-->
 						<picture class="similar-item__frame">
 							<source srcset="img/good-1.webp" type="image/webp" />
@@ -883,137 +890,7 @@
 						</div>
 					</a>
 					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
-						<!--Картинка-->
-						<picture class="similar-item__frame">
-							<source srcset="img/good-1.webp" type="image/webp" />
-							<img class="similar-item__pic" src="img/good-1.png" />
-						</picture>
-						<!--Инфоблок-->
-						<div class="similar-item__info">
-							<span class="similar-item__type">Фирменный стиль</span>
-							<b class="similar-item__name">Михайлов и партнеры</b>
-						</div>
-					</a>
-					<!--Single simple similar item-->
-					<a class="similar-layout__item similar-item swiper-slide" href="#" target="_self" title="">
+					<a class="similar-item__link" href="#" target="_self" title="">
 						<!--Картинка-->
 						<picture class="similar-item__frame">
 							<source srcset="img/good-1.webp" type="image/webp" />
@@ -1026,11 +903,149 @@
 						</div>
 					</a>
 				</div>
-				<div class="similar-layout__btn">
-					<div class="slide-prev"></div>
-					<div class="slide-next"></div>
+				<div class="similar-layout__item similar-item">
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+				</div>
+				<div class="similar-layout__item similar-item">
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+				</div>
+				<div class="similar-layout__item similar-item">
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+				</div>
+				<div class="similar-layout__item similar-item">
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+				</div>
+				<div class="similar-layout__item similar-item">
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
+					<!--Single simple similar item-->
+					<a class="similar-item__link" href="#" target="_self" title="">
+						<!--Картинка-->
+						<picture class="similar-item__frame">
+							<source srcset="img/good-1.webp" type="image/webp" />
+							<img class="similar-item__pic" src="img/good-1.png" />
+						</picture>
+						<!--Инфоблок-->
+						<div class="similar-item__info">
+							<span class="similar-item__type">Фирменный стиль</span>
+							<b class="similar-item__name">Михайлов и партнеры</b>
+						</div>
+					</a>
 				</div>
 			</div>
+			<div class="slide-prev"></div>
+			<div class="slide-next"></div>
 		</div>
 	</main>
 	<!--Page footer-->
@@ -1194,7 +1209,7 @@
 		</div>
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/slider.js"></script>
 	<script src="js/script.js"></script>
 </body>

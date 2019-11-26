@@ -1,56 +1,18 @@
 .similar-layout {
   width: 100%;
-
-  .swiper-wrapper {
-    flex-direction: row !important;
-    padding-bottom: 180px;
-  }
-
-  &__btn {
-    position: absolute;
-    border: 2px solid #FF770D;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 0;
-
-    bottom: 0px;
-    left: 50%;
-
-    z-index: 9;
-
-    width: 96px;
-    height: 50px;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 2px;
-      height: 50px;
-
-      background-color: #FF770D;
-      top: 0;
-      right: 45px;
-    }
-  }
+  max-width: 375px;
 
   .slide-next,
   .slide-prev {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
 
-    padding: 0;
-    margin: 0;
-    width: 46px;
+    width: 36px;
     height: 46px;
 
     cursor: pointer;
     outline: none;
+
+    border: 2px solid #FF770D;
   }
 
   .slide-prev {
@@ -58,6 +20,11 @@
     background-size: 13px 22px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    top: -50px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(90deg);
   }
 
   .slide-next {
@@ -65,5 +32,55 @@
     background-size: 13px 22px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    bottom: -50px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .similar-layout {
+    width: 100%;
+    max-width: 100%;
+
+    .swiper-wrapper {
+      flex-direction: row !important;
+      padding-bottom: 180px;
+    }
+
+    .slide-next,
+    .slide-prev {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0;
+      margin: 0;
+      width: 46px;
+      height: 46px;
+
+      cursor: pointer;
+      outline: none;
+    }
+
+    .slide-prev {
+      bottom: -100px;
+      top: auto;
+
+      left: 46%;
+
+      transform: translateX(-45%) rotate(0deg);
+    }
+
+    .slide-next {
+      bottom: -100px;
+      right: 46%;
+      left: auto;
+
+      transform: translateX(-45%) rotate(0deg);
+    }
   }
 }

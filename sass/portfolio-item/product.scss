@@ -8,27 +8,45 @@
   &__info {
     width: 100%;
 
-    @include container;
+    max-width: 375px;
     align-self: flex-start;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 
   &__title {
     font: {
-      size: 3.438rem;
+      size: 2rem;
+      family: $pt-bold;
+      weight: 700;
+    }
+
+    color: $text-white;
+    line-height: 2.5rem;
+
+    margin: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  &__subtitle {
+    font: {
+      size: 1.5rem;
       family: $pt-bold;
       weight: 600;
     }
 
-    line-height: 4.313rem;
+    line-height: 1.875rem;
     color: $text-white;
 
     margin: 0;
-    margin-bottom: 2.625rem;
+    margin-bottom: 2.125rem;
+
+    max-width: 200px;
   }
 
   &__specs {
@@ -97,8 +115,126 @@
 
   &--black {
     .product__title,
+    .product__subtitle,
     .product__specs-text {
       color: #000000;
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .product {
+
+    &__info {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__info {
+      width: 100%;
+
+      @include container;
+      align-self: flex-start;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__title {
+      font: {
+        size: 3.438rem;
+        family: $pt-bold;
+        weight: 600;
+      }
+
+      line-height: 4.313rem;
+      color: $text-white;
+
+      margin: 0;
+      margin-bottom: 2.625rem;
+    }
+
+    &__specs {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      margin-bottom: 7.75rem;
+
+      &-item {
+        position: relative;
+
+        font: {
+          size: 1.125em;
+          family: $pt-regular;
+          weight: 400;
+        }
+
+        color: $text-white;
+        line-height: 1;
+
+        padding-left: 26px;
+        margin-bottom: 20px;
+
+        &::before {
+          position: absolute;
+          content: '';
+
+          width: 11px;
+          height: 11px;
+
+          left: 0;
+          top: 4px;
+
+          background-color: #ea5b0a;
+          border-radius: 50%;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 1px;
+          height: 11px;
+
+          bottom: -15px;
+          left: 5px;
+
+          background-color: #EA5A17;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &--black {
+      .product__title,
+      .product__specs-text {
+        color: #000000;
+      }
     }
   }
 }

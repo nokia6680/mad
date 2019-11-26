@@ -42,16 +42,77 @@
 
     &-text {
       font: {
-        size: 1.875rem;
+        size: 1.25rem;
         family: $pt-light;
         weight: 300;
       }
 
-      line-height: 2rem;
+      line-height: 1.5rem;
       color: $text-white;
 
       &.text-black {
         color: $text-black;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .details-specs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: auto;
+    max-width: 150px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      width: 100%;
+
+      margin-bottom: 1.375rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-nr {
+        font: {
+          size: 1.875rem;
+          family: $pt-bold;
+          weight: 700;
+        }
+
+        line-height: 2.375rem;
+        color: $text-white;
+
+        &.text-black {
+          color: $text-black;
+        }
+      }
+
+      &-text {
+        font: {
+          size: 1.875rem;
+          family: $pt-light;
+          weight: 300;
+        }
+
+        line-height: 2rem;
+        color: $text-white;
+
+        &.text-black {
+          color: $text-black;
+        }
       }
     }
   }

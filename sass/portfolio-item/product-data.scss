@@ -2,8 +2,8 @@
   width: 100%;
 
   background-color: #F1F1F1;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 3.125rem;
+  padding-bottom: 4rem;
 
   &--1 {
     background-color: transparent;
@@ -13,9 +13,9 @@
     @include container;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__link {
@@ -29,7 +29,13 @@
     text-decoration: none;
 
     position: relative;
-    padding-left: 40px;
+    padding-left: 38px;
+
+    margin-bottom: 1.75rem;
+
+    &:last-child {
+      margin-bottom: 3rem;
+    }
 
     &--doc {
       margin-right: 8.125rem;
@@ -46,7 +52,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        left: 0;
+        left: 3px;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -75,21 +81,116 @@
   &__publication {
     display: inline-flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
 
-    margin-left: auto;
-    margin-right: 0;
-
     font: {
-      size: 1.125rem;
-      weight: 700;
-      family: $pt-bold;
+      size: 0.875rem;
+      weight: 400;
+      family: $pt-regular;
     }
 
     color: $text-black;
-    text-align: right;
+    text-align: left;
     max-width: 164px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .product-data {
+    width: 100%;
+
+    background-color: #F1F1F1;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    &--1 {
+      background-color: transparent;
+    }
+
+    &__wrap {
+      @include container;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__link {
+      font: {
+        size: 1.125rem;
+        weight: 700;
+        family: $pt-bold;
+      }
+
+      color: $text-black;
+      text-decoration: none;
+
+      position: relative;
+      padding-left: 40px;
+
+      &--doc {
+        margin-right: 8.125rem;
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 18px;
+          height: 25px;
+
+          background-image: url("data:image/svg+xml,%3Csvg width='18' height='25' viewBox='0 0 18 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 7.2002C10.5 7.52832 10.5938 7.80957 10.8281 7.99707C11.0156 8.23145 11.2969 8.3252 11.625 8.3252H18V23.7002C18 24.0283 17.8594 24.3096 17.6719 24.4971C17.4375 24.7314 17.1562 24.8252 16.875 24.8252H1.125C0.796875 24.8252 0.515625 24.7314 0.328125 24.4971C0.09375 24.3096 0 24.0283 0 23.7002V1.9502C0 1.66895 0.09375 1.3877 0.328125 1.15332C0.515625 0.96582 0.796875 0.825195 1.125 0.825195H10.5V7.2002ZM13.5 18.2627V17.8877C13.5 17.7471 13.4062 17.6064 13.3125 17.5127C13.2188 17.4189 13.0781 17.3252 12.9375 17.3252H5.0625C4.875 17.3252 4.73438 17.4189 4.64062 17.5127C4.54688 17.6064 4.5 17.7471 4.5 17.8877V18.2627C4.5 18.4502 4.54688 18.5908 4.64062 18.6846C4.73438 18.7783 4.875 18.8252 5.0625 18.8252H12.9375C13.0781 18.8252 13.2188 18.7783 13.3125 18.6846C13.4062 18.5908 13.5 18.4502 13.5 18.2627ZM13.5 15.2627V14.8877C13.5 14.7471 13.4062 14.6064 13.3125 14.5127C13.2188 14.4189 13.0781 14.3252 12.9375 14.3252H5.0625C4.875 14.3252 4.73438 14.4189 4.64062 14.5127C4.54688 14.6064 4.5 14.7471 4.5 14.8877V15.2627C4.5 15.4502 4.54688 15.5908 4.64062 15.6846C4.73438 15.7783 4.875 15.8252 5.0625 15.8252H12.9375C13.0781 15.8252 13.2188 15.7783 13.3125 15.6846C13.4062 15.5908 13.5 15.4502 13.5 15.2627ZM13.5 11.8877C13.5 11.7471 13.4062 11.6064 13.3125 11.5127C13.2188 11.4189 13.0781 11.3252 12.9375 11.3252H5.0625C4.875 11.3252 4.73438 11.4189 4.64062 11.5127C4.54688 11.6064 4.5 11.7471 4.5 11.8877V12.2627C4.5 12.4502 4.54688 12.5908 4.64062 12.6846C4.73438 12.7783 4.875 12.8252 5.0625 12.8252H12.9375C13.0781 12.8252 13.2188 12.7783 13.3125 12.6846C13.4062 12.5908 13.5 12.4502 13.5 12.2627V11.8877ZM18 6.54395C18 6.2627 17.8594 5.98145 17.6719 5.74707L13.0781 1.15332C12.8438 0.96582 12.5625 0.825195 12.2812 0.825195H12V6.8252H18V6.54395Z' fill='%23FF770D'/%3E%3C/svg%3E%0A");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &--comment {
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 25px;
+          height: 22px;
+
+          background-image: url("data:image/svg+xml,%3Csvg width='25' height='22' viewBox='0 0 25 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0.325195C15.1562 0.325195 17.1719 0.793945 19 1.6377C20.8281 2.52832 22.2812 3.7002 23.3594 5.2002C24.4375 6.7002 25 8.29395 25 10.0752C25 11.8564 24.4375 13.4971 23.3594 14.9971C22.2812 16.4971 20.8281 17.6689 19 18.5127C17.1719 19.4033 15.1562 19.8252 13 19.8252C11.2188 19.8252 9.57812 19.5439 7.98438 18.9346C7.14062 19.5908 6.29688 20.1064 5.40625 20.4814C4.09375 21.0439 2.73438 21.3252 1.375 21.3252C1.1875 21.3252 1.09375 21.2783 1.04688 21.0908C0.953125 20.9502 1 20.8096 1.09375 20.6689C1.375 20.3877 1.70312 19.9658 2.17188 19.3096C2.92188 18.2314 3.39062 17.2002 3.67188 16.2158C2.82812 15.3721 2.17188 14.3877 1.70312 13.3564C1.23438 12.3252 1 11.2471 1 10.0752C1 8.29395 1.51562 6.7002 2.59375 5.2002C3.67188 3.7002 5.125 2.52832 6.95312 1.6377C8.78125 0.793945 10.7969 0.325195 13 0.325195Z' fill='%23FF770D'/%3E%3C/svg%3E");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &__publication {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      margin-left: auto;
+      margin-right: 0;
+
+      font: {
+        size: 1.125rem;
+        weight: 700;
+        family: $pt-bold;
+      }
+
+      color: $text-black;
+      text-align: right;
+      max-width: 164px;
+    }
   }
 }

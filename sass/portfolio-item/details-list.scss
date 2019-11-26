@@ -6,7 +6,7 @@
 
   list-style: none;
 
-  margin-top: -5rem;
+  margin-top: -3rem;
   padding-bottom: 7rem;
 
   display: flex;
@@ -21,6 +21,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__frame {
@@ -35,54 +39,45 @@
 
   &__description {
     font: {
-      size: 1.125rem;
+      size: 1rem;
       family: $pt-bold;
       weight: 700;
     }
 
-    line-height: 1.438rem;
+    line-height: 1.25rem;
     color: $text-white;
 
-    max-width: 440px;
+    max-width: 340px;
     text-align: left;
+
+    &.text-black {
+      color: #000;
+    }
   }
 
   /*ПЕРВЫЙ ТИП КАРТОЧКИ!!!*/
   &--1 {
-    margin-top: -10rem;
+    display: none;
+    margin-top: -2rem;
     padding-bottom: 0;
 
-    display: none;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
 
     .details-list__item {
       &.vertical {
-        max-width: 1170px;
+        max-width: 375px;
         .details-list__frame {
-          margin-bottom: 5rem;
+          margin-bottom: 3rem;
         }
         /*Изображение по центру*/
         &--center {
+          margin-bottom: 3rem;
+
           .details-list__frame {
-            margin-bottom: 0;
+            margin-bottom: 3rem;
             align-self: center;
-            margin-left: 7rem;
-            mix-blend-mode: normal;
-
-            position: relative;
-          }
-
-          .details-list__credits {
-            margin-top: -8rem;
-          }
-        }
-        /*ОБратный вертикальный порядок*/
-        &--reverse {
-          .details-list__description {
-            margin-bottom: 5rem;
-          }
-
-          .details-list__frame {
-            margin-bottom: 0;
+            margin-left: 0;
           }
         }
 
@@ -93,8 +88,8 @@
 
           position: relative;
 
-          padding-bottom: 2.5rem;
-          padding-top: 5.5rem;
+          padding-bottom: 3rem;
+          padding-top: 3rem;
 
           margin-bottom: 0;
 
@@ -117,22 +112,33 @@
           .details-list__frame {
             z-index: 2;
             width: 100%;
-            max-width: 1289px;
-            margin-bottom: 2,5rem;
+            min-width: 440px;
+            margin-bottom: 3rem;
+
+            &--first {
+              order: 1;
+              margin-right: -10rem;
+            }
+
+            &--second {
+              order: 2;
+              margin-left: -10rem;
+            }
           }
 
           .details-list__pic {
             width: 100%;
-            max-width: 1289px;
             object-fit: contain;
           }
 
           .details-list__info {
+            order: 3;
+
             z-index: 2;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
             flex-wrap: nowrap;
 
             width: 100%;
@@ -146,36 +152,31 @@
       }
 
       &.horizontal {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
-
-        max-width: 1170px;
 
         &--2 {
           .details-list__frame {
             width: 100%;
-            max-width: 1289px;
-
-            margin-left: -70px;
+            margin-bottom: 3rem;
           }
 
           .details-list__description {
-            width: 206px;
-            margin-top: 2rem;
+            width: 260px;
           }
         }
 
         &--2-inv {
-          flex-direction: row;
-          justify-content: space-between;
+          flex-direction: column-reverse;
+          justify-content: flex-start;
           align-items: flex-start;
+          margin-bottom: 3rem;
 
           .details-list__frame {
             width: 100%;
-            max-width: 1289px;
 
-            margin-right: -70px;
+            margin-bottom: 3rem;
           }
 
           .details-list__info {
@@ -188,24 +189,7 @@
           }
 
           .details-list__description {
-            width: 206px;
-            margin-top: 2rem;
-          }
-        }
-        /*Для трех элементов в ряд*/
-        &--3 {
-          .details-list__frame {
-            min-width: 570px;
-            max-width: 570px;
-            margin-right: 5rem;
-          }
-
-          .details-list__description {
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-left: auto;
-            margin-right: 0;
-            max-width: 225px;
+            display: none;
           }
         }
       }
@@ -215,56 +199,59 @@
   &--2 {
     display: none;
 
-    margin-top: -5rem;
+    margin-top: -2rem;
     padding-bottom: 0;
 
     .details-list__item {
       &.vertical {
         .details-list__frame {
-          margin-bottom: 5rem;
+          margin-bottom: 3rem;
         }
         /*Изображение по центру*/
         &--center {
-          max-width: 1170px;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
+          margin-bottom: 3rem;
 
           .details-list__frame {
-            margin-bottom: 0;
+            margin-bottom: 3rem;
             align-self: center;
-            margin-left: 7rem;
-            mix-blend-mode: normal;
-
-            position: relative;
           }
 
           .details-list__credits {
-            margin-top: -4rem;
+            margin-top: 0;
           }
         }
         /*ОБратный вертикальный порядок*/
         &--reverse {
-          max-width: 1170px;
+          flex-direction: column;
+          margin-bottom: 3rem;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
 
           .details-list__description {
-            margin: 0;
+            margin-bottom: 3rem;
           }
 
           .details-list__frame {
             align-self: center;
             margin-bottom: 0;
-            margin-top: -4rem;
           }
         }
 
         &--triple {
-          max-width: 1170px;
+          flex-direction: column;
           justify-content: flex-start;
-          align-items: center;
+          align-items: flex-start;
 
           position: relative;
           margin-bottom: 0;
 
-          padding-top: 6.875rem;
-          padding-bottom: 8.25rem;
+          padding-top: 2.25rem;
+          padding-bottom: 2.25rem;
+
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
 
           &::before {
             position: absolute;
@@ -285,13 +272,15 @@
           .details-list__specs {
             z-index: 2;
 
-            align-self: flex-end;
+            order: 3;
           }
 
           .details-list__frame {
             z-index: 2;
             width: 100%;
-            margin-top: -6rem;
+            margin-top: 0;
+
+            order: 1;
           }
 
           .details-list__description {
@@ -299,8 +288,10 @@
             align-self: flex-start;
             color: $text-black;
 
-            margin-top: -15rem;
-            max-width: 305px;
+            margin-top: 0;
+            max-width: 335px;
+
+            order: 2;
           }
         }
       }
@@ -309,9 +300,9 @@
         width: 100%;
 
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         flex-wrap: nowrap;
 
         margin-bottom: 0;
@@ -319,12 +310,13 @@
 
         .details-list__frame {
           width: 100%;
-          height: 763px;
+          height: 286px;
         }
 
         .details-list__pic {
           height: 100%;
-          max-height: 763px;
+          max-height: 286px;
+          min-height: 286px;
           object-fit: cover;
         }
       }
@@ -333,30 +325,27 @@
   /*ТРЕТИЙ ТИП КАРТОЧКИ!!!*/
   &--3 {
     padding-bottom: 0;
-    margin-top: -5rem;
+    margin-top: -2rem;
 
     display: none;
 
     .details-list__item {
       &.vertical {
         .details-list__frame {
-          margin-bottom: 5rem;
+          margin-bottom: 3rem;
         }
         /*Изображение по центру*/
         &--center {
-          max-width: 1170px;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
 
           .details-list__frame {
             margin-bottom: 0;
             align-self: center;
-            margin-left: 7rem;
-            mix-blend-mode: normal;
-
-            position: relative;
           }
 
           .details-list__credits {
-            margin-top: -7rem;
+            margin-top: 0;
           }
         }
 
@@ -365,24 +354,21 @@
           justify-content: flex-start;
           align-items: flex-start;
 
-          max-width: 1170px;
-
           padding-bottom: 2.5rem;
-          padding-top: 5.5rem;
+          padding-top: 2.5rem;
+
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
 
           margin-bottom: 0;
 
           .details-list__imagewrap {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
 
             width: 100%;
-          }
-
-          .details-list__frame {
-
           }
 
           .details-list__pic {
@@ -400,9 +386,9 @@
         width: 100%;
 
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         flex-wrap: nowrap;
 
         margin-bottom: 0;
@@ -410,12 +396,13 @@
 
         .details-list__frame {
           width: 100%;
-          height: 800px;
+          height: 300px;
         }
 
         .details-list__pic {
           height: 100%;
-          max-height: 800px;
+          max-height: 300px;
+          min-height: 300px;
           object-fit: cover;
         }
       }
@@ -423,19 +410,21 @@
   }
   /*ЧЕТВЕРТЫЙ ТИП КАРТОЧКИ*/
   &--4 {
-    padding-bottom: 8.25rem;
-    margin-top: -5rem;
-
+    padding-bottom: 0;
+    margin-top: -2rem;
     display: none;
 
     .details-list__item {
       &.vertical {
+        margin-bottom: 3rem;
+
         .details-list__frame {
-          margin-bottom: 5rem;
+          margin-bottom: 3rem;
         }
         /*Изображение по центру*/
         &--center {
-          max-width: 1170px;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
 
           .details-list__frame {
             margin-bottom: 2.5rem;
@@ -451,40 +440,59 @@
 
       &.double {
         width: 100%;
-        max-width: 1170px;
 
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: nowrap;
 
-        margin-bottom: 0;
+        margin-bottom: 2rem;
         padding: 0;
 
         .details-list__frame {
           width: 100%;
-          height: 504px;
+
+          &--first {
+            margin-left: -10rem;
+            margin-bottom: 2rem;
+          }
+
+          &--second {
+            margin-right: -10rem;
+            margin-bottom: 2rem;
+          }
         }
 
         .details-list__pic {
           height: 100%;
-          max-height: 504px;
           object-fit: cover;
+        }
+
+        .details-list__description {
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
         }
       }
 
       &.horizontal {
-        max-width: 1170px;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+
+        padding-bottom: 3rem;
+        padding-top: 2.25rem;
+
+        background-color: #d5d5d5;
+
         width: 100%;
 
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
 
         .details-list__frame {
-          width: 50%;
+          width: 100%;
         }
 
         .details-list__info {
@@ -493,7 +501,7 @@
           justify-content: space-between;
           align-items: flex-start;
 
-          width: 50%;
+          width: 100%;
           height: auto;
         }
       }
@@ -501,47 +509,531 @@
   }
   /*ПЯТЫЙ ТИП КАРТОЧКИ*/
   &--5 {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+
     .details-list__item {
-      margin-bottom: 7.5rem;
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.mobile-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .details-list__frame {
+          min-width: 440px;
+          margin-right: -10rem;
+        }
+      }
 
       &.vertical {
-        max-width: 1170px;
         .details-list__frame {
-          margin-bottom: 5rem;
+          margin-bottom: 3rem;
         }
 
         /*ОБратный вертикальный порядок*/
         &--reverse {
+          flex-direction: column-reverse;
           .details-list__description {
-            margin-bottom: 5rem;
+            margin-bottom: 0;
+            margin-top: 0;
           }
 
           .details-list__frame {
-            margin-bottom: 0;
+            min-width: 440px;
+            margin-bottom: 3rem;
+
+            margin-left: -10rem;
           }
         }
       }
 
       &.horizontal {
-        max-width: 1170px;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
 
         /*Для трех элементов в ряд*/
         &--3 {
           .details-list__frame {
-            min-width: 570px;
-            max-width: 570px;
-            margin-right: 5rem;
+            margin-bottom: 3rem;
           }
 
           .details-list__description {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .details-list {
+    /*ПЕРВЫЙ ТИП КАРТОЧКИ!!!*/
+    &--1 {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    /*ВТОРОЙ ТИП КАРТОЧКИ!!!*/
+    &--2 {
+      .details-list__item {
+        &.vertical {
+          /*Изображение по центру*/
+          &--center {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+          /*ОБратный вертикальный порядок*/
+          &--reverse {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+
+          &--triple {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+        }
+      }
+    }
+    /*ТРЕТИЙ ТИП КАРТОЧКИ!!!*/
+    &--3 {
+      .details-list__item {
+        &.vertical {
+          /*Изображение по центру*/
+          &--center {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+
+          &--middle {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+        }
+      }
+    }
+    /*ЧЕТВЕРТЫЙ ТИП КАРТОЧКИ*/
+    &--4 {
+      .details-list__item {
+        &.vertical {
+          /*Изображение по центру*/
+          &--center {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+        }
+
+        &.horizontal {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+      }
+    }
+    /*ПЯТЫЙ ТИП КАРТОЧКИ*/
+    &--5 {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .details-list {
+    margin-top: -5rem;
+    padding-bottom: 7rem;
+
+    &__description {
+      font: {
+        size: 1.125rem;
+      }
+
+      line-height: 1.438rem;
+
+      max-width: 440px;
+    }
+
+    /*ПЕРВЫЙ ТИП КАРТОЧКИ!!!*/
+    &--1 {
+      margin-top: -10rem;
+      padding-bottom: 0;
+
+      padding-left: 0;
+      padding-right: 0;
+
+      .details-list__item {
+        &.vertical {
+          max-width: 1170px;
+          .details-list__frame {
+            margin-bottom: 5rem;
+          }
+          /*Изображение по центру*/
+          &--center {
+            .details-list__frame {
+              margin-bottom: 0;
+              margin-left: 7rem;
+            }
+
+            .details-list__credits {
+              margin-top: -8rem;
+            }
+          }
+
+          &--middle {
+            padding-bottom: 2.5rem;
+            padding-top: 5.5rem;
+
+            .details-list__frame {
+              max-width: 1289px;
+              margin-bottom: 0;
+
+              &--first {
+                order: 1;
+                margin-right: 0;
+              }
+
+              &--second {
+                order: 3;
+                margin-left: 0;
+              }
+            }
+
+            .details-list__pic {
+              max-width: 1289px;
+            }
+
+            .details-list__info {
+              order: 2;
+
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+
+        &.horizontal {
+          flex-direction: row;
+          justify-content: space-between;
+
+          max-width: 1170px;
+
+          &--2 {
+            .details-list__frame {
+              width: 100%;
+              max-width: 1289px;
+
+              margin-left: -70px;
+            }
+
+            .details-list__description {
+              width: 206px;
+              margin-top: 2rem;
+            }
+          }
+
+          &--2-inv {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .details-list__frame {
+              width: 100%;
+              max-width: 1289px;
+
+              margin-right: -70px;
+            }
+
+            .details-list__description {
+              display: inline-flex;
+              width: 206px;
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
+    /*ВТОРОЙ ТИП КАРТОЧКИ!!!*/
+    &--2 {
+      margin-top: -5rem;
+      padding-bottom: 0;
+
+      .details-list__item {
+        &.vertical {
+          .details-list__frame {
+            margin-bottom: 5rem;
+          }
+          /*Изображение по центру*/
+          &--center {
+            max-width: 1170px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .details-list__frame {
+              margin-bottom: 0;
+              margin-left: 7rem;
+            }
+
+            .details-list__credits {
+              margin-top: -4rem;
+            }
+          }
+          /*ОБратный вертикальный порядок*/
+          &--reverse {
+            max-width: 1170px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .details-list__description {
+              margin: 0;
+            }
+
+            .details-list__frame {
+              margin-top: -4rem;
+            }
+          }
+
+          &--triple {
+            max-width: 1170px;
+            align-items: center;
+
+            padding-top: 6.875rem;
+            padding-bottom: 8.25rem;
+
+            .details-list__specs {
+              align-self: flex-end;
+              order: 1;
+            }
+
+            .details-list__frame {
+              order: 2;
+              margin-top: -6rem;
+            }
+
+            .details-list__description {
+              order: 3;
+              margin-top: -15rem;
+            }
+          }
+        }
+
+        &.double {
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-end;
+
+          .details-list__frame {
+            height: 763px;
+          }
+
+          .details-list__pic {
+            min-height: 763px;
+            max-height: 763px;
+          }
+        }
+      }
+    }
+    /*ТРЕТИЙ ТИП КАРТОЧКИ!!!*/
+    &--3 {
+      padding-bottom: 0;
+      margin-top: -5rem;
+
+      .details-list__item {
+        &.vertical {
+          .details-list__frame {
+            margin-bottom: 5rem;
+          }
+          /*Изображение по центру*/
+          &--center {
+            max-width: 1170px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .details-list__frame {
+              margin-left: 7rem;
+            }
+
+            .details-list__credits {
+              margin-top: -7rem;
+            }
+          }
+
+          &--middle {
+            max-width: 1170px;
+
+            padding-top: 5.5rem;
+            padding-left: 0;
+            padding-right: 0;
+
+            .details-list__imagewrap {
+              width: 100%;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+          }
+        }
+
+        &.double {
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-end;
+
+          .details-list__frame {
+            height: 800px;
+          }
+
+          .details-list__pic {
+            min-height: 800px;
+            max-height: 800px;
+          }
+        }
+      }
+    }
+    /*ЧЕТВЕРТЫЙ ТИП КАРТОЧКИ*/
+    &--4 {
+      padding-bottom: 0;
+      margin-top: -5rem;
+
+      .details-list__item {
+        &.vertical {
+          .details-list__frame {
+            margin-bottom: 5rem;
+          }
+          /*Изображение по центру*/
+          &--center {
+            max-width: 1170px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+
+        &.double {
+          width: 100%;
+          max-width: 1170px;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+
+          margin-bottom: 0;
+          padding: 0;
+
+          .details-list__frame {
+            width: 45%;
+            height: 480px;
+
+            margin: 0;
+            margin-bottom: 3rem;
+          }
+
+          .details-list__pic {
+            height: 100%;
+            max-height: 480px;
+            object-fit: cover;
+          }
+
+          .details-list__description {
+            display: none;
+          }
+        }
+
+        &.horizontal {
+          width: 100%;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          padding-bottom: 0;
+          padding-top: 90px;
+
+          .details-list__frame {
+            width: 50%;
+            max-width: 550px;
+            margin-right: 120px;
+          }
+
+          .details-list__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            width: 50%;
+            max-width: 500px;
+            height: auto;
+
+            padding-bottom: 110px;
+          }
+
+          .details-list__description {
+            max-width: 380px;
+            margin-bottom: 150px;
             margin-top: 0;
-            margin-bottom: 0;
-            margin-left: auto;
-            margin-right: 0;
-            max-width: 225px;
+          }
+        }
+      }
+    }
+    /*ПЯТЫЙ ТИП КАРТОЧКИ*/
+    &--5 {
+      padding-left: 0;
+      padding-right: 0;
+
+      .details-list__item {
+        margin-bottom: 7.5rem;
+
+        &.vertical {
+          max-width: 1170px;
+          .details-list__frame {
+            margin-bottom: 5rem;
+          }
+
+          /*ОБратный вертикальный порядок*/
+          &--reverse {
+            .details-list__description {
+              margin-bottom: 5rem;
+            }
+
+            .details-list__frame {
+              margin-bottom: 3rem;
+              margin-left: 0;
+            }
+          }
+        }
+
+        &.mobile-image {
+          display: none;
+        }
+
+        &.horizontal {
+          max-width: 1170px;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          /*Для трех элементов в ряд*/
+          &--3 {
+            .details-list__frame {
+              min-width: 570px;
+              max-width: 570px;
+              margin-right: 5rem;
+            }
+
+            .details-list__description {
+              display: inline-flex;
+              margin-top: 0;
+              margin-bottom: 0;
+              margin-left: auto;
+              margin-right: 0;
+              max-width: 225px;
+            }
           }
         }
       }

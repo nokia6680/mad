@@ -1,9 +1,42 @@
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  slidesPerColumn: 2,
-  spaceBetween: 0,
-  navigation: {
-    nextEl: '.slide-next',
-    prevEl: '.slide-prev',
-  },
+$('.similar-layout').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  arrows: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  vertical: true,
+  prevArrow: '<div class="slide-prev"></div>',
+  nextArrow: '<div class="slide-next"></div>',
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        dots: false,
+        infinite: false,
+        speed: 300,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        vertical: true,
+        prevArrow: '<div class="slide-prev"></div>',
+        nextArrow: '<div class="slide-next"></div>',
+      }
+    },
+    {
+      breakpoint: 9999,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false,
+        vertical: false,
+        prevArrow: '<div class="slide-prev"></div>',
+        nextArrow: '<div class="slide-next"></div>',
+      }
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 });
