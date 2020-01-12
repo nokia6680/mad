@@ -95,3 +95,18 @@
     100% { max-height: 88px; }
   }
 }
+
+@mixin font-setting($family, $size, $line-height, $font-width, $color) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-width;
+  color: $color;
+}
+
+@mixin flex-setting($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

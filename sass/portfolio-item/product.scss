@@ -153,6 +153,10 @@
     }
 
     &__title {
+      display: none;
+    }
+
+    &__subtitle {
       font: {
         size: 3.438rem;
         family: $pt-bold;
@@ -161,6 +165,9 @@
 
       line-height: 4.313rem;
       color: $text-white;
+
+      width: auto;
+      max-width: 100%;
 
       margin: 0;
       margin-bottom: 2.625rem;
